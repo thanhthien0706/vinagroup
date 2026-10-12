@@ -1,0 +1,454 @@
+:root {
+  --vg-primary: #005eb8;
+  --vg-primary-dark: #004585;
+  --vg-primary-darker: #00237b;
+  --vg-text: #212121;
+  --vg-text-light: #5f6368;
+  --vg-border: #e3e6ea;
+  --vg-bg-light: #f5f7fa;
+}
+
+body {
+  color: var(--vg-text);
+}
+
+a {
+  color: var(--vg-primary);
+}
+
+a:hover {
+  color: var(--vg-primary-dark);
+}
+
+/* ---------- Header / Nav ---------- */
+.vg-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.vg-header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+
+.vg-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--vg-text);
+}
+
+.vg-logo img {
+  width: 44px;
+  height: 44px;
+}
+
+.vg-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.vg-nav a {
+  display: inline-block;
+  padding: 10px 16px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--vg-text);
+  letter-spacing: 0.02em;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.vg-nav a:hover,
+.vg-nav a.is-active {
+  color: var(--vg-primary);
+  border-bottom-color: var(--vg-primary);
+}
+
+.vg-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: var(--vg-text);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .vg-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+    align-items: stretch;
+    padding: 8px 0;
+    display: none;
+  }
+  .vg-nav.is-open {
+    display: flex;
+  }
+  .vg-nav a {
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--vg-border);
+  }
+  .vg-nav-toggle {
+    display: block;
+  }
+}
+
+/* ---------- Hero ---------- */
+.vg-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 110px 24px;
+  text-align: center;
+}
+
+.vg-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 35, 123, 0.72), rgba(0, 35, 123, 0.55));
+}
+
+.vg-hero--page {
+  padding: 70px 24px;
+}
+
+.vg-hero__inner {
+  position: relative;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.vg-hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.vg-hero h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  margin: 12px 0 16px;
+  line-height: 1.25;
+}
+
+.vg-hero p {
+  font-size: 17px;
+  opacity: 0.95;
+}
+
+.vg-breadcrumb {
+  position: relative;
+  font-size: 13px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.vg-breadcrumb a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ---------- Sections ---------- */
+.vg-section {
+  padding: 72px 24px;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.vg-section--alt {
+  background: var(--vg-bg-light);
+}
+
+.vg-section-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--vg-primary-darker);
+  text-align: center;
+  margin-bottom: 36px;
+  text-transform: uppercase;
+}
+
+.vg-split {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.vg-split > * {
+  flex: 1 1 360px;
+}
+
+.vg-split img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 35, 123, 0.15);
+}
+
+.vg-split h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--vg-primary-darker);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.vg-split p {
+  line-height: 1.7;
+  color: var(--vg-text-light);
+}
+
+/* ---------- Cards ---------- */
+.vg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.vg-card {
+  background: #fff;
+  border: 1px solid var(--vg-border);
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vg-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 35, 123, 0.12);
+}
+
+.vg-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--vg-primary-darker);
+  margin-bottom: 10px;
+}
+
+.vg-card p {
+  color: var(--vg-text-light);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* ---------- List / checkmarks ---------- */
+.vg-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vg-list li {
+  position: relative;
+  padding: 8px 0 8px 28px;
+  line-height: 1.6;
+  color: var(--vg-text-light);
+}
+
+.vg-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  color: var(--vg-primary);
+  font-weight: 700;
+}
+
+/* ---------- Pricing ---------- */
+.vg-pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.vg-price-card {
+  background: #fff;
+  border: 1px solid var(--vg-border);
+  border-radius: 14px;
+  padding: 32px 28px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.vg-price-card--featured {
+  border-color: var(--vg-primary);
+  box-shadow: 0 16px 36px rgba(0, 35, 123, 0.18);
+  transform: scale(1.02);
+}
+
+.vg-price-card h3 {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--vg-text-light);
+  margin-bottom: 6px;
+}
+
+.vg-price-card .vg-price {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--vg-primary-darker);
+  margin-bottom: 20px;
+}
+
+.vg-price-card .vg-list {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+/* ---------- Buttons ---------- */
+.vg-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--vg-primary);
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 999px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.vg-btn:hover {
+  background: var(--vg-primary-dark);
+  transform: translateY(-2px);
+}
+
+.vg-btn--outline {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff !important;
+}
+
+.vg-btn--outline:hover {
+  background: #fff;
+  color: var(--vg-primary) !important;
+}
+
+/* ---------- Stats ---------- */
+.vg-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  text-align: center;
+}
+
+.vg-stat-num {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--vg-primary);
+}
+
+.vg-stat-label {
+  color: var(--vg-text-light);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Contact ---------- */
+.vg-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.vg-contact-card {
+  background: #fff;
+  border: 1px solid var(--vg-border);
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.vg-contact-card .vg-contact-label {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--vg-text-light);
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+
+.vg-contact-card .vg-contact-value {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--vg-primary-darker);
+}
+
+/* ---------- Footer ---------- */
+.vg-footer {
+  background: var(--vg-primary-darker);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 56px 24px 24px;
+}
+
+.vg-footer__inner {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.vg-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.vg-footer-title {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+
+.vg-footer-grid a {
+  display: block;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 4px 0;
+  font-size: 14px;
+}
+
+.vg-footer-grid a:hover {
+  color: #fff;
+}
+
+.vg-footer-grid p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  margin: 0 0 6px;
+}
+
+.vg-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 20px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
