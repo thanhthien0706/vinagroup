@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.vg-nav');
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
-      nav.classList.toggle('is-open');
+      const isOpen = nav.classList.toggle('is-open');
+      toggle.classList.toggle('is-open', isOpen);
+      toggle.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+      toggle.setAttribute('aria-label', isOpen ? 'Đóng menu' : 'Mở menu');
     });
   }
 });
