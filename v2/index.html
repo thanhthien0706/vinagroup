@@ -100,21 +100,24 @@
             }
           }
 
-          /* Hiệu ứng chuyển slide: kết hợp trượt (slide) + mờ dần (crossfade) cho mượt mắt hơn khi bấm next/prev */
+          /* Hiệu ứng chuyển slide: crossfade thuần (mờ chồng), không trượt ngang nên ảnh luôn phủ kín khung,
+             không còn hở nền trắng/đuôi trắng giữa 2 slide như kiểu trượt + mờ kết hợp trước đây */
           #carouselExampleIndicators .carousel-item {
-            transition: transform .9s cubic-bezier(.65, 0, .35, 1), opacity .9s cubic-bezier(.65, 0, .35, 1);
-          }
-          #carouselExampleIndicators .carousel-item.carousel-item-next,
-          #carouselExampleIndicators .carousel-item.carousel-item-prev {
+            transform: none !important;
             opacity: 0;
+            transition: opacity 1.1s ease;
           }
-          #carouselExampleIndicators .carousel-item.carousel-item-next.carousel-item-left,
-          #carouselExampleIndicators .carousel-item.carousel-item-prev.carousel-item-right {
+          #carouselExampleIndicators .carousel-item.active,
+          #carouselExampleIndicators .carousel-item-next.carousel-item-left,
+          #carouselExampleIndicators .carousel-item-prev.carousel-item-right {
+            z-index: 1;
             opacity: 1;
           }
-          #carouselExampleIndicators .carousel-item.active.carousel-item-left,
-          #carouselExampleIndicators .carousel-item.active.carousel-item-right {
+          #carouselExampleIndicators .active.carousel-item-left,
+          #carouselExampleIndicators .active.carousel-item-right {
+            z-index: 0;
             opacity: 0;
+            transition: opacity 0s 1.1s;
           }
 
           /* Ảnh nền: hiệu ứng zoom chậm (Ken Burns) khi slide đang hiện */
@@ -159,6 +162,30 @@
             margin: 0;
             padding: 22px 0 28px;
             background: linear-gradient(180deg, #f6faf8 0%, #ffffff 100%);
+          }
+          #carouselExampleIndicators .carousel-indicators {
+            position: relative;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            margin: 0 18px;
+          }
+          #carouselExampleIndicators .carousel-indicators li {
+            width: 9px;
+            height: 9px;
+            margin: 0 5px;
+            border-radius: 50px;
+            background-color: #d7e4dd;
+            border: none;
+            opacity: 1;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s;
+          }
+          #carouselExampleIndicators .carousel-indicators li:hover {
+            background-color: #8fc4a7;
+          }
+          #carouselExampleIndicators .carousel-indicators li.active {
+            width: 30px;
+            background:#5fae84;
           }
 
           /* Nút Next/Prev: nổi trên ảnh slide, căn giữa theo chiều dọc vùng ảnh (không tính dải chấm bên dưới) */
@@ -227,30 +254,6 @@
               height: 18px;
             }
           }
-          #carouselExampleIndicators .carousel-indicators {
-            position: static;
-            margin: 0;
-          }
-          #carouselExampleIndicators .carousel-indicators li {
-            width: 10px;
-            height: 10px;
-            margin: 0 5px;
-            border: none;
-            background-color: #d7e8de;
-            box-shadow: none;
-            opacity: 1;
-            transition: width .4s ease, background .4s ease, box-shadow .4s ease;
-          }
-          #carouselExampleIndicators .carousel-indicators li:hover {
-            background-color: #a8d9bf;
-          }
-          #carouselExampleIndicators .carousel-indicators li.active {
-            width: 36px;
-            border-radius: 6px;
-            background: linear-gradient(90deg, #5fae84, #0f6b3f);
-            box-shadow: 0 4px 14px rgba(11, 85, 48, .35);
-          }
-
           /* Tiêu đề các mục: in đậm, dùng font có điểm nhấn thay vì font mảnh mặc định */
           .uob-h2,
           .uob-h4,
@@ -636,7 +639,7 @@ Email: tapdoanvinagroup@gmail.com</p><a href="lien-he/" target="_self" class="dt
     <div class="iw_placeholder" id="iw_placeholder1605162160633"> 
      </div> 
      <div class="iw_component" id="iw_comp1773900973409">
-       <!--ls:begin[component-1773900973409]--><style>#iw_comp1773900973409{}</style><div xmlns:xs="http://www.w3.org/2001/XMLSchema" data-ride="carousel" class="carousel slide text-center pointer-event multi-masthead" id="carouselExampleIndicators">
+       <!--ls:begin[component-1773900973409]--><style>#iw_comp1773900973409{}</style><div xmlns:xs="http://www.w3.org/2001/XMLSchema" data-ride="carousel" data-wrap="true" class="carousel slide text-center pointer-event multi-masthead" id="carouselExampleIndicators">
    <div class="carousel-inner">
       <div class="carousel-item active">
          <div class="jumbotron has-bg-img masthead masthead-dark p-0 mb-0 container-fluid rounded-0 text-left reduced-height">
@@ -724,13 +727,13 @@ Email: tapdoanvinagroup@gmail.com</p><a href="lien-he/" target="_self" class="dt
       </div>
    </div>
    <div class="carousel-controls d-flex align-items-center justify-content-center"><a class="carousel-control-prev" role="button" data-slide="prev" href="#carouselExampleIndicators" aria-label="Slide trước"><img loading="lazy" class="carousel-control-prev-icon" src="assets/iwov-resources/assets/Icons/icons-chevron-left.svg" alt=""></a><ol class="carousel-indicators">
-         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-         <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
-         <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
-         <li data-target="#carouselExampleIndicators" data-slide-to="3" class=""></li>
-         <li data-target="#carouselExampleIndicators" data-slide-to="4" class=""></li>
-         <li data-target="#carouselExampleIndicators" data-slide-to="5" class=""></li>
-      </ol><a class="carousel-control-next" role="button" data-slide="next" href="#carouselExampleIndicators" aria-label="Slide sau"><img loading="lazy" class="carousel-control-next-icon" src="assets/iwov-resources/assets/Icons/icons-chevron-right.svg" alt=""></a></div>
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1" aria-label="Slide 2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2" aria-label="Slide 3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3" aria-label="Slide 4"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4" aria-label="Slide 5"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="5" aria-label="Slide 6"></li>
+   </ol><a class="carousel-control-next" role="button" data-slide="next" href="#carouselExampleIndicators" aria-label="Slide sau"><img loading="lazy" class="carousel-control-next-icon" src="assets/iwov-resources/assets/Icons/icons-chevron-right.svg" alt=""></a></div>
 </div><!--ls:end[component-1773900973409]-->
      </div> 
      <div class="iw_component" id="iw_comp1773900973411">
