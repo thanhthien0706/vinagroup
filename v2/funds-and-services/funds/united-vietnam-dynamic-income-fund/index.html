@@ -26,7 +26,200 @@
           {
             min-width: 100% !important;
           }
-        </style>
+        
+          /* Tiêu đề các mục: in đậm, dùng font có điểm nhấn thay vì font mảnh mặc định */
+          .uob-h2,
+          .uob-h4,
+          h3.uob-h4 {
+            font-family: "Noto Sans Bold", sans-serif !important;
+            font-weight: 700 !important;
+            letter-spacing: .3px;
+          }
+
+          /* Tự Doanh Phái Sinh: thiết kế lại */
+          .section-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--primary-light);
+            margin-bottom: 14px;
+          }
+          .section-kicker::before {
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 3px;
+            border-radius: 3px;
+            background: linear-gradient(90deg, #5fae84, #0f6b3f);
+            flex: 0 0 auto;
+          }
+          #carouselExampleIndicators .masthead-dark .overlay {
+            background: linear-gradient(115deg, rgba(7, 58, 32, .88) 0%, rgba(11, 85, 48, .72) 45%, rgba(15, 107, 63, .4) 75%, rgba(34, 160, 107, .14) 100%) !important;
+            display: flex;
+            align-items: center;
+          }
+          .svc-hero-title {
+            font-family: "Noto Sans Bold", sans-serif !important;
+            font-weight: 700 !important;
+            text-shadow: 0 2px 16px rgba(5, 20, 45, .45);
+          }
+
+          /* Giới thiệu: bố cục ảnh + chữ song song */
+          .svc-intro-section {
+            padding: 24px 0 56px;
+          }
+          .svc-intro-img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 1rem;
+            box-shadow: 0 24px 50px rgba(11, 85, 48, .18);
+          }
+
+          /* Công cụ phái sinh */
+          .svc-scope-section {
+            padding: 8px 0 56px;
+            background: linear-gradient(180deg, #ffffff 0%, #f2faf6 60%, #ffffff 100%);
+          }
+          .svc-scope-card {
+            text-align: center;
+            background: #ffffff;
+            border: 1.5px solid #e5efe9;
+            border-radius: 1rem;
+            padding: 32px 22px;
+            height: 100%;
+            transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+          }
+          .svc-scope-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 44px rgba(11, 85, 48, .16);
+            border-color: #5fae84;
+          }
+          .svc-scope-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+            margin-bottom: 18px;
+          }
+          .svc-scope-title {
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 15.5px;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+          }
+          .svc-scope-text {
+            font-size: 13.5px;
+            color: var(--gray-600);
+            line-height: 1.55;
+          }
+
+          /* Đội ngũ giao dịch: ảnh + chữ (đảo chiều) */
+          .svc-team-section {
+            padding: 8px 0 60px;
+          }
+          .svc-team-img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 1rem;
+            box-shadow: 0 24px 50px rgba(11, 85, 48, .18);
+          }
+
+          /* Vì Sao Chọn Dịch Vụ Này */
+          .svc-why-card {
+            text-align: center;
+            background: #ffffff;
+            border: 1.5px solid #e5efe9;
+            border-radius: 1rem;
+            padding: 36px 26px;
+            height: 100%;
+            transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+          }
+          .svc-why-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 44px rgba(11, 85, 48, .16);
+            border-color: #5fae84;
+          }
+          .svc-why-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+            box-shadow: 0 10px 24px rgba(11, 85, 48, .25);
+            margin-bottom: 20px;
+          }
+          .svc-why-text {
+            font-size: 13.5px;
+            color: var(--gray-600);
+            line-height: 1.55;
+            margin-top: 8px;
+          }
+
+          /* CTA cuối trang */
+          .svc-cta-banner {
+            margin: 24px 0 64px;
+            padding: 52px 36px;
+            border-radius: 1.2rem;
+            background: linear-gradient(115deg, #052d19 0%, #0b5530 45%, #22a06b 100%);
+            text-align: center;
+            color: #ffffff;
+          }
+          .svc-cta-banner h2 {
+            color: #ffffff !important;
+          }
+          .svc-cta-banner p {
+            color: rgba(255,255,255,.85);
+            max-width: 620px;
+            margin: 0 auto 26px;
+          }
+          .svc-cta-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+          }
+          .svc-cta-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 30px;
+            border-radius: 30px;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            transition: background .3s ease, transform .3s ease, color .3s ease;
+          }
+          .svc-cta-links a.svc-cta-primary {
+            background: #ffffff;
+            color: #0b5530;
+          }
+          .svc-cta-links a.svc-cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px rgba(0,0,0,.2);
+          }
+          .svc-cta-links a.svc-cta-ghost {
+            background: rgba(255,255,255,.12);
+            border: 1.5px solid rgba(255,255,255,.4);
+            color: #ffffff;
+          }
+          .svc-cta-links a.svc-cta-ghost:hover {
+            background: rgba(255,255,255,.22);
+            transform: translateY(-3px);
+          }
+</style>
 <link href="../../../assets/iwov-resources/grid/bootstrap/4.0/bootstrap-grid.min.css" type="text/css" rel="stylesheet">
 <!--ls:end[stylesheet]-->
 <!--ls:begin[script]-->
@@ -157,12 +350,12 @@
                               <div class="col-lg">
                                  <h6 class="text-uppercase mega-menu-title">GIỚI THIỆU</h6>
                                  <div class="dropdown-item"><a href="../../../about-us/corporate-profile/" class="dtm-link text-link" target="_self" anchor_name="header:giới thiệu công ty">Giới Thiệu Công Ty</a></div>
-                                 <div class="dropdown-item"><a href="../../../about-us/board-of-directors/" class="dtm-link text-link" target="_self" anchor_name="header:hội Đồng quản trị">Hội Đồng Quản Trị</a></div>
-                                 <div class="dropdown-item"><a href="../../../about-us/management-team/" class="dtm-link text-link" target="_self" anchor_name="header:ban Điều hành">Ban Điều Hành</a></div>
+                                 
+                                 
                                  <div class="dropdown-item"><a href="../../../about-us/our-investment-philosophy-and-capabilities/" class="dtm-link text-link" target="_self" anchor_name="header:phong cách, triết lý &amp; năng lực Đầu tư">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
-                                 <div class="dropdown-item"><a href="../../../about-us/careers/" class="dtm-link text-link" target="_self" anchor_name="header:cơ hội nghề nghiệp">Cơ Hội Nghề Nghiệp</a></div>
+                                 
                                  <div class="dropdown-item"><a href="../../../about-us/partnership/" class="dtm-link text-link" target="_self" anchor_name="header:Đối tác">Đối Tác</a></div>
-                                 <div class="dropdown-item"><a href="../../../about-us/policy/" class="dtm-link text-link" target="_self" anchor_name="header:quy Định">Quy Định</a></div>
+                                 
                               </div>
                               <div class="col-lg"></div>
                               <div class="col-lg"></div>
@@ -260,12 +453,12 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../../../contact-us/" target="_sel
                                     <div class="split-line--row"></div>
                                     <div class="col-12 pb-4 pt-3">
                                        <div class="dropdown-item"><a href="../../../about-us/corporate-profile/" class="dtm-link text-link" target="_self">Giới Thiệu Công Ty</a></div>
-                                       <div class="dropdown-item"><a href="../../../about-us/board-of-directors/" class="dtm-link text-link" target="_self">Hội Đồng Quản Trị</a></div>
-                                       <div class="dropdown-item"><a href="../../../about-us/management-team/" class="dtm-link text-link" target="_self">Ban Điều Hành</a></div>
+                                       
+                                       
                                        <div class="dropdown-item"><a href="../../../about-us/our-investment-philosophy-and-capabilities/" class="dtm-link text-link" target="_self">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
-                                       <div class="dropdown-item"><a href="../../../about-us/careers/" class="dtm-link text-link" target="_self">Cơ Hội Nghề Nghiệp</a></div>
+                                       
                                        <div class="dropdown-item"><a href="../../../about-us/partnership/" class="dtm-link text-link" target="_self">Đối Tác</a></div>
-                                       <div class="dropdown-item"><a href="../../../about-us/policy/" class="dtm-link text-link" target="_self">Quy Định</a></div>
+                                       
                                     </div>
                                  </div>
                               </div>
@@ -411,51 +604,89 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../../../contact-us/" target="_sel
        <!--ls:begin[component-1773900973963]--><style>#iw_comp1773900973963{}</style><div xmlns:xs="http://www.w3.org/2001/XMLSchema" data-ride="carousel" class="carousel slide text-center pointer-event multi-masthead" id="carouselExampleIndicators">
    <div class="carousel-inner">
       <div class="carousel-item active">
-         <div class="jumbotron has-bg-img masthead masthead-light p-0 mb-0 container-fluid rounded-0 text-left reduced-height">
-            <div><img loading="lazy" class="d-md-none bg-img" src="../../../assets/web-resources/images/funds-and-services/uvdif/uvdif-banner-phone.jpg" alt=""><img loading="lazy" class="d-none d-md-block bg-img" src="../../../assets/web-resources/images/funds-and-services/uvdif/uvdif-banner.jpg" alt=""></div>
+         <div class="jumbotron has-bg-img masthead masthead-dark p-0 mb-0 container-fluid rounded-0 text-left reduced-height">
+            <div><img loading="lazy" class="d-md-none bg-img" src="../../../assets/web-resources/images/funds-and-services/uvdif/uvdif-banner-new-phone.jpg" alt="Tự Doanh Phái Sinh"><img loading="lazy" class="d-none d-md-block bg-img" src="../../../assets/web-resources/images/funds-and-services/uvdif/uvdif-banner-new.jpg" alt="Tự Doanh Phái Sinh"></div>
+            <div class="overlay">
+               <div class="row ml-0 mr-0">
+                  <div class="col col-md-7 uob-form masthead-form pr-0">
+                     <span class="section-kicker" style="color:#8ff0c0">Dịch Vụ Đầu Tư</span>
+                     <h1 class="uob-h2 mb-0 svc-hero-title">Tự Doanh Phái Sinh</h1>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
    </div>
 </div><!--ls:end[component-1773900973963]--> 
      </div> 
      <div class="iw_component" id="iw_comp1773900973964">
-       <!--ls:begin[component-1773900973964]--><style>#iw_comp1773900973964{}</style><div class="" id="">
-<div><div class="" id="introduction">
-<div class="uob-table-carousel pb-0">
-<h2 class="uob-h2 pb-5" style="text-align: center;">Tự Doanh Phái Sinh</h2>
-<p style="text-align: left;"><span>Vina Group cung cấp dịch vụ </span><strong>giao dịch phái sinh linh hoạt, phòng ngừa rủi ro và tối ưu lợi nhuận</strong><span>, giúp quý khách sử dụng công cụ phái sinh như một giải pháp bảo hiểm danh mục hiệu quả trước biến động thị trường.</span></p>
-<p style="text-align: left;"><span>Đội ngũ giao dịch của chúng tôi theo dõi sát các chỉ số thị trường, xây dựng chiến lược phái sinh linh hoạt phù hợp với từng giai đoạn thị trường, kết hợp quản trị rủi ro chặt chẽ nhằm bảo vệ và tối ưu hóa lợi nhuận cho danh mục đầu tư của quý khách.</span></p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../../assets/web-resources/images/funds-and-services/uvdif/uvdif-06.png" alt="" width="70%"></p>
-</div>
-</div></div>
+       <!--ls:begin[component-1773900973964]--><style>#iw_comp1773900973964{}</style><div class="container-fluid svc-intro-section" id="introduction">
+   <div class="row align-items-center">
+      <div class="col-12 col-lg-6">
+         <span class="section-kicker">Dịch Vụ Đầu Tư</span>
+         <h2 class="uob-h2 mb-4" style="text-align: left;">Tự Doanh Phái Sinh</h2>
+         <p class="paragraph" style="text-align: left;"><span>Vina Group cung cấp dịch vụ </span><strong>giao dịch phái sinh linh hoạt, phòng ngừa rủi ro và tối ưu lợi nhuận</strong><span>, giúp quý khách sử dụng công cụ phái sinh như một giải pháp bảo hiểm danh mục hiệu quả trước biến động thị trường.</span></p>
+         <p class="paragraph" style="text-align: left;"><span>Đội ngũ giao dịch của chúng tôi theo dõi sát các chỉ số thị trường, xây dựng chiến lược phái sinh linh hoạt phù hợp với từng giai đoạn thị trường, kết hợp quản trị rủi ro chặt chẽ nhằm bảo vệ và tối ưu hóa lợi nhuận cho danh mục đầu tư của quý khách.</span></p>
+      </div>
+      <div class="col-12 col-lg-6 mt-5 mt-lg-0"><img loading="lazy" class="img-fluid svc-intro-img" src="../../../assets/web-resources/images/funds-and-services/uvdif/uvdif-risk-management.jpg" alt="Chuyên viên giao dịch theo dõi biểu đồ phái sinh"></div>
+   </div>
 </div>
 <!--ls:end[component-1773900973964]-->
      </div>
+     <div class="iw_component" id="iw_comp_uvdif_scope">
+       <div class="container-fluid svc-scope-section">
+   <div class="row justify-content-center">
+      <div class="col-12 text-center"><span class="section-kicker d-inline-flex">Đa Dạng Công Cụ</span></div>
+   </div>
+   <div class="row justify-content-center content-title">
+      <h2 class="col-12 uob-h2 text-center">Công Cụ Phái Sinh</h2>
+      <div class="col-12 col-md-8 text-center"><p class="paragraph">Linh hoạt lựa chọn công cụ phù hợp với từng chiến lược phòng ngừa rủi ro và tối ưu lợi nhuận.</p></div>
+   </div>
+   <div class="row">
+      <div class="col-12 col-md-4 mb-5 mb-md-0"><div class="svc-scope-card"><span class="svc-scope-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 19V11M4 11L2 11M4 11L6 11M11 19V5M11 5L9 5M11 5L13 5M18 19V13M18 13L16 13M18 13L20 13" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span><div class="svc-scope-title">Hợp Đồng Tương Lai</div><div class="svc-scope-text">Giao dịch dựa trên chỉ số và tài sản cơ sở, tận dụng biến động cả hai chiều của thị trường.</div></div></div>
+      <div class="col-12 col-md-4 mb-5 mb-md-0"><div class="svc-scope-card"><span class="svc-scope-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#ffffff" stroke-width="2"/><path d="M12 7V12L15.5 14" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="svc-scope-title">Quyền Chọn</div><div class="svc-scope-text">Linh hoạt quyền mua hoặc bán tài sản cơ sở ở mức giá xác định trong tương lai.</div></div></div>
+      <div class="col-12 col-md-4"><div class="svc-scope-card"><span class="svc-scope-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 10L12 4L21 10M5 10V19M19 10V19M9 19V14H15V19M3 19H21" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="svc-scope-title">Hoán Đổi Rủi Ro</div><div class="svc-scope-text">Giải pháp phòng ngừa rủi ro lãi suất và biến động giá cho danh mục dài hạn.</div></div></div>
+   </div>
+</div>
+     </div>
      <div class="iw_component" id="iw_comp1773900973971">
-       <!--ls:begin[component-1773900973971]--><style>#iw_comp1773900973971{}</style><!--- - - -Start 3 Column SVG Stack component- - - - - --><div class="container-fluid here-to-help bg-gray text-center bg-white">
+       <!--ls:begin[component-1773900973971]--><style>#iw_comp1773900973971{}</style><!--- - - -Start 3 Column SVG Stack component- - - - - --><div class="container-fluid here-to-help bg-white text-center">
+   <span class="section-kicker d-flex justify-content-center">Ưu Điểm Dịch Vụ</span>
    <h2 class="uob-h2 content-title mb-0 mb-md-3 mb-lg-6">Vì Sao Chọn Dịch Vụ Này</h2>
-   <h5 class="uob-h5 text-center mb-0 mb-md-3 mb-lg-6"></h5>
-   <div class="row m-0 p-0">
-      <div class="col-12 col-sm-4 content-block d-flex d-sm-block mt-5 pl-0 pr-0 align-items-center"><a href="../../" class="dtm-link  rounded-top-10 img-fluid" anchor_name="chiến lược linh hoạt" target="_self"><img loading="lazy" src="../../../assets/web-resources/images/funds-and-services/uveef/uveef-fund-icon-01.png" alt="Chiến Lược Linh Hoạt"></a><div class="text-left text-sm-center ml-4 ml-sm-0">
-            <h3 class="uob-h6 mt-5 mb-3">Chiến Lược Linh Hoạt</h3>
-            <div><a href="../../" class="dtm-link text-link text-link--bright-blue " anchor_name="tìm hiểu thêm" target="_self">Tìm hiểu thêm</a></div>
+   <div class="row mt-5">
+      <div class="col-12 col-sm-4 mb-5 mb-sm-0 px-3"><div class="svc-why-card"><span class="svc-why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 17L9 11L13 15L21 7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 7H21V13" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3 class="uob-h6 mb-0">Chiến Lược Linh Hoạt</h3>
+            <p class="svc-why-text">Điều chỉnh chiến lược phái sinh linh hoạt theo từng giai đoạn biến động của thị trường.</p>
          </div>
       </div>
-      <div class="col-12 col-sm-4 content-block d-flex d-sm-block mt-5 pl-0 pr-0 align-items-center"><a href="../../" class="dtm-link  rounded-top-10 img-fluid" anchor_name="phòng ngừa rủi ro" target="_self"><img loading="lazy" src="../../../assets/web-resources/images/funds-and-services/uveef/uveef-fund-icon-04.png" alt="Phòng Ngừa Rủi Ro"></a><div class="text-left text-sm-center ml-4 ml-sm-0">
-            <h3 class="uob-h6 mt-5 mb-3">Phòng Ngừa Rủi Ro</h3>
-            <div><a href="../../" class="dtm-link text-link text-link--bright-blue " anchor_name="tìm hiểu thêm" target="_self">Tìm hiểu thêm</a></div>
+      <div class="col-12 col-sm-4 mb-5 mb-sm-0 px-3"><div class="svc-why-card"><span class="svc-why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 22S19 17.9 19 11.5S16.2 2 12 2 5 5.9 5 11.5 12 22 12 22Z" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/><path d="M9 11.5L11 13.5L15.5 9" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3 class="uob-h6 mb-0">Phòng Ngừa Rủi Ro</h3>
+            <p class="svc-why-text">Sử dụng phái sinh như công cụ bảo hiểm, bảo vệ danh mục trước biến động bất lợi.</p>
          </div>
       </div>
-      <div class="col-12 col-sm-4 content-block d-flex d-sm-block mt-5 pl-0 pr-0 align-items-center"><a href="../../../contact-us/" class="dtm-link  rounded-top-10 img-fluid" anchor_name="đội ngũ giao dịch chuyên nghiệp" target="_self"><img loading="lazy" src="../../../assets/web-resources/images/funds-and-services/uveef/uveef-fund-icon-06.png" alt="Đội Ngũ Giao Dịch Chuyên Nghiệp"></a><div class="text-left text-sm-center ml-4 ml-sm-0">
-            <h3 class="uob-h6 mt-5 mb-3">Đội Ngũ Giao Dịch Chuyên Nghiệp</h3>
-            <div><a href="../../../contact-us/" class="dtm-link text-link text-link--bright-blue " anchor_name="tìm hiểu thêm" target="_self">Liên hệ tư vấn</a></div>
+      <div class="col-12 col-sm-4 px-3"><div class="svc-why-card"><span class="svc-why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="9" r="2.6" stroke="#ffffff" stroke-width="2"/><circle cx="16" cy="9" r="2.6" stroke="#ffffff" stroke-width="2"/><path d="M2.5 19C2.5 16 5 13.8 8 13.8C9.4 13.8 10.7 14.3 11.6 15.1M21.5 19C21.5 16 19 13.8 16 13.8C14.6 13.8 13.3 14.3 12.4 15.1" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <h3 class="uob-h6 mb-0">Đội Ngũ Giao Dịch Chuyên Nghiệp</h3>
+            <p class="svc-why-text">Chuyên viên giàu kinh nghiệm, bám sát thị trường và quản trị rủi ro theo thời gian thực.</p>
          </div>
       </div>
    </div>
 </div>
 <!--- - - -End 3 Column SVG Stack Component- - - - - --><!--ls:end[component-1773900973971]-->
      </div>
-    </div> 
+     <div class="iw_component" id="iw_comp_uvdif_cta">
+       <div class="container-fluid">
+   <div class="svc-cta-banner">
+      <span class="section-kicker" style="color:#8ff0c0">Bắt Đầu Ngay</span>
+      <h2 class="uob-h2 mb-3">Sẵn Sàng Tối Ưu Danh Mục Với Công Cụ Phái Sinh?</h2>
+      <p class="paragraph">Liên hệ đội ngũ giao dịch của Vina Group để được tư vấn chiến lược phái sinh phù hợp với mục tiêu đầu tư của bạn.</p>
+      <div class="svc-cta-links">
+         <a class="svc-cta-primary" href="../../../contact-us/">Liên Hệ Tư Vấn</a>
+         <a class="svc-cta-ghost" href="../">Xem Các Dịch Vụ Khác</a>
+      </div>
+   </div>
+</div>
+     </div>
+    </div>
     <div class="iw_component" id="iw_comp1660130786243">
       <!--ls:begin[component-1660130786243]--><style>#iw_comp1660130786243{}</style><div role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" class="rounded-10 uob-cookie cookie-popup" id="cookie-alert">
    <div class="d-sm-flex">

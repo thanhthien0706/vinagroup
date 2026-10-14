@@ -26,7 +26,209 @@
           {
             min-width: 100% !important;
           }
-        </style>
+        
+          /* Tiêu đề các mục: in đậm, dùng font có điểm nhấn thay vì font mảnh mặc định */
+          .uob-h2,
+          .uob-h4,
+          h3.uob-h4 {
+            font-family: "Noto Sans Bold", sans-serif !important;
+            font-weight: 700 !important;
+            letter-spacing: .3px;
+          }
+
+          /* Liên Hệ: thiết kế lại trang, bổ sung section mới */
+          .section-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--primary-light);
+            margin-bottom: 14px;
+          }
+          .section-kicker::before {
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 3px;
+            border-radius: 3px;
+            background: linear-gradient(90deg, #5fae84, #0f6b3f);
+            flex: 0 0 auto;
+          }
+          #carouselExampleIndicators .masthead-dark .overlay {
+            background: linear-gradient(115deg, rgba(7, 58, 32, .88) 0%, rgba(11, 85, 48, .72) 45%, rgba(15, 107, 63, .4) 75%, rgba(34, 160, 107, .14) 100%) !important;
+            display: flex;
+            align-items: center;
+          }
+          .contact-hero-title {
+            font-family: "Noto Sans Bold", sans-serif !important;
+            font-weight: 700 !important;
+            text-shadow: 0 2px 16px rgba(5, 20, 45, .45);
+          }
+
+          /* 3 thẻ thông tin liên hệ */
+          .contact-info-card {
+            position: relative;
+            background: #ffffff;
+            border: 1.5px solid #e5efe9;
+            border-radius: 1rem;
+            padding: 36px 28px;
+            height: 100%;
+            text-align: center;
+            transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+          }
+          .contact-info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 44px rgba(11, 85, 48, .16);
+            border-color: #5fae84;
+          }
+          .contact-info-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+            box-shadow: 0 10px 24px rgba(11, 85, 48, .25);
+            margin-bottom: 20px;
+          }
+
+          /* Form liên hệ */
+          .contact-form-section {
+            padding: 24px 0 64px;
+          }
+          .contact-form-illustration {
+            width: 100%;
+            border-radius: 1rem;
+            box-shadow: 0 24px 50px rgba(11, 85, 48, .18);
+          }
+          .vg-form-group {
+            margin-bottom: 20px;
+          }
+          .vg-form-label {
+            display: block;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+          }
+          .vg-form-control {
+            width: 100%;
+            border: 1.5px solid #dce7e0;
+            border-radius: .6rem;
+            padding: 12px 16px;
+            font-size: 14px;
+            color: #212121;
+            background: #fbfdfc;
+            transition: border-color .25s ease, box-shadow .25s ease;
+          }
+          .vg-form-control:focus {
+            outline: none;
+            border-color: #5fae84;
+            box-shadow: 0 0 0 3px rgba(95, 174, 132, .18);
+            background: #ffffff;
+          }
+          textarea.vg-form-control {
+            resize: vertical;
+            min-height: 120px;
+          }
+          .vg-btn-submit {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            border-radius: 30px;
+            padding: 13px 32px;
+            background: linear-gradient(90deg, #5fae84, #0f6b3f);
+            color: #ffffff;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: .3px;
+            cursor: pointer;
+            transition: transform .3s ease, box-shadow .3s ease;
+          }
+          .vg-btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px rgba(11, 85, 48, .3);
+          }
+          .vg-form-note {
+            font-size: 12.5px;
+            color: var(--gray-600);
+            margin-top: 14px;
+          }
+
+          /* Bản đồ */
+          .contact-map-section {
+            padding: 8px 0 64px;
+          }
+          .contact-map-wrap {
+            width: 100%;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 24px 50px rgba(11, 85, 48, .16);
+            border: 1.5px solid #e5efe9;
+          }
+          .contact-map-wrap iframe {
+            width: 100%;
+            height: 420px;
+            border: 0;
+            display: block;
+          }
+
+          /* FAQ */
+          .contact-faq-section {
+            padding: 8px 0 72px;
+            background: linear-gradient(180deg, #ffffff 0%, #f2faf6 60%, #ffffff 100%);
+          }
+          .faq-item {
+            border: 1.5px solid #e5efe9 !important;
+            border-radius: .85rem !important;
+            overflow: hidden;
+            margin-bottom: 14px;
+            transition: border-color .25s ease;
+          }
+          .faq-item:hover {
+            border-color: #5fae84 !important;
+          }
+          .faq-item .card-header {
+            background: #ffffff;
+            border: 0;
+            padding: 0;
+          }
+          .faq-item .card-header a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 24px;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--primary-dark);
+          }
+          .faq-item .card-header a .faq-icon {
+            flex: 0 0 auto;
+            margin-left: 16px;
+            transition: transform .3s ease;
+          }
+          .faq-item .card-header a.collapsed .faq-icon {
+            transform: rotate(0deg);
+          }
+          .faq-item .card-header a:not(.collapsed) .faq-icon {
+            transform: rotate(45deg);
+          }
+          .faq-item .card-body {
+            padding: 0 24px 22px;
+            color: var(--gray-600);
+            font-size: 14.5px;
+            line-height: 1.6;
+          }
+</style>
 <link href="../assets/iwov-resources/grid/bootstrap/4.0/bootstrap-grid.min.css" type="text/css" rel="stylesheet">
 <!--ls:end[stylesheet]-->
 <!--ls:begin[script]-->
@@ -157,12 +359,12 @@
                               <div class="col-lg">
                                  <h6 class="text-uppercase mega-menu-title">GIỚI THIỆU</h6>
                                  <div class="dropdown-item"><a href="../about-us/corporate-profile/" class="dtm-link text-link" target="_self" anchor_name="header:giới thiệu công ty">Giới Thiệu Công Ty</a></div>
-                                 <div class="dropdown-item"><a href="../about-us/board-of-directors/" class="dtm-link text-link" target="_self" anchor_name="header:hội Đồng quản trị">Hội Đồng Quản Trị</a></div>
-                                 <div class="dropdown-item"><a href="../about-us/management-team/" class="dtm-link text-link" target="_self" anchor_name="header:ban Điều hành">Ban Điều Hành</a></div>
+                                 
+                                 
                                  <div class="dropdown-item"><a href="../about-us/our-investment-philosophy-and-capabilities/" class="dtm-link text-link" target="_self" anchor_name="header:phong cách, triết lý &amp; năng lực Đầu tư">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
-                                 <div class="dropdown-item"><a href="../about-us/careers/" class="dtm-link text-link" target="_self" anchor_name="header:cơ hội nghề nghiệp">Cơ Hội Nghề Nghiệp</a></div>
+                                 
                                  <div class="dropdown-item"><a href="../about-us/partnership/" class="dtm-link text-link" target="_self" anchor_name="header:Đối tác">Đối Tác</a></div>
-                                 <div class="dropdown-item"><a href="../about-us/policy/" class="dtm-link text-link" target="_self" anchor_name="header:quy Định">Quy Định</a></div>
+                                 
                               </div>
                               <div class="col-lg"></div>
                               <div class="col-lg"></div>
@@ -260,12 +462,12 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../contact-us/" target="_self" cla
                                     <div class="split-line--row"></div>
                                     <div class="col-12 pb-4 pt-3">
                                        <div class="dropdown-item"><a href="../about-us/corporate-profile/" class="dtm-link text-link" target="_self">Giới Thiệu Công Ty</a></div>
-                                       <div class="dropdown-item"><a href="../about-us/board-of-directors/" class="dtm-link text-link" target="_self">Hội Đồng Quản Trị</a></div>
-                                       <div class="dropdown-item"><a href="../about-us/management-team/" class="dtm-link text-link" target="_self">Ban Điều Hành</a></div>
+                                       
+                                       
                                        <div class="dropdown-item"><a href="../about-us/our-investment-philosophy-and-capabilities/" class="dtm-link text-link" target="_self">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
-                                       <div class="dropdown-item"><a href="../about-us/careers/" class="dtm-link text-link" target="_self">Cơ Hội Nghề Nghiệp</a></div>
+                                       
                                        <div class="dropdown-item"><a href="../about-us/partnership/" class="dtm-link text-link" target="_self">Đối Tác</a></div>
-                                       <div class="dropdown-item"><a href="../about-us/policy/" class="dtm-link text-link" target="_self">Quy Định</a></div>
+                                       
                                     </div>
                                  </div>
                               </div>
@@ -413,6 +615,14 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../contact-us/" target="_self" cla
       <div class="carousel-item active">
          <div class="jumbotron has-bg-img masthead masthead-dark p-0 mb-0 container-fluid rounded-0 text-left reduced-height">
             <div><img loading="lazy" class="d-md-none bg-img" src="../assets/web-resources/images/contact-us/index/banner-750x900.jpg" alt="Liên Hệ"><img loading="lazy" class="d-none d-md-block bg-img" src="../assets/web-resources/images/contact-us/index/banner-1920x600.jpg" alt="Liên Hệ"></div>
+            <div class="overlay">
+               <div class="row ml-0 mr-0">
+                  <div class="col col-md-7 uob-form masthead-form pr-0">
+                     <span class="section-kicker" style="color:#8ff0c0">Liên Hệ Vina Group</span>
+                     <h1 class="uob-h2 mb-0 contact-hero-title">Chúng Tôi Luôn Sẵn Sàng Lắng Nghe Bạn</h1>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
    </div>
@@ -420,30 +630,107 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../contact-us/" target="_self" cla
      </div> 
      <div class="iw_component" id="iw_comp1776839816665">
        <!--ls:begin[component-1776839816665]--><style>#iw_comp1776839816665{}</style><!--- - - -Start 3 Column SVG Stack component- - - - - --><div class="container-fluid here-to-help bg-gray text-center bg-white">
+   <span class="section-kicker d-flex justify-content-center">Thông Tin Liên Hệ</span>
    <h2 class="uob-h2 content-title mb-0 mb-md-3 mb-lg-6">Liên Hệ</h2>
    <h5 class="uob-h5 text-center mb-0 mb-md-3 mb-lg-6">Chúng tôi luôn sẵn sàng hỗ trợ bạn. Vui lòng điền thông tin vào mẫu bên dưới để gửi câu hỏi hoặc yêu cầu hỗ trợ. Đội ngũ của chúng tôi sẽ phản hồi bạn sớm nhất có thể.</h5>
-   <div class="row m-0 p-0">
-      <div class="col-12 col-sm-4 content-block d-flex d-sm-block mt-5 pl-0 pr-0 align-items-center"><a class="dtm-link rounded-top-10 img-fluid" anchor_name="Địa chỉ" target=""><img loading="lazy" src="../assets/web-resources/images/contact-us/index/location-pin.svg" alt="Địa chỉ"></a><div class="text-left text-sm-center ml-4 ml-sm-0">
-            <h3 class="uob-h6 mt-5 mb-3">Địa chỉ</h3>
-            <p class="paragraph w-sm-70 mx-sm-auto">Tầng 27, Tháp A2, Tòa nhà Viettel,<br>285 Cách mạng tháng 8, phường Hòa Hưng,
-Thành phố Hồ Chí Minh, Việt Nam</p>
+   <div class="row m-0 p-0 mt-5">
+      <div class="col-12 col-sm-4 mb-5 mb-sm-0 px-3">
+         <div class="contact-info-card"><span class="contact-info-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-7.1 7-12.5S16.2 2 12 2 5 4.6 5 9.5 12 22 12 22Z" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.7" stroke="#ffffff" stroke-width="2"/></svg></span>
+            <h3 class="uob-h6 mb-3">Địa Chỉ</h3>
+            <p class="paragraph">Tầng 27, Tháp A2, Tòa nhà Viettel,<br>285 Cách mạng tháng 8, phường Hòa Hưng,<br>Thành phố Hồ Chí Minh, Việt Nam</p>
          </div>
       </div>
-      <div class="col-12 col-sm-4 content-block d-flex d-sm-block mt-5 pl-0 pr-0 align-items-center"><a class="dtm-link rounded-top-10 img-fluid" anchor_name="hotline" target=""><img loading="lazy" src="../assets/web-resources/images/contact-us/index/call.svg" alt="Hotline"></a><div class="text-left text-sm-center ml-4 ml-sm-0">
-            <h3 class="uob-h6 mt-5 mb-3">Hotline</h3>
-            <p class="paragraph w-sm-70 mx-sm-auto"><strong>Điện thoại:</strong> <a href="tel:0772916169">077.291.6169</a></p>
+      <div class="col-12 col-sm-4 mb-5 mb-sm-0 px-3">
+         <div class="contact-info-card"><span class="contact-info-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M3.5 5.5C3.5 4.4 4.4 3.5 5.5 3.5H8.3L10 8L7.6 9.8C8.6 12 10 13.4 12.2 14.4L14 12L18.5 13.7V16.5C18.5 17.6 17.6 18.5 16.5 18.5C9.3 18.5 3.5 12.7 3.5 5.5Z" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/></svg></span>
+            <h3 class="uob-h6 mb-3">Hotline</h3>
+            <p class="paragraph"><strong>Điện thoại:</strong><br><a href="tel:0772916169">077.291.6169</a></p>
          </div>
       </div>
-      <div class="col-12 col-sm-4 content-block d-flex d-sm-block mt-5 pl-0 pr-0 align-items-center"><a class="dtm-link rounded-top-10 img-fluid" anchor_name="email" target=""><img loading="lazy" src="../assets/web-resources/images/contact-us/index/checkbox.svg" alt="Email"></a><div class="text-left text-sm-center ml-4 ml-sm-0">
-            <h3 class="uob-h6 mt-5 mb-3">Email</h3>
-            <p class="paragraph w-sm-70 mx-sm-auto"><a href="mailto:tapdoanvinagroup@gmail.com">tapdoanvinagroup@gmail.com</a></p>
+      <div class="col-12 col-sm-4 mb-5 mb-sm-0 px-3">
+         <div class="contact-info-card"><span class="contact-info-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#ffffff" stroke-width="2"/><path d="M4 7L12 13L20 7" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/></svg></span>
+            <h3 class="uob-h6 mb-3">Email</h3>
+            <p class="paragraph"><a href="mailto:tapdoanvinagroup@gmail.com">tapdoanvinagroup@gmail.com</a></p>
          </div>
       </div>
    </div>
 </div>
-<!--- - - -End 3 Column SVG Stack Component- - - - - --><!--ls:end[component-1776839816665]--> 
-     </div> 
-    </div> 
+<!--- - - -End 3 Column SVG Stack Component- - - - - --><!--ls:end[component-1776839816665]-->
+     </div>
+     <div class="iw_component" id="iw_comp1776839816670">
+       <div class="container-fluid contact-form-section">
+   <div class="row align-items-center">
+      <div class="col-12 col-lg-6 mb-5 mb-lg-0"><img loading="lazy" class="contact-form-illustration" src="../assets/web-resources/images/contact-us/index/contact-form-illustration-green.svg" alt="Gửi yêu cầu liên hệ tới Vina Group"></div>
+      <div class="col-12 col-lg-6">
+         <span class="section-kicker">Gửi Yêu Cầu</span>
+         <h2 class="uob-h2 mb-4">Gửi Yêu Cầu Hỗ Trợ</h2>
+         <form id="vgContactForm" action="#" onsubmit="try{var n=document.getElementById('vgName').value,e=document.getElementById('vgEmail').value,s=document.getElementById('vgSubject').value||'Yêu cầu hỗ trợ từ website',m=document.getElementById('vgMessage').value;window.location.href='mailto:tapdoanvinagroup@gmail.com?subject='+encodeURIComponent(s)+'&amp;body='+encodeURIComponent('Họ tên: '+n+'\nEmail: '+e+'\n\n'+m);}catch(err){} return false;">
+            <div class="vg-form-group">
+               <label class="vg-form-label" for="vgName">Họ và tên</label>
+               <input type="text" class="vg-form-control" id="vgName" placeholder="Nhập họ và tên của bạn" required>
+            </div>
+            <div class="vg-form-group">
+               <label class="vg-form-label" for="vgEmail">Email</label>
+               <input type="email" class="vg-form-control" id="vgEmail" placeholder="email@example.com" required>
+            </div>
+            <div class="vg-form-group">
+               <label class="vg-form-label" for="vgSubject">Chủ đề</label>
+               <input type="text" class="vg-form-control" id="vgSubject" placeholder="Ví dụ: Tư vấn đầu tư, hợp tác...">
+            </div>
+            <div class="vg-form-group">
+               <label class="vg-form-label" for="vgMessage">Nội dung</label>
+               <textarea class="vg-form-control" id="vgMessage" placeholder="Nội dung câu hỏi hoặc yêu cầu của bạn" required></textarea>
+            </div>
+            <button type="submit" class="vg-btn-submit">Gửi Yêu Cầu<svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <p class="vg-form-note">Khi bấm "Gửi Yêu Cầu", ứng dụng email mặc định trên thiết bị của bạn sẽ mở ra với nội dung đã điền sẵn để gửi tới tapdoanvinagroup@gmail.com.</p>
+         </form>
+      </div>
+   </div>
+</div>
+     </div>
+     <div class="iw_component" id="iw_comp1776839816675">
+       <div class="container-fluid contact-map-section">
+   <div class="row justify-content-center content-title">
+      <div class="col-12 text-center"><span class="section-kicker d-inline-flex">Vị Trí Văn Phòng</span></div>
+      <h2 class="col-12 uob-h2 text-center">Tìm Đường Đến Vina Group</h2>
+   </div>
+   <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+         <div class="contact-map-wrap"><iframe loading="lazy" src="https://www.google.com/maps?q=285+Cach+Mang+Thang+8,+Phuong+Hoa+Hung,+Ho+Chi+Minh,+Vietnam&amp;output=embed" allowfullscreen title="Bản đồ văn phòng Vina Group"></iframe></div>
+      </div>
+   </div>
+</div>
+     </div>
+     <div class="iw_component" id="iw_comp1776839816680">
+       <div class="container-fluid contact-faq-section">
+   <div class="row justify-content-center content-title">
+      <div class="col-12 text-center"><span class="section-kicker d-inline-flex">Giải Đáp Thắc Mắc</span></div>
+      <h2 class="col-12 uob-h2 text-center">Câu Hỏi Thường Gặp</h2>
+   </div>
+   <div class="row justify-content-center">
+      <div class="col-12 col-lg-9">
+         <div class="accordion" id="contactFaqAccordion">
+            <div class="card faq-item">
+               <div class="card-header" id="faqHeading1"><a class="collapsed" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">Làm thế nào để trở thành cổ đông hoặc nhà đầu tư cùng Vina Group?<span class="faq-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="#0f6b3f" stroke-width="2.3" stroke-linecap="round"/></svg></span></a></div>
+               <div id="faqCollapse1" class="collapse" aria-labelledby="faqHeading1" data-parent="#contactFaqAccordion"><div class="card-body">Quý khách có thể liên hệ trực tiếp qua hotline hoặc email bên trên, hoặc điền mẫu yêu cầu hỗ trợ để đội ngũ tư vấn của Vina Group liên hệ, hướng dẫn chi tiết về các sản phẩm và điều kiện đầu tư phù hợp.</div></div>
+            </div>
+            <div class="card faq-item">
+               <div class="card-header" id="faqHeading2"><a class="collapsed" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">Vina Group phản hồi yêu cầu hỗ trợ trong bao lâu?<span class="faq-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="#0f6b3f" stroke-width="2.3" stroke-linecap="round"/></svg></span></a></div>
+               <div id="faqCollapse2" class="collapse" aria-labelledby="faqHeading2" data-parent="#contactFaqAccordion"><div class="card-body">Đội ngũ của chúng tôi luôn cố gắng phản hồi các yêu cầu hỗ trợ trong thời gian sớm nhất. Với các yêu cầu khẩn, quý khách vui lòng liên hệ trực tiếp qua hotline 077.291.6169 để được hỗ trợ nhanh chóng hơn.</div></div>
+            </div>
+            <div class="card faq-item">
+               <div class="card-header" id="faqHeading3"><a class="collapsed" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">Tôi có thể đặt lịch gặp trực tiếp tại văn phòng không?<span class="faq-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="#0f6b3f" stroke-width="2.3" stroke-linecap="round"/></svg></span></a></div>
+               <div id="faqCollapse3" class="collapse" aria-labelledby="faqHeading3" data-parent="#contactFaqAccordion"><div class="card-body">Có. Quý khách vui lòng liên hệ trước qua hotline hoặc email để đặt lịch hẹn, giúp đội ngũ Vina Group sắp xếp thời gian và chuyên viên phù hợp đón tiếp quý khách tại Tầng 27, Tháp A2, Tòa nhà Viettel.</div></div>
+            </div>
+            <div class="card faq-item">
+               <div class="card-header" id="faqHeading4"><a class="collapsed" data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">Vina Group có hỗ trợ tư vấn hợp tác đầu tư cho doanh nghiệp không?<span class="faq-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="#0f6b3f" stroke-width="2.3" stroke-linecap="round"/></svg></span></a></div>
+               <div id="faqCollapse4" class="collapse" aria-labelledby="faqHeading4" data-parent="#contactFaqAccordion"><div class="card-body">Có. Vina Group luôn chào đón cơ hội hợp tác với quỹ đầu tư, tổ chức tài chính và doanh nghiệp Pre-IPO tiềm năng. Quý đối tác quan tâm vui lòng gửi yêu cầu qua form liên hệ hoặc tham khảo thêm tại trang Định Hướng Hợp Tác.</div></div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+     </div>
+    </div>
     <div class="iw_component" id="iw_comp1660130786243">
       <!--ls:begin[component-1660130786243]--><style>#iw_comp1660130786243{}</style><div role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" class="rounded-10 uob-cookie cookie-popup" id="cookie-alert">
    <div class="d-sm-flex">

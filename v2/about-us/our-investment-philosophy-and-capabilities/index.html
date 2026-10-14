@@ -26,7 +26,84 @@
           {
             min-width: 100% !important;
           }
-        </style>
+
+          /* Phong Cách Đầu Tư: bố cục ảnh + chữ song song */
+          .style-intro-section {
+            padding: 24px 0 56px;
+          }
+          .style-intro-img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 1rem;
+            box-shadow: 0 24px 50px rgba(11, 85, 48, .18);
+          }
+          .section-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--primary-light);
+            margin-bottom: 14px;
+          }
+          .section-kicker::before {
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 3px;
+            border-radius: 3px;
+            background: linear-gradient(90deg, #5fae84, #0f6b3f);
+            flex: 0 0 auto;
+          }
+
+          /* Triết Lý & Năng Lực Đầu Tư: khung nội dung chuyên nghiệp hơn */
+          .philosophy-card {
+            position: relative;
+            border: 1.5px solid #dcefe4 !important;
+            overflow: hidden;
+            transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+          }
+          .philosophy-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #5fae84, #0f6b3f);
+          }
+          .philosophy-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(11, 85, 48, .16);
+            border-color: #5fae84 !important;
+          }
+          .philosophy-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+            color: #ffffff;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+          }
+        
+          /* Tiêu đề các mục: in đậm, dùng font có điểm nhấn thay vì font mảnh mặc định */
+          .uob-h2,
+          .uob-h4,
+          h3.uob-h4 {
+            font-family: "Noto Sans Bold", sans-serif !important;
+            font-weight: 700 !important;
+            letter-spacing: .3px;
+          }
+</style>
 <link href="../../assets/iwov-resources/grid/bootstrap/4.0/bootstrap-grid.min.css" type="text/css" rel="stylesheet">
 <!--ls:end[stylesheet]-->
 <!--ls:begin[script]-->
@@ -157,12 +234,12 @@
                               <div class="col-lg">
                                  <h6 class="text-uppercase mega-menu-title">GIỚI THIỆU</h6>
                                  <div class="dropdown-item"><a href="../../about-us/corporate-profile/" class="dtm-link text-link" target="_self" anchor_name="header:giới thiệu công ty">Giới Thiệu Công Ty</a></div>
-                                 <div class="dropdown-item"><a href="../../about-us/board-of-directors/" class="dtm-link text-link" target="_self" anchor_name="header:hội Đồng quản trị">Hội Đồng Quản Trị</a></div>
-                                 <div class="dropdown-item"><a href="../../about-us/management-team/" class="dtm-link text-link" target="_self" anchor_name="header:ban Điều hành">Ban Điều Hành</a></div>
+                                 
+                                 
                                  <div class="dropdown-item"><a href="../../about-us/our-investment-philosophy-and-capabilities/" class="dtm-link text-link" target="_self" anchor_name="header:phong cách, triết lý &amp; năng lực Đầu tư">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
-                                 <div class="dropdown-item"><a href="../../about-us/careers/" class="dtm-link text-link" target="_self" anchor_name="header:cơ hội nghề nghiệp">Cơ Hội Nghề Nghiệp</a></div>
+                                 
                                  <div class="dropdown-item"><a href="../../about-us/partnership/" class="dtm-link text-link" target="_self" anchor_name="header:Đối tác">Đối Tác</a></div>
-                                 <div class="dropdown-item"><a href="../../about-us/policy/" class="dtm-link text-link" target="_self" anchor_name="header:quy Định">Quy Định</a></div>
+                                 
                               </div>
                               <div class="col-lg"></div>
                               <div class="col-lg"></div>
@@ -260,12 +337,12 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../../contact-us/" target="_self" 
                                     <div class="split-line--row"></div>
                                     <div class="col-12 pb-4 pt-3">
                                        <div class="dropdown-item"><a href="../../about-us/corporate-profile/" class="dtm-link text-link" target="_self">Giới Thiệu Công Ty</a></div>
-                                       <div class="dropdown-item"><a href="../../about-us/board-of-directors/" class="dtm-link text-link" target="_self">Hội Đồng Quản Trị</a></div>
-                                       <div class="dropdown-item"><a href="../../about-us/management-team/" class="dtm-link text-link" target="_self">Ban Điều Hành</a></div>
+                                       
+                                       
                                        <div class="dropdown-item"><a href="../../about-us/our-investment-philosophy-and-capabilities/" class="dtm-link text-link" target="_self">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
-                                       <div class="dropdown-item"><a href="../../about-us/careers/" class="dtm-link text-link" target="_self">Cơ Hội Nghề Nghiệp</a></div>
+                                       
                                        <div class="dropdown-item"><a href="../../about-us/partnership/" class="dtm-link text-link" target="_self">Đối Tác</a></div>
-                                       <div class="dropdown-item"><a href="../../about-us/policy/" class="dtm-link text-link" target="_self">Quy Định</a></div>
+                                       
                                     </div>
                                  </div>
                               </div>
@@ -419,37 +496,41 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../../contact-us/" target="_self" 
 </div><!--ls:end[component-1773900973713]--> 
      </div> 
      <div class="iw_component" id="iw_comp1773900973714">
-       <!--ls:begin[component-1773900973714]--><style>#iw_comp1773900973714{}</style><div class="" id="">
-<div><div class="" id="introduction">
-<div>
+       <!--ls:begin[component-1773900973714]--><style>#iw_comp1773900973714{}</style><div class="container-fluid style-intro-section">
+   <div class="row align-items-center">
+      <div class="col-12 col-lg-6">
+         <span class="section-kicker">Phong Cách Đầu Tư</span>
+         <h2 class="uob-h2 mb-4" style="text-align: left;">Phong Cách Đầu Tư</h2>
+         <p class="paragraph" style="text-align: left;">Tại CÔNG TY CỔ PHẦN TẬP ĐOÀN VINA GROUP, chúng tôi tin rằng một quy trình nghiên cứu đầu tư nghiêm túc và có kỷ luật là nền tảng để mang lại lợi nhuận đầu tư lâu dài và ổn định cho cổ đông, khách hàng. Với đội ngũ chuyên gia tài chính giàu kinh nghiệm thực chiến, chúng tôi xây dựng chiến lược đầu tư minh bạch, bám sát diễn biến thị trường và quản trị rủi ro chặt chẽ trong từng quyết định.</p>
+      </div>
+      <div class="col-12 col-lg-6 mt-5 mt-lg-0"><img loading="lazy" class="img-fluid style-intro-img" src="../../assets/web-resources/images/about-us/shareholder-investment/phong-cach-dau-tu-green.svg" alt="Phong cách đầu tư của Vina Group"></div>
+   </div>
+</div>
+<div class="container-fluid pb-6">
 <div class="uob-table-carousel pb-0">
-<h2 class="uob-h2 pb-5" style="text-align: center;">Phong Cách Đầu Tư</h2>
-<p style="text-align: left;">Tại CÔNG TY CỔ PHẦN TẬP ĐOÀN VINA GROUP, chúng tôi tin rằng một quy trình nghiên cứu đầu tư nghiêm túc và có kỷ luật là nền tảng để mang lại lợi nhuận đầu tư lâu dài và ổn định cho cổ đông, khách hàng. Với đội ngũ chuyên gia tài chính giàu kinh nghiệm thực chiến, chúng tôi xây dựng chiến lược đầu tư minh bạch, bám sát diễn biến thị trường và quản trị rủi ro chặt chẽ trong từng quyết định.</p>
-<br>
+<span class="section-kicker d-flex justify-content-center">Năng Lực</span>
 <h2 class="uob-h2 pb-5" style="text-align: center;">Triết Lý &amp; Năng Lực Đầu Tư</h2>
 <div class="row">
    <div class="col-12 col-md-6 col-lg-4 mb-5">
-      <div class="card rounded-10 h-100"><div class="card-body p-6"><h4 class="card-title uob-h4 mb-3">Đầu Tư Tự Doanh</h4><p class="paragraph">Quản lý đầu tư, tối ưu lợi nhuận và kiểm soát rủi ro.</p></div></div>
+      <div class="card philosophy-card rounded-10 h-100"><div class="card-body p-6"><span class="philosophy-badge">01</span><h4 class="card-title uob-h4 mb-3 mt-3">Đầu Tư Tự Doanh</h4><p class="paragraph">Quản lý đầu tư, tối ưu lợi nhuận và kiểm soát rủi ro.</p></div></div>
    </div>
    <div class="col-12 col-md-6 col-lg-4 mb-5">
-      <div class="card rounded-10 h-100"><div class="card-body p-6"><h4 class="card-title uob-h4 mb-3">Tư Vấn Quản Lý Doanh Nghiệp</h4><p class="paragraph">Xây dựng chiến lược bền vững, tối ưu vận hành và quản trị.</p></div></div>
+      <div class="card philosophy-card rounded-10 h-100"><div class="card-body p-6"><span class="philosophy-badge">02</span><h4 class="card-title uob-h4 mb-3 mt-3">Tư Vấn Quản Lý Doanh Nghiệp</h4><p class="paragraph">Xây dựng chiến lược bền vững, tối ưu vận hành và quản trị.</p></div></div>
    </div>
    <div class="col-12 col-md-6 col-lg-4 mb-5">
-      <div class="card rounded-10 h-100"><div class="card-body p-6"><h4 class="card-title uob-h4 mb-3">Tự Doanh Cổ Phiếu</h4><p class="paragraph">Giao dịch cổ phiếu sâu, phân tích kỹ thuật và quản trị rủi ro.</p></div></div>
+      <div class="card philosophy-card rounded-10 h-100"><div class="card-body p-6"><span class="philosophy-badge">03</span><h4 class="card-title uob-h4 mb-3 mt-3">Tự Doanh Cổ Phiếu</h4><p class="paragraph">Giao dịch cổ phiếu sâu, phân tích kỹ thuật và quản trị rủi ro.</p></div></div>
    </div>
    <div class="col-12 col-md-6 col-lg-4 mb-5">
-      <div class="card rounded-10 h-100"><div class="card-body p-6"><h4 class="card-title uob-h4 mb-3">Tự Doanh Trái Phiếu</h4><p class="paragraph">Đầu tư trái phiếu an toàn, tối ưu lợi suất và quản lý rủi ro.</p></div></div>
+      <div class="card philosophy-card rounded-10 h-100"><div class="card-body p-6"><span class="philosophy-badge">04</span><h4 class="card-title uob-h4 mb-3 mt-3">Tự Doanh Trái Phiếu</h4><p class="paragraph">Đầu tư trái phiếu an toàn, tối ưu lợi suất và quản lý rủi ro.</p></div></div>
    </div>
    <div class="col-12 col-md-6 col-lg-4 mb-5">
-      <div class="card rounded-10 h-100"><div class="card-body p-6"><h4 class="card-title uob-h4 mb-3">Tự Doanh Phái Sinh</h4><p class="paragraph">Giao dịch phái sinh linh hoạt, phòng ngừa rủi ro và tối ưu lợi nhuận.</p></div></div>
+      <div class="card philosophy-card rounded-10 h-100"><div class="card-body p-6"><span class="philosophy-badge">05</span><h4 class="card-title uob-h4 mb-3 mt-3">Tự Doanh Phái Sinh</h4><p class="paragraph">Giao dịch phái sinh linh hoạt, phòng ngừa rủi ro và tối ưu lợi nhuận.</p></div></div>
    </div>
    <div class="col-12 col-md-6 col-lg-4 mb-5">
-      <div class="card rounded-10 h-100"><div class="card-body p-6"><h4 class="card-title uob-h4 mb-3">Nghiên Cứu &amp; Phân Tích Thị Trường</h4><p class="paragraph">Phân tích xu hướng thị trường, cung cấp insight và dự báo chiến lược.</p></div></div>
+      <div class="card philosophy-card rounded-10 h-100"><div class="card-body p-6"><span class="philosophy-badge">06</span><h4 class="card-title uob-h4 mb-3 mt-3">Nghiên Cứu &amp; Phân Tích Thị Trường</h4><p class="paragraph">Phân tích xu hướng thị trường, cung cấp insight và dự báo chiến lược.</p></div></div>
    </div>
 </div>
 </div>
-</div>
-</div></div>
 </div>
 <!--ls:end[component-1773900973714]--> 
      </div> 

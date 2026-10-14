@@ -26,7 +26,224 @@
           {
             min-width: 100% !important;
           }
-        </style>
+        
+          /* Tiêu đề các mục: in đậm, dùng font có điểm nhấn thay vì font mảnh mặc định */
+          .uob-h2,
+          .uob-h4,
+          h3.uob-h4 {
+            font-family: "Noto Sans Bold", sans-serif !important;
+            font-weight: 700 !important;
+            letter-spacing: .3px;
+          }
+
+          /* Giới Thiệu: thiết kế lại, bổ sung section mới */
+          .section-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--primary-light);
+            margin-bottom: 14px;
+          }
+          .section-kicker::before {
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 3px;
+            border-radius: 3px;
+            background: linear-gradient(90deg, #5fae84, #0f6b3f);
+            flex: 0 0 auto;
+          }
+          #carouselExampleIndicators .masthead-dark .overlay {
+            background: linear-gradient(115deg, rgba(7, 58, 32, .88) 0%, rgba(11, 85, 48, .72) 45%, rgba(15, 107, 63, .4) 75%, rgba(34, 160, 107, .14) 100%) !important;
+            display: flex;
+            align-items: center;
+          }
+          .au-hero-title {
+            font-family: "Noto Sans Bold", sans-serif !important;
+            font-weight: 700 !important;
+            text-shadow: 0 2px 16px rgba(5, 20, 45, .45);
+          }
+
+          /* 3 thẻ Giới Thiệu */
+          .au-nav-section {
+            padding: 16px 0 60px;
+          }
+          .au-nav-card {
+            display: block;
+            background: #ffffff;
+            border: 1.5px solid #e5efe9;
+            border-radius: 1rem;
+            padding: 36px 28px;
+            height: 100%;
+            text-align: center;
+            transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+          }
+          .au-nav-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 44px rgba(11, 85, 48, .16);
+            border-color: #5fae84;
+          }
+          .au-nav-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+            box-shadow: 0 10px 24px rgba(11, 85, 48, .25);
+            margin-bottom: 20px;
+            transition: transform .35s ease;
+          }
+          .au-nav-card:hover .au-nav-icon {
+            transform: scale(1.08) rotate(-4deg);
+          }
+          .au-nav-card .au-nav-desc {
+            font-size: 14px;
+            color: var(--gray-600);
+            margin: 10px 0 16px;
+            line-height: 1.55;
+          }
+          .au-nav-card .au-nav-link {
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 13.5px;
+            color: var(--primary-dark);
+          }
+
+          /* Giá Trị Cốt Lõi */
+          .au-values-section {
+            padding: 8px 0 60px;
+            background: linear-gradient(180deg, #ffffff 0%, #f2faf6 60%, #ffffff 100%);
+          }
+          .au-value-card {
+            text-align: center;
+            padding: 28px 20px;
+            height: 100%;
+          }
+          .au-value-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+            margin-bottom: 18px;
+          }
+          .au-value-title {
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+          }
+          .au-value-text {
+            font-size: 13.5px;
+            color: var(--gray-600);
+            line-height: 1.55;
+          }
+
+          /* Tại Sao Chọn Vina Group */
+          .au-why-section {
+            padding: 8px 0 60px;
+          }
+          .au-why-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            background: #ffffff;
+            border: 1.5px solid #e5efe9;
+            border-radius: .9rem;
+            padding: 24px;
+            height: 100%;
+            transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+          }
+          .au-why-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px rgba(11, 85, 48, .14);
+            border-color: #5fae84;
+          }
+          .au-why-icon {
+            flex: 0 0 auto;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+          }
+          .au-why-title {
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 15.5px;
+            color: var(--primary-dark);
+            margin-bottom: 6px;
+          }
+          .au-why-text {
+            font-size: 13.5px;
+            color: var(--gray-600);
+            line-height: 1.55;
+          }
+
+          /* CTA cuối trang */
+          .au-cta-banner {
+            margin: 8px 0 64px;
+            padding: 52px 36px;
+            border-radius: 1.2rem;
+            background: linear-gradient(115deg, #052d19 0%, #0b5530 45%, #22a06b 100%);
+            text-align: center;
+            color: #ffffff;
+          }
+          .au-cta-banner h2 {
+            color: #ffffff !important;
+          }
+          .au-cta-banner p {
+            color: rgba(255,255,255,.85);
+            max-width: 620px;
+            margin: 0 auto 26px;
+          }
+          .au-cta-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+          }
+          .au-cta-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 30px;
+            border-radius: 30px;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            transition: background .3s ease, transform .3s ease, color .3s ease;
+          }
+          .au-cta-links a.au-cta-primary {
+            background: #ffffff;
+            color: #0b5530;
+          }
+          .au-cta-links a.au-cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px rgba(0,0,0,.2);
+          }
+          .au-cta-links a.au-cta-ghost {
+            background: rgba(255,255,255,.12);
+            border: 1.5px solid rgba(255,255,255,.4);
+            color: #ffffff;
+          }
+          .au-cta-links a.au-cta-ghost:hover {
+            background: rgba(255,255,255,.22);
+            transform: translateY(-3px);
+          }
+</style>
 <link href="../assets/iwov-resources/grid/bootstrap/4.0/bootstrap-grid.min.css" type="text/css" rel="stylesheet">
 <!--ls:end[stylesheet]-->
 <!--ls:begin[script]-->
@@ -157,12 +374,12 @@
                               <div class="col-lg">
                                  <h6 class="text-uppercase mega-menu-title">GIỚI THIỆU</h6>
                                  <div class="dropdown-item"><a href="../about-us/corporate-profile/" class="dtm-link text-link" target="_self" anchor_name="header:giới thiệu công ty">Giới Thiệu Công Ty</a></div>
-                                 <div class="dropdown-item"><a href="../about-us/board-of-directors/" class="dtm-link text-link" target="_self" anchor_name="header:hội Đồng quản trị">Hội Đồng Quản Trị</a></div>
-                                 <div class="dropdown-item"><a href="../about-us/management-team/" class="dtm-link text-link" target="_self" anchor_name="header:ban Điều hành">Ban Điều Hành</a></div>
+                                 
+                                 
                                  <div class="dropdown-item"><a href="../about-us/our-investment-philosophy-and-capabilities/" class="dtm-link text-link" target="_self" anchor_name="header:phong cách, triết lý &amp; năng lực Đầu tư">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
-                                 <div class="dropdown-item"><a href="../about-us/careers/" class="dtm-link text-link" target="_self" anchor_name="header:cơ hội nghề nghiệp">Cơ Hội Nghề Nghiệp</a></div>
+                                 
                                  <div class="dropdown-item"><a href="../about-us/partnership/" class="dtm-link text-link" target="_self" anchor_name="header:Đối tác">Đối Tác</a></div>
-                                 <div class="dropdown-item"><a href="../about-us/policy/" class="dtm-link text-link" target="_self" anchor_name="header:quy Định">Quy Định</a></div>
+                                 
                               </div>
                               <div class="col-lg"></div>
                               <div class="col-lg"></div>
@@ -260,12 +477,12 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../contact-us/" target="_self" cla
                                     <div class="split-line--row"></div>
                                     <div class="col-12 pb-4 pt-3">
                                        <div class="dropdown-item"><a href="../about-us/corporate-profile/" class="dtm-link text-link" target="_self">Giới Thiệu Công Ty</a></div>
-                                       <div class="dropdown-item"><a href="../about-us/board-of-directors/" class="dtm-link text-link" target="_self">Hội Đồng Quản Trị</a></div>
-                                       <div class="dropdown-item"><a href="../about-us/management-team/" class="dtm-link text-link" target="_self">Ban Điều Hành</a></div>
+                                       
+                                       
                                        <div class="dropdown-item"><a href="../about-us/our-investment-philosophy-and-capabilities/" class="dtm-link text-link" target="_self">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
-                                       <div class="dropdown-item"><a href="../about-us/careers/" class="dtm-link text-link" target="_self">Cơ Hội Nghề Nghiệp</a></div>
+                                       
                                        <div class="dropdown-item"><a href="../about-us/partnership/" class="dtm-link text-link" target="_self">Đối Tác</a></div>
-                                       <div class="dropdown-item"><a href="../about-us/policy/" class="dtm-link text-link" target="_self">Quy Định</a></div>
+                                       
                                     </div>
                                  </div>
                               </div>
@@ -415,9 +632,9 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../contact-us/" target="_self" cla
             <div><img loading="lazy" class="d-md-none bg-img" src="../assets/web-resources/images/about-us/index/about-us-2026-phone.jpg" alt=""><img loading="lazy" class="d-none d-md-block bg-img" src="../assets/web-resources/images/about-us/index/about-us-2026.jpg" alt=""></div>
             <div class="overlay">
                <div class="row ml-0 mr-0">
-                  <div class="col col-md-6 uob-form masthead-form pr-0">
-                     <h1 class="uob-h2 mb-md-5">Tập Đoàn Tài Chính Hàng Đầu Việt Nam</h1>
-                     <div></div>
+                  <div class="col col-md-7 uob-form masthead-form pr-0">
+                     <span class="section-kicker" style="color:#8ff0c0">Khám Phá Vina Group</span>
+                     <h1 class="uob-h2 mb-0 au-hero-title">Tập Đoàn Tài Chính Hàng Đầu Việt Nam</h1>
                   </div>
                </div>
             </div>
@@ -427,45 +644,80 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../contact-us/" target="_self" cla
 </div><!--ls:end[component-1773900973450]--> 
      </div> 
      <div class="iw_component" id="iw_comp1773900973454">
-       <!--ls:begin[component-1773900973454]--><style>#iw_comp1773900973454{}</style><!--- - - -Start 3 Column SVG Stack component- - - - - --><div class="container-fluid here-to-help bg-gray text-center bg-white">
+       <!--ls:begin[component-1773900973454]--><style>#iw_comp1773900973454{}</style><!--- - - -Start 3 Column SVG Stack component- - - - - --><div class="container-fluid here-to-help bg-white text-center au-nav-section">
+   <span class="section-kicker d-flex justify-content-center">Tìm Hiểu Về Chúng Tôi</span>
    <h2 class="uob-h2 content-title mb-0 mb-md-3 mb-lg-6">Giới Thiệu</h2>
-   <h5 class="uob-h5 text-center mb-0 mb-md-3 mb-lg-6"></h5>
-   <div class="row m-0 p-0">
-      <div class="col-12 col-sm-4 content-block d-flex d-sm-block mt-5 pl-0 pr-0 align-items-center"><a href="corporate-profile/" class="dtm-link  rounded-top-10 img-fluid" anchor_name="giới thiệu công ty" target="_self"><img loading="lazy" src="../assets/web-resources/images/about-us/index/about-us-1.png" alt="Giới Thiệu Công Ty"></a><div class="text-left text-sm-center ml-4 ml-sm-0">
-            <h3 class="uob-h6 mt-5 mb-3">Giới Thiệu Công Ty</h3>
-            <div><a href="corporate-profile/" class="dtm-link text-link text-link--bright-blue " anchor_name="tìm hiểu thêm" target="_self">Tìm hiểu thêm</a></div>
-         </div>
+   <h5 class="uob-h5 text-center mb-0 mb-md-3 mb-lg-6">Khám phá hành trình, triết lý đầu tư và mạng lưới hợp tác đã làm nên một Vina Group minh bạch, chuyên nghiệp và đáng tin cậy.</h5>
+   <div class="row m-0 p-0 mt-5">
+      <div class="col-12 col-sm-4 mb-5 mb-sm-0 px-3"><a href="corporate-profile/" class="dtm-link au-nav-card" anchor_name="giới thiệu công ty" target="_self"><span class="au-nav-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 21V5C4 3.9 4.9 3 6 3H14C15.1 3 16 3.9 16 5V21" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/><path d="M16 11H18C19.1 11 20 11.9 20 13V21" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/><path d="M8 7H12M8 11H12M8 15H12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <h3 class="uob-h6 mb-0">Giới Thiệu Công Ty</h3>
+            <p class="au-nav-desc">Hành trình hình thành, tầm nhìn và sứ mệnh của Vina Group trên thị trường tài chính Việt Nam.</p>
+            <span class="au-nav-link">Tìm hiểu thêm →</span>
+         </a>
       </div>
-      <div class="col-12 col-sm-4 content-block d-flex d-sm-block mt-5 pl-0 pr-0 align-items-center"><a href="board-of-directors/" class="dtm-link  rounded-top-10 img-fluid" anchor_name="hội Đồng quản trị" target="_self"><img loading="lazy" src="../assets/web-resources/images/about-us/index/about-us-2.png" alt="Hội Đồng Quản Trị"></a><div class="text-left text-sm-center ml-4 ml-sm-0">
-            <h3 class="uob-h6 mt-5 mb-3">Hội Đồng Quản Trị</h3>
-            <div><a href="board-of-directors/" class="dtm-link text-link text-link--bright-blue " anchor_name="tìm hiểu thêm" target="_self">Tìm hiểu thêm</a></div>
-         </div>
+      <div class="col-12 col-sm-4 mb-5 mb-sm-0 px-3"><a href="our-investment-philosophy-and-capabilities/" class="dtm-link au-nav-card" anchor_name="phong cách, triết lý &amp; năng lực Đầu tư" target="_self"><span class="au-nav-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#ffffff" stroke-width="2"/><path d="M15.5 8.5L13 13L8.5 15.5L11 11L15.5 8.5Z" fill="#ffffff"/></svg></span>
+            <h3 class="uob-h6 mb-0">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</h3>
+            <p class="au-nav-desc">Quy trình nghiên cứu kỷ luật và năng lực chuyên môn đứng sau mỗi quyết định đầu tư.</p>
+            <span class="au-nav-link">Tìm hiểu thêm →</span>
+         </a>
       </div>
-      <div class="col-12 col-sm-4 content-block d-flex d-sm-block mt-5 pl-0 pr-0 align-items-center"><a href="management-team/" class="dtm-link  rounded-top-10 img-fluid" anchor_name="ban Điều hành" target="_self"><img loading="lazy" src="../assets/web-resources/images/about-us/index/about-us-3.png" alt="Ban Điều Hành"></a><div class="text-left text-sm-center ml-4 ml-sm-0">
-            <h3 class="uob-h6 mt-5 mb-3">Ban Điều Hành</h3>
-            <div><a href="management-team/" class="dtm-link text-link text-link--bright-blue " anchor_name="tìm hiểu thêm" target="_self">Tìm hiểu thêm</a></div>
-         </div>
-      </div>
-      <div class="col-12 col-sm-4 content-block d-flex d-sm-block mt-5 pl-0 pr-0 align-items-center"><a href="shareholder-investment-capabilities/" class="dtm-link  rounded-top-10 img-fluid" anchor_name="phong cách, triết lý &amp; năng lực Đầu tư" target="_self"><img loading="lazy" src="../assets/web-resources/images/about-us/index/about-us-4.png" alt="Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư"></a><div class="text-left text-sm-center ml-4 ml-sm-0">
-            <h3 class="uob-h6 mt-5 mb-3">Phong Cách, Triết Lý & Năng Lực Đầu Tư</h3>
-            <div><a href="shareholder-investment-capabilities/" class="dtm-link text-link text-link--bright-blue " anchor_name="tìm hiểu thêm" target="_self">Tìm hiểu thêm</a></div>
-         </div>
-      </div>
-      <div class="col-12 col-sm-4 content-block d-flex d-sm-block mt-5 pl-0 pr-0 align-items-center"><a href="partnership/" class="dtm-link  rounded-top-10 img-fluid" anchor_name="Đối tác" target="_self"><img loading="lazy" src="../assets/web-resources/images/about-us/index/about-us-5.png" alt="Đối Tác"></a><div class="text-left text-sm-center ml-4 ml-sm-0">
-            <h3 class="uob-h6 mt-5 mb-3">Đối Tác</h3>
-            <div><a href="partnership/" class="dtm-link text-link text-link--bright-blue " anchor_name="tìm hiểu thêm" target="_self">Tìm hiểu thêm</a></div>
-         </div>
-      </div>
-      <div class="col-12 col-sm-4 content-block d-flex d-sm-block mt-5 pl-0 pr-0 align-items-center"><a href="careers/" class="dtm-link  rounded-top-10 img-fluid" anchor_name="cơ hội nghề nghiệp" target="_self"><img loading="lazy" src="../assets/web-resources/images/about-us/index/about-us-6.png" alt="Cơ Hội Nghề Nghiệp"></a><div class="text-left text-sm-center ml-4 ml-sm-0">
-            <h3 class="uob-h6 mt-5 mb-3">Cơ Hội Nghề Nghiệp</h3>
-            <div><a href="careers/" class="dtm-link text-link text-link--bright-blue " anchor_name="tìm hiểu thêm" target="_self">Tìm hiểu thêm</a></div>
-         </div>
+      <div class="col-12 col-sm-4 mb-5 mb-sm-0 px-3"><a href="partnership/" class="dtm-link au-nav-card" anchor_name="Đối tác" target="_self"><span class="au-nav-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="9" r="2.6" stroke="#ffffff" stroke-width="2"/><circle cx="16" cy="9" r="2.6" stroke="#ffffff" stroke-width="2"/><path d="M2.5 19C2.5 16 5 13.8 8 13.8C9.4 13.8 10.7 14.3 11.6 15.1M21.5 19C21.5 16 19 13.8 16 13.8C14.6 13.8 13.3 14.3 12.4 15.1" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <h3 class="uob-h6 mb-0">Đối Tác</h3>
+            <p class="au-nav-desc">Hệ sinh thái hợp tác cùng ngân hàng, công ty chứng khoán và nền tảng fintech uy tín.</p>
+            <span class="au-nav-link">Tìm hiểu thêm →</span>
+         </a>
       </div>
    </div>
 </div>
-<!--- - - -End 3 Column SVG Stack Component- - - - - --><!--ls:end[component-1773900973454]--> 
-     </div> 
-    </div> 
+<!--- - - -End 3 Column SVG Stack Component- - - - - --><!--ls:end[component-1773900973454]-->
+     </div>
+     <div class="iw_component" id="iw_comp_au_values">
+       <div class="container-fluid au-values-section">
+   <div class="row justify-content-center">
+      <div class="col-12 text-center"><span class="section-kicker d-inline-flex">Nền Tảng Cốt Lõi</span></div>
+   </div>
+   <div class="row justify-content-center content-title">
+      <h2 class="col-12 uob-h2 text-center">Giá Trị Cốt Lõi</h2>
+      <div class="col-12 col-md-8 text-center"><p class="paragraph">Bốn giá trị dẫn lối mọi quyết định và hành động của Vina Group trên hành trình đồng hành cùng cổ đông và khách hàng.</p></div>
+   </div>
+   <div class="row">
+      <div class="col-6 col-md-3 mb-5 mb-md-0"><div class="au-value-card"><span class="au-value-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2L19 5.5V11C19 16 16 19.5 12 21C8 19.5 5 16 5 11V5.5L12 2Z" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/></svg></span><div class="au-value-title">Uy Tín</div><div class="au-value-text">Cam kết thực hiện đúng những gì đã hứa với cổ đông và khách hàng.</div></div></div>
+      <div class="col-6 col-md-3 mb-5 mb-md-0"><div class="au-value-card"><span class="au-value-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#ffffff" stroke-width="2"/><path d="M12 8V12L15 14" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="au-value-title">Minh Bạch</div><div class="au-value-text">Công bố thông tin rõ ràng, kịp thời trong mọi hoạt động đầu tư.</div></div></div>
+      <div class="col-6 col-md-3"><div class="au-value-card"><span class="au-value-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2" stroke="#ffffff" stroke-width="2"/><path d="M8 7V5C8 3.9 8.9 3 10 3H14C15.1 3 16 3.9 16 5V7" stroke="#ffffff" stroke-width="2"/></svg></span><div class="au-value-title">Chuyên Nghiệp</div><div class="au-value-text">Đội ngũ chuyên gia giàu kinh nghiệm, quy trình quản trị rủi ro chặt chẽ.</div></div></div>
+      <div class="col-6 col-md-3"><div class="au-value-card"><span class="au-value-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 20 16.5 20 10C20 6.7 17.5 4.5 14.8 4.5C13.6 4.5 12.5 5 12 6C11.5 5 10.4 4.5 9.2 4.5C6.5 4.5 4 6.7 4 10C4 16.5 12 21 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/></svg></span><div class="au-value-title">Tận Tâm</div><div class="au-value-text">Lấy lợi ích lâu dài của cổ đông và khách hàng làm trọng tâm phục vụ.</div></div></div>
+   </div>
+</div>
+     </div>
+     <div class="iw_component" id="iw_comp_au_why">
+       <div class="container-fluid au-why-section">
+   <div class="row justify-content-center">
+      <div class="col-12 text-center"><span class="section-kicker d-inline-flex">Lý Do Lựa Chọn</span></div>
+   </div>
+   <div class="row justify-content-center content-title">
+      <h2 class="col-12 uob-h2 text-center">Vì Sao Chọn Vina Group</h2>
+   </div>
+   <div class="row">
+      <div class="col-12 col-md-6 mb-4"><div class="au-why-card"><span class="au-why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 19V11M4 11L2 11M4 11L6 11M11 19V5M11 5L9 5M11 5L13 5M18 19V13M18 13L16 13M18 13L20 13" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span><div><div class="au-why-title">Cơ Hội Đầu Tư Pre-IPO Chất Lượng</div><div class="au-why-text">Tiếp cận các cơ hội đầu tư trước niêm yết được chọn lọc kỹ lưỡng, kể cả với nhà đầu tư vốn hạn chế.</div></div></div></div>
+      <div class="col-12 col-md-6 mb-4"><div class="au-why-card"><span class="au-why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 22S19 17.9 19 11.5S16.2 2 12 2 5 5.9 5 11.5 12 22 12 22Z" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/><path d="M9 11.5L11 13.5L15.5 9" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="au-why-title">Quản Trị Rủi Ro Chặt Chẽ</div><div class="au-why-text">Quy trình thẩm định và kiểm soát rủi ro nghiêm ngặt trong từng quyết định đầu tư.</div></div></div></div>
+      <div class="col-12 col-md-6 mb-4 mb-md-0"><div class="au-why-card"><span class="au-why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="9" r="2.6" stroke="#ffffff" stroke-width="2"/><circle cx="16" cy="9" r="2.6" stroke="#ffffff" stroke-width="2"/><path d="M2.5 19C2.5 16 5 13.8 8 13.8C9.4 13.8 10.7 14.3 11.6 15.1M21.5 19C21.5 16 19 13.8 16 13.8C14.6 13.8 13.3 14.3 12.4 15.1" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span><div><div class="au-why-title">Đội Ngũ Chuyên Gia Giàu Kinh Nghiệm</div><div class="au-why-text">Chuyên viên tài chính thực chiến, am hiểu sâu sắc thị trường chứng khoán Việt Nam.</div></div></div></div>
+      <div class="col-12 col-md-6"><div class="au-why-card"><span class="au-why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 21V5C4 3.9 4.9 3 6 3H14C15.1 3 16 3.9 16 5V21" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/><path d="M16 11H18C19.1 11 20 11.9 20 13V21" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/></svg></span><div><div class="au-why-title">Hệ Sinh Thái Đối Tác Rộng Khắp</div><div class="au-why-text">Mạng lưới hợp tác cùng ngân hàng, công ty chứng khoán và nền tảng fintech uy tín.</div></div></div></div>
+   </div>
+</div>
+     </div>
+     <div class="iw_component" id="iw_comp_au_cta">
+       <div class="container-fluid">
+   <div class="au-cta-banner">
+      <span class="section-kicker" style="color:#8ff0c0">Sẵn Sàng Đồng Hành</span>
+      <h2 class="uob-h2 mb-3">Bắt Đầu Hành Trình Đầu Tư Cùng Vina Group</h2>
+      <p class="paragraph">Khám phá các giải pháp đầu tư phù hợp với mục tiêu tài chính của bạn, hoặc liên hệ đội ngũ chuyên gia để được tư vấn chi tiết.</p>
+      <div class="au-cta-links">
+         <a class="au-cta-primary" href="../funds-and-services/">Khám Phá Dịch Vụ Đầu Tư</a>
+         <a class="au-cta-ghost" href="../contact-us/">Liên Hệ Tư Vấn</a>
+      </div>
+   </div>
+</div>
+     </div>
+    </div>
     <div class="iw_component" id="iw_comp1660130786243">
       <!--ls:begin[component-1660130786243]--><style>#iw_comp1660130786243{}</style><div role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" class="rounded-10 uob-cookie cookie-popup" id="cookie-alert">
    <div class="d-sm-flex">

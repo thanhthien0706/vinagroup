@@ -26,7 +26,244 @@
           {
             min-width: 100% !important;
           }
-        </style>
+        
+          /* Tiêu đề các mục: in đậm, dùng font có điểm nhấn thay vì font mảnh mặc định */
+          .uob-h2,
+          .uob-h4,
+          h3.uob-h4 {
+            font-family: "Noto Sans Bold", sans-serif !important;
+            font-weight: 700 !important;
+            letter-spacing: .3px;
+          }
+
+          /* Hợp Tác Dự Án Tiềm Năng: thiết kế lại, bổ sung section mới */
+          .section-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--primary-light);
+            margin-bottom: 14px;
+          }
+          .section-kicker::before {
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 3px;
+            border-radius: 3px;
+            background: linear-gradient(90deg, #5fae84, #0f6b3f);
+            flex: 0 0 auto;
+          }
+          #carouselExampleIndicators .masthead-dark .overlay {
+            background: linear-gradient(115deg, rgba(7, 58, 32, .88) 0%, rgba(11, 85, 48, .72) 45%, rgba(15, 107, 63, .4) 75%, rgba(34, 160, 107, .14) 100%) !important;
+            display: flex;
+            align-items: center;
+          }
+          .svc-hero-title {
+            font-family: "Noto Sans Bold", sans-serif !important;
+            font-weight: 700 !important;
+            text-shadow: 0 2px 16px rgba(5, 20, 45, .45);
+          }
+
+          /* Giới thiệu: bố cục ảnh + chữ song song */
+          .svc-intro-section {
+            padding: 24px 0 56px;
+          }
+          .svc-intro-img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 1rem;
+            box-shadow: 0 24px 50px rgba(11, 85, 48, .18);
+          }
+
+          /* Lĩnh Vực Hợp Tác */
+          .svc-scope-section {
+            padding: 8px 0 56px;
+            background: linear-gradient(180deg, #ffffff 0%, #f2faf6 60%, #ffffff 100%);
+          }
+          .svc-scope-card {
+            text-align: center;
+            background: #ffffff;
+            border: 1.5px solid #e5efe9;
+            border-radius: 1rem;
+            padding: 32px 22px;
+            height: 100%;
+            transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+          }
+          .svc-scope-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 44px rgba(11, 85, 48, .16);
+            border-color: #5fae84;
+          }
+          .svc-scope-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+            margin-bottom: 18px;
+          }
+          .svc-scope-title {
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 15.5px;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+          }
+          .svc-scope-text {
+            font-size: 13.5px;
+            color: var(--gray-600);
+            line-height: 1.55;
+          }
+
+          /* Thẩm định dự án: ảnh + chữ (đảo chiều) */
+          .svc-diligence-section {
+            padding: 8px 0 60px;
+          }
+          .svc-diligence-img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 1rem;
+            box-shadow: 0 24px 50px rgba(11, 85, 48, .18);
+          }
+          .svc-diligence-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 20px 0 0;
+          }
+          .svc-diligence-list li {
+            position: relative;
+            padding-left: 34px;
+            margin-bottom: 14px;
+            font-size: 14.5px;
+            line-height: 1.6;
+          }
+          .svc-diligence-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+          }
+          .svc-diligence-list li::after {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 8px;
+            width: 10px;
+            height: 5px;
+            border-left: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            transform: rotate(-45deg);
+          }
+
+          /* Lợi Ích Hợp Tác */
+          .svc-benefit-section {
+            padding: 8px 0 60px;
+            background: linear-gradient(180deg, #ffffff 0%, #f2faf6 60%, #ffffff 100%);
+          }
+          .svc-benefit-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            background: #ffffff;
+            border: 1.5px solid #e5efe9;
+            border-radius: .9rem;
+            padding: 24px;
+            height: 100%;
+            transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+          }
+          .svc-benefit-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px rgba(11, 85, 48, .14);
+            border-color: #5fae84;
+          }
+          .svc-benefit-icon {
+            flex: 0 0 auto;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+          }
+          .svc-benefit-title {
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 15.5px;
+            color: var(--primary-dark);
+            margin-bottom: 6px;
+          }
+          .svc-benefit-text {
+            font-size: 13.5px;
+            color: var(--gray-600);
+            line-height: 1.55;
+          }
+
+          /* CTA cuối trang */
+          .svc-cta-banner {
+            margin: 8px 0 64px;
+            padding: 52px 36px;
+            border-radius: 1.2rem;
+            background: linear-gradient(115deg, #052d19 0%, #0b5530 45%, #22a06b 100%);
+            text-align: center;
+            color: #ffffff;
+          }
+          .svc-cta-banner h2 {
+            color: #ffffff !important;
+          }
+          .svc-cta-banner p {
+            color: rgba(255,255,255,.85);
+            max-width: 620px;
+            margin: 0 auto 26px;
+          }
+          .svc-cta-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+          }
+          .svc-cta-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 30px;
+            border-radius: 30px;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            transition: background .3s ease, transform .3s ease, color .3s ease;
+          }
+          .svc-cta-links a.svc-cta-primary {
+            background: #ffffff;
+            color: #0b5530;
+          }
+          .svc-cta-links a.svc-cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px rgba(0,0,0,.2);
+          }
+          .svc-cta-links a.svc-cta-ghost {
+            background: rgba(255,255,255,.12);
+            border: 1.5px solid rgba(255,255,255,.4);
+            color: #ffffff;
+          }
+          .svc-cta-links a.svc-cta-ghost:hover {
+            background: rgba(255,255,255,.22);
+            transform: translateY(-3px);
+          }
+</style>
 <link href="../../../assets/iwov-resources/grid/bootstrap/4.0/bootstrap-grid.min.css" type="text/css" rel="stylesheet">
 <!--ls:end[stylesheet]-->
 <!--ls:begin[script]-->
@@ -157,12 +394,12 @@
                               <div class="col-lg">
                                  <h6 class="text-uppercase mega-menu-title">GIỚI THIỆU</h6>
                                  <div class="dropdown-item"><a href="../../../about-us/corporate-profile/" class="dtm-link text-link" target="_self" anchor_name="header:giới thiệu công ty">Giới Thiệu Công Ty</a></div>
-                                 <div class="dropdown-item"><a href="../../../about-us/board-of-directors/" class="dtm-link text-link" target="_self" anchor_name="header:hội Đồng quản trị">Hội Đồng Quản Trị</a></div>
-                                 <div class="dropdown-item"><a href="../../../about-us/management-team/" class="dtm-link text-link" target="_self" anchor_name="header:ban Điều hành">Ban Điều Hành</a></div>
+                                 
+                                 
                                  <div class="dropdown-item"><a href="../../../about-us/our-investment-philosophy-and-capabilities/" class="dtm-link text-link" target="_self" anchor_name="header:phong cách, triết lý &amp; năng lực Đầu tư">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
-                                 <div class="dropdown-item"><a href="../../../about-us/careers/" class="dtm-link text-link" target="_self" anchor_name="header:cơ hội nghề nghiệp">Cơ Hội Nghề Nghiệp</a></div>
+                                 
                                  <div class="dropdown-item"><a href="../../../about-us/partnership/" class="dtm-link text-link" target="_self" anchor_name="header:Đối tác">Đối Tác</a></div>
-                                 <div class="dropdown-item"><a href="../../../about-us/policy/" class="dtm-link text-link" target="_self" anchor_name="header:quy Định">Quy Định</a></div>
+                                 
                               </div>
                               <div class="col-lg"></div>
                               <div class="col-lg"></div>
@@ -260,12 +497,12 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../../../contact-us/" target="_sel
                                     <div class="split-line--row"></div>
                                     <div class="col-12 pb-4 pt-3">
                                        <div class="dropdown-item"><a href="../../../about-us/corporate-profile/" class="dtm-link text-link" target="_self">Giới Thiệu Công Ty</a></div>
-                                       <div class="dropdown-item"><a href="../../../about-us/board-of-directors/" class="dtm-link text-link" target="_self">Hội Đồng Quản Trị</a></div>
-                                       <div class="dropdown-item"><a href="../../../about-us/management-team/" class="dtm-link text-link" target="_self">Ban Điều Hành</a></div>
+                                       
+                                       
                                        <div class="dropdown-item"><a href="../../../about-us/our-investment-philosophy-and-capabilities/" class="dtm-link text-link" target="_self">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
-                                       <div class="dropdown-item"><a href="../../../about-us/careers/" class="dtm-link text-link" target="_self">Cơ Hội Nghề Nghiệp</a></div>
+                                       
                                        <div class="dropdown-item"><a href="../../../about-us/partnership/" class="dtm-link text-link" target="_self">Đối Tác</a></div>
-                                       <div class="dropdown-item"><a href="../../../about-us/policy/" class="dtm-link text-link" target="_self">Quy Định</a></div>
+                                       
                                     </div>
                                  </div>
                               </div>
@@ -411,26 +648,100 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../../../contact-us/" target="_sel
        <!--ls:begin[component-1773900973949]--><style>#iw_comp1773900973949{}</style><div xmlns:xs="http://www.w3.org/2001/XMLSchema" data-ride="carousel" class="carousel slide text-center pointer-event multi-masthead" id="carouselExampleIndicators">
    <div class="carousel-inner">
       <div class="carousel-item active">
-         <div class="jumbotron has-bg-img masthead masthead-light p-0 mb-0 container-fluid rounded-0 text-left reduced-height">
-            <div><img loading="lazy" class="d-md-none bg-img" src="../../../assets/web-resources/images/funds-and-services/uveef/uveef-fund-banner-phone.jpg" alt=""><img loading="lazy" class="d-none d-md-block bg-img" src="../../../assets/web-resources/images/funds-and-services/uveef/uveef-fund-banner.jpg" alt=""></div>
+         <div class="jumbotron has-bg-img masthead masthead-dark p-0 mb-0 container-fluid rounded-0 text-left reduced-height">
+            <div><img loading="lazy" class="d-md-none bg-img" src="../../../assets/web-resources/images/funds-and-services/uveef/hop-tac-du-an-banner-phone.jpg" alt="Hợp Tác Dự Án Tiềm Năng"><img loading="lazy" class="d-none d-md-block bg-img" src="../../../assets/web-resources/images/funds-and-services/uveef/hop-tac-du-an-banner.jpg" alt="Hợp Tác Dự Án Tiềm Năng"></div>
+            <div class="overlay">
+               <div class="row ml-0 mr-0">
+                  <div class="col col-md-7 uob-form masthead-form pr-0">
+                     <span class="section-kicker" style="color:#8ff0c0">Dịch Vụ Đầu Tư</span>
+                     <h1 class="uob-h2 mb-0 svc-hero-title">Hợp Tác Dự Án Tiềm Năng</h1>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
    </div>
 </div><!--ls:end[component-1773900973949]--> 
      </div> 
      <div class="iw_component" id="iw_comp1773900973950">
-       <!--ls:begin[component-1773900973950]--><style>#iw_comp1773900973950{}</style><div class="" id="">
-<div><div class="" id="introduction">
-<div class="uob-table-carousel pb-0">
-<h2 class="uob-h2 pb-5" style="text-align: center;">Hợp Tác Dự Án Tiềm Năng</h2>
-<p style="text-align: left;"><span>Vina Group cung cấp </span><strong>dịch vụ quản lý tài sản chuyên nghiệp với mục tiêu tối đa hóa giá trị tài sản của bạn</strong><span>, thông qua việc hợp tác, thẩm định và đồng hành cùng các dự án đầu tư tiềm năng đa ngành.</span></p>
-<p style="text-align: left;"><span>Chúng tôi chủ động tìm kiếm, sàng lọc và thẩm định các cơ hội hợp tác dự án, xây dựng cấu trúc đầu tư phù hợp nhằm tối ưu lợi ích cho cổ đông, đối tác và nhà đầu tư trên hành trình phát triển bền vững.</span></p>
-</div>
-</div></div>
+       <!--ls:begin[component-1773900973950]--><style>#iw_comp1773900973950{}</style><div class="container-fluid svc-intro-section" id="introduction">
+   <div class="row align-items-center">
+      <div class="col-12 col-lg-6">
+         <span class="section-kicker">Dịch Vụ Đầu Tư</span>
+         <h2 class="uob-h2 mb-4" style="text-align: left;">Hợp Tác Dự Án Tiềm Năng</h2>
+         <p class="paragraph" style="text-align: left;"><span>Vina Group cung cấp </span><strong>dịch vụ quản lý tài sản chuyên nghiệp với mục tiêu tối đa hóa giá trị tài sản của bạn</strong><span>, thông qua việc hợp tác, thẩm định và đồng hành cùng các dự án đầu tư tiềm năng đa ngành.</span></p>
+         <p class="paragraph" style="text-align: left;"><span>Chúng tôi chủ động tìm kiếm, sàng lọc và thẩm định các cơ hội hợp tác dự án, xây dựng cấu trúc đầu tư phù hợp nhằm tối ưu lợi ích cho cổ đông, đối tác và nhà đầu tư trên hành trình phát triển bền vững.</span></p>
+      </div>
+      <div class="col-12 col-lg-6 mt-5 mt-lg-0"><img loading="lazy" class="img-fluid svc-intro-img" src="../../../assets/web-resources/images/funds-and-services/uveef/hop-tac-handshake.jpg" alt="Bắt tay hợp tác dự án đầu tư"></div>
+   </div>
 </div>
 <!--ls:end[component-1773900973950]-->
      </div>
-    </div> 
+     <div class="iw_component" id="iw_comp_uveef_scope">
+       <div class="container-fluid svc-scope-section">
+   <div class="row justify-content-center">
+      <div class="col-12 text-center"><span class="section-kicker d-inline-flex">Đa Dạng Lĩnh Vực</span></div>
+   </div>
+   <div class="row justify-content-center content-title">
+      <h2 class="col-12 uob-h2 text-center">Lĩnh Vực Hợp Tác</h2>
+      <div class="col-12 col-md-8 text-center"><p class="paragraph">Vina Group mở rộng hợp tác trên nhiều lĩnh vực, ưu tiên các dự án có nền tảng vững chắc và tiềm năng tăng trưởng dài hạn.</p></div>
+   </div>
+   <div class="row">
+      <div class="col-6 col-md-3 mb-5 mb-md-0"><div class="svc-scope-card"><span class="svc-scope-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 21V5C4 3.9 4.9 3 6 3H14C15.1 3 16 3.9 16 5V21" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/><path d="M16 11H18C19.1 11 20 11.9 20 13V21" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/><path d="M8 7H12M8 11H12M8 15H12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span><div class="svc-scope-title">Bất Động Sản</div><div class="svc-scope-text">Dự án bất động sản thương mại, nhà ở và hạ tầng có pháp lý rõ ràng.</div></div></div>
+      <div class="col-6 col-md-3 mb-5 mb-md-0"><div class="svc-scope-card"><span class="svc-scope-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="#ffffff" stroke-width="2"/><path d="M12 2V5M12 19V22M22 12H19M5 12H2M19.07 4.93L16.95 7.05M7.05 16.95L4.93 19.07M19.07 19.07L16.95 16.95M7.05 7.05L4.93 4.93" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span><div class="svc-scope-title">Công Nghệ &amp; Sản Xuất</div><div class="svc-scope-text">Doanh nghiệp công nghệ, sản xuất có mô hình kinh doanh khả thi và khả năng mở rộng.</div></div></div>
+      <div class="col-6 col-md-3"><div class="svc-scope-card"><span class="svc-scope-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 10L12 4L21 10M5 10V19M19 10V19M9 19V14H15V19M3 19H21" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="svc-scope-title">Tài Chính &amp; Dịch Vụ</div><div class="svc-scope-text">Hợp tác cùng tổ chức tài chính, nền tảng dịch vụ có tệp khách hàng ổn định.</div></div></div>
+      <div class="col-6 col-md-3"><div class="svc-scope-card"><span class="svc-scope-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 20 16.5 20 10C20 6.7 17.5 4.5 14.8 4.5C13.6 4.5 12.5 5 12 6C11.5 5 10.4 4.5 9.2 4.5C6.5 4.5 4 6.7 4 10C4 16.5 12 21 12 21Z" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/></svg></span><div class="svc-scope-title">Tiêu Dùng &amp; Bán Lẻ</div><div class="svc-scope-text">Thương hiệu tiêu dùng, bán lẻ có tốc độ tăng trưởng và biên lợi nhuận hấp dẫn.</div></div></div>
+   </div>
+</div>
+     </div>
+     <div class="iw_component" id="iw_comp_uveef_diligence">
+       <div class="container-fluid svc-diligence-section">
+   <div class="row align-items-center">
+      <div class="col-12 col-lg-6 mb-5 mb-lg-0 order-lg-2"><img loading="lazy" class="img-fluid svc-diligence-img" src="../../../assets/web-resources/images/funds-and-services/uveef/hop-tac-contract-review.jpg" alt="Thẩm định và rà soát hợp đồng dự án"></div>
+      <div class="col-12 col-lg-6 order-lg-1">
+         <span class="section-kicker">Quy Trình Đánh Giá</span>
+         <h2 class="uob-h2 mb-4" style="text-align: left;">Thẩm Định Dự Án Kỹ Lưỡng</h2>
+         <p class="paragraph" style="text-align: left;">Trước khi đưa ra quyết định hợp tác, mỗi dự án đều trải qua quy trình thẩm định toàn diện nhằm bảo vệ tối đa lợi ích của cổ đông và đối tác.</p>
+         <ul class="svc-diligence-list">
+            <li>Rà soát pháp lý và tính minh bạch của dự án</li>
+            <li>Đánh giá năng lực tài chính và dòng tiền dự kiến</li>
+            <li>Phân tích tiềm năng tăng trưởng và rủi ro ngành</li>
+            <li>Xây dựng cấu trúc hợp tác phù hợp, cùng có lợi</li>
+         </ul>
+      </div>
+   </div>
+</div>
+     </div>
+     <div class="iw_component" id="iw_comp_uveef_benefit">
+       <div class="container-fluid svc-benefit-section">
+   <div class="row justify-content-center">
+      <div class="col-12 text-center"><span class="section-kicker d-inline-flex">Giá Trị Mang Lại</span></div>
+   </div>
+   <div class="row justify-content-center content-title">
+      <h2 class="col-12 uob-h2 text-center">Lợi Ích Khi Hợp Tác Cùng Vina Group</h2>
+   </div>
+   <div class="row">
+      <div class="col-12 col-md-6 mb-4"><div class="svc-benefit-card"><span class="svc-benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 22S19 17.9 19 11.5S16.2 2 12 2 5 5.9 5 11.5 12 22 12 22Z" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/><path d="M9 11.5L11 13.5L15.5 9" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="svc-benefit-title">Nguồn Vốn Đồng Hành Dài Hạn</div><div class="svc-benefit-text">Không chỉ là nhà đầu tư, Vina Group đồng hành cùng dự án trong suốt quá trình phát triển.</div></div></div></div>
+      <div class="col-12 col-md-6 mb-4"><div class="svc-benefit-card"><span class="svc-benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="9" r="2.6" stroke="#ffffff" stroke-width="2"/><circle cx="16" cy="9" r="2.6" stroke="#ffffff" stroke-width="2"/><path d="M2.5 19C2.5 16 5 13.8 8 13.8C9.4 13.8 10.7 14.3 11.6 15.1M21.5 19C21.5 16 19 13.8 16 13.8C14.6 13.8 13.3 14.3 12.4 15.1" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span><div><div class="svc-benefit-title">Mạng Lưới Đối Tác Rộng Khắp</div><div class="svc-benefit-text">Kết nối với hệ sinh thái ngân hàng, công ty chứng khoán và nền tảng tài chính uy tín.</div></div></div></div>
+      <div class="col-12 col-md-6"><div class="svc-benefit-card"><span class="svc-benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2" stroke="#ffffff" stroke-width="2"/><path d="M8 7V5C8 3.9 8.9 3 10 3H14C15.1 3 16 3.9 16 5V7" stroke="#ffffff" stroke-width="2"/></svg></span><div><div class="svc-benefit-title">Cấu Trúc Hợp Tác Linh Hoạt</div><div class="svc-benefit-text">Thiết kế phương án hợp tác phù hợp với đặc thù và giai đoạn phát triển của từng dự án.</div></div></div></div>
+      <div class="col-12 col-md-6"><div class="svc-benefit-card"><span class="svc-benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 19V11M4 11L2 11M4 11L6 11M11 19V5M11 5L9 5M11 5L13 5M18 19V13M18 13L16 13M18 13L20 13" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span><div><div class="svc-benefit-title">Minh Bạch Trong Từng Giai Đoạn</div><div class="svc-benefit-text">Báo cáo tiến độ và tài chính rõ ràng, định kỳ trong suốt quá trình hợp tác.</div></div></div></div>
+   </div>
+</div>
+     </div>
+     <div class="iw_component" id="iw_comp_uveef_cta">
+       <div class="container-fluid">
+   <div class="svc-cta-banner">
+      <span class="section-kicker" style="color:#8ff0c0">Kết Nối Hợp Tác</span>
+      <h2 class="uob-h2 mb-3">Bạn Có Dự Án Tiềm Năng Cần Hợp Tác?</h2>
+      <p class="paragraph">Gửi thông tin dự án tới đội ngũ Vina Group để được đánh giá và tư vấn phương án hợp tác phù hợp.</p>
+      <div class="svc-cta-links">
+         <a class="svc-cta-primary" href="../../../contact-us/">Liên Hệ Hợp Tác</a>
+         <a class="svc-cta-ghost" href="../">Xem Các Dịch Vụ Khác</a>
+      </div>
+   </div>
+</div>
+     </div>
+    </div>
     <div class="iw_component" id="iw_comp1660130786243">
       <!--ls:begin[component-1660130786243]--><style>#iw_comp1660130786243{}</style><div role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" class="rounded-10 uob-cookie cookie-popup" id="cookie-alert">
    <div class="d-sm-flex">

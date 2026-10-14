@@ -26,7 +26,265 @@
           {
             min-width: 100% !important;
           }
-        </style>
+        
+          /* Tiêu đề các mục: in đậm, dùng font có điểm nhấn thay vì font mảnh mặc định */
+          .uob-h2,
+          .uob-h4,
+          h3.uob-h4 {
+            font-family: "Noto Sans Bold", sans-serif !important;
+            font-weight: 700 !important;
+            letter-spacing: .3px;
+          }
+
+          /* Quan Hệ Cổ Đông: thiết kế lại, bổ sung section mới */
+          .section-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--primary-light);
+            margin-bottom: 14px;
+          }
+          .section-kicker::before {
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 3px;
+            border-radius: 3px;
+            background: linear-gradient(90deg, #5fae84, #0f6b3f);
+            flex: 0 0 auto;
+          }
+          #carouselExampleIndicators .masthead-dark .overlay {
+            background: linear-gradient(115deg, rgba(7, 58, 32, .88) 0%, rgba(11, 85, 48, .72) 45%, rgba(15, 107, 63, .4) 75%, rgba(34, 160, 107, .14) 100%) !important;
+            display: flex;
+            align-items: center;
+          }
+          .ir-hero-title {
+            font-family: "Noto Sans Bold", sans-serif !important;
+            font-weight: 700 !important;
+            text-shadow: 0 2px 16px rgba(5, 20, 45, .45);
+          }
+
+          /* 3 card Quan Hệ Cổ Đông: hiệu ứng hover đồng bộ các trang khác */
+          #iw_comp1776839816589 .card {
+            transition: transform .4s ease, box-shadow .4s ease;
+          }
+          #iw_comp1776839816589 .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 44px rgba(11, 85, 48, .18) !important;
+          }
+          #iw_comp1776839816589 .card img.card-img-top {
+            transition: transform .5s ease;
+          }
+          #iw_comp1776839816589 .card:hover img.card-img-top {
+            transform: scale(1.06);
+          }
+
+          /* Thông Báo Đến Cổ Đông: danh sách dạng card thay vì bullet thô */
+          .ir-notice-section {
+            padding: 16px 0 56px;
+          }
+          .ir-notice-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            background: #ffffff;
+            border: 1.5px solid #e5efe9;
+            border-radius: .85rem;
+            padding: 20px 24px;
+            margin-bottom: 14px;
+            transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+          }
+          .ir-notice-item:hover {
+            transform: translateX(6px);
+            box-shadow: 0 14px 30px rgba(11, 85, 48, .12);
+            border-color: #5fae84;
+          }
+          .ir-notice-icon {
+            flex: 0 0 auto;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+          }
+          .ir-notice-text {
+            font-size: 15px;
+            color: #212121;
+            padding-top: 4px;
+          }
+
+          /* Mục Tiêu Cổ Đông & Quyền Lợi Cổ Đông: list có icon check thay vì bullet */
+          .ir-check-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+          }
+          .ir-check-list li {
+            position: relative;
+            padding-left: 34px;
+            margin-bottom: 16px;
+            font-size: 15px;
+            line-height: 1.6;
+          }
+          .ir-check-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+          }
+          .ir-check-list li::after {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 8px;
+            width: 10px;
+            height: 5px;
+            border-left: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            transform: rotate(-45deg);
+          }
+
+          /* Quyền Lợi Cổ Đông: lưới thẻ thay vì list đơn điệu */
+          .ir-benefit-section {
+            padding: 8px 0 56px;
+          }
+          .ir-benefit-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: #ffffff;
+            border: 1.5px solid #e5efe9;
+            border-radius: .85rem;
+            padding: 18px 20px;
+            height: 100%;
+            transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+          }
+          .ir-benefit-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 34px rgba(11, 85, 48, .14);
+            border-color: #5fae84;
+          }
+          .ir-benefit-card .ir-benefit-icon {
+            flex: 0 0 auto;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+          }
+          .ir-benefit-card span.ir-benefit-text {
+            font-size: 14.5px;
+            color: #212121;
+            line-height: 1.5;
+          }
+
+          /* Quy Trình Công Bố Thông Tin: 4 bước ngang */
+          .ir-process-section {
+            padding: 8px 0 64px;
+            background: linear-gradient(180deg, #ffffff 0%, #f2faf6 60%, #ffffff 100%);
+          }
+          .ir-process-step {
+            position: relative;
+            text-align: center;
+            padding: 0 16px;
+          }
+          .ir-process-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+            color: #ffffff;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            box-shadow: 0 10px 24px rgba(11, 85, 48, .25);
+            position: relative;
+            z-index: 2;
+          }
+          .ir-process-step-title {
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+          }
+          .ir-process-step-text {
+            font-size: 13.5px;
+            color: var(--gray-600);
+            line-height: 1.55;
+          }
+          @media (min-width: 768px) {
+            .ir-process-connector {
+              position: absolute;
+              top: 32px;
+              left: calc(50% + 40px);
+              right: calc(-50% + 40px);
+              height: 2px;
+              background: repeating-linear-gradient(90deg, #5fae84 0 8px, transparent 8px 16px);
+              z-index: 1;
+            }
+          }
+
+          /* Kênh Liên Hệ Quan Hệ Cổ Đông: banner CTA */
+          .ir-contact-banner {
+            margin: 8px 0 64px;
+            padding: 48px 36px;
+            border-radius: 1.2rem;
+            background: linear-gradient(115deg, #052d19 0%, #0b5530 45%, #22a06b 100%);
+            text-align: center;
+            color: #ffffff;
+          }
+          .ir-contact-banner h2 {
+            color: #ffffff !important;
+          }
+          .ir-contact-banner p {
+            color: rgba(255,255,255,.85);
+            max-width: 620px;
+            margin: 0 auto 26px;
+          }
+          .ir-contact-banner .ir-contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+          }
+          .ir-contact-banner .ir-contact-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 26px;
+            border-radius: 30px;
+            background: rgba(255,255,255,.12);
+            border: 1.5px solid rgba(255,255,255,.4);
+            color: #ffffff;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            transition: background .3s ease, transform .3s ease;
+          }
+          .ir-contact-banner .ir-contact-links a:hover {
+            background: #ffffff;
+            color: #0b5530;
+            transform: translateY(-3px);
+          }
+</style>
 <link href="../assets/iwov-resources/grid/bootstrap/4.0/bootstrap-grid.min.css" type="text/css" rel="stylesheet">
 <!--ls:end[stylesheet]-->
 <!--ls:begin[script]-->
@@ -157,12 +415,12 @@
                               <div class="col-lg">
                                  <h6 class="text-uppercase mega-menu-title">GIỚI THIỆU</h6>
                                  <div class="dropdown-item"><a href="../about-us/corporate-profile/" class="dtm-link text-link" target="_self" anchor_name="header:giới thiệu công ty">Giới Thiệu Công Ty</a></div>
-                                 <div class="dropdown-item"><a href="../about-us/board-of-directors/" class="dtm-link text-link" target="_self" anchor_name="header:hội Đồng quản trị">Hội Đồng Quản Trị</a></div>
-                                 <div class="dropdown-item"><a href="../about-us/management-team/" class="dtm-link text-link" target="_self" anchor_name="header:ban Điều hành">Ban Điều Hành</a></div>
+                                 
+                                 
                                  <div class="dropdown-item"><a href="../about-us/our-investment-philosophy-and-capabilities/" class="dtm-link text-link" target="_self" anchor_name="header:phong cách, triết lý &amp; năng lực Đầu tư">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
-                                 <div class="dropdown-item"><a href="../about-us/careers/" class="dtm-link text-link" target="_self" anchor_name="header:cơ hội nghề nghiệp">Cơ Hội Nghề Nghiệp</a></div>
+                                 
                                  <div class="dropdown-item"><a href="../about-us/partnership/" class="dtm-link text-link" target="_self" anchor_name="header:Đối tác">Đối Tác</a></div>
-                                 <div class="dropdown-item"><a href="../about-us/policy/" class="dtm-link text-link" target="_self" anchor_name="header:quy Định">Quy Định</a></div>
+                                 
                               </div>
                               <div class="col-lg"></div>
                               <div class="col-lg"></div>
@@ -260,12 +518,12 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../contact-us/" target="_self" cla
                                     <div class="split-line--row"></div>
                                     <div class="col-12 pb-4 pt-3">
                                        <div class="dropdown-item"><a href="../about-us/corporate-profile/" class="dtm-link text-link" target="_self">Giới Thiệu Công Ty</a></div>
-                                       <div class="dropdown-item"><a href="../about-us/board-of-directors/" class="dtm-link text-link" target="_self">Hội Đồng Quản Trị</a></div>
-                                       <div class="dropdown-item"><a href="../about-us/management-team/" class="dtm-link text-link" target="_self">Ban Điều Hành</a></div>
+                                       
+                                       
                                        <div class="dropdown-item"><a href="../about-us/our-investment-philosophy-and-capabilities/" class="dtm-link text-link" target="_self">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
-                                       <div class="dropdown-item"><a href="../about-us/careers/" class="dtm-link text-link" target="_self">Cơ Hội Nghề Nghiệp</a></div>
+                                       
                                        <div class="dropdown-item"><a href="../about-us/partnership/" class="dtm-link text-link" target="_self">Đối Tác</a></div>
-                                       <div class="dropdown-item"><a href="../about-us/policy/" class="dtm-link text-link" target="_self">Quy Định</a></div>
+                                       
                                     </div>
                                  </div>
                               </div>
@@ -411,6 +669,14 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../contact-us/" target="_self" cla
       <div class="carousel-item active">
          <div class="jumbotron has-bg-img masthead masthead-dark p-0 mb-0 container-fluid rounded-0 text-left reduced-height">
             <div><img loading="lazy" class="d-md-none bg-img" src="../assets/web-resources/images/investor-relations/index/banner-750x900.jpg" alt="Quan Hệ Cổ Đông"><img loading="lazy" class="d-none d-md-block bg-img" src="../assets/web-resources/images/investor-relations/index/banner-1920x600.jpg" alt="Quan Hệ Cổ Đông"></div>
+            <div class="overlay">
+               <div class="row ml-0 mr-0">
+                  <div class="col col-md-7 uob-form masthead-form pr-0">
+                     <span class="section-kicker" style="color:#8ff0c0">Quan Hệ Cổ Đông</span>
+                     <h1 class="uob-h2 mb-0 ir-hero-title">Minh Bạch Thông Tin, Đồng Hành Cùng Cổ Đông</h1>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
    </div>
@@ -420,8 +686,11 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../contact-us/" target="_self" cla
        <!--ls:begin[component-1776839816589]--><style>#iw_comp1776839816589{}</style><div id="pcp-try-figure-out">
    <div class="col-slider">
       <div class="try-figure-out container-fluid pl-0 pr-0">
+         <div class="row justify-content-center ml-0 mr-0">
+            <div class="col-12 text-center mt-5"><span class="section-kicker d-inline-flex">Nhà Đầu Tư &amp; Cổ Đông</span></div>
+         </div>
          <div class="row justify-content-center content-title ml-0 mr-0">
-            <h2 class="col-12 uob-h2 mt-5 text-center">Quan Hệ Cổ Đông</h2>
+            <h2 class="col-12 uob-h2 text-center">Quan Hệ Cổ Đông</h2>
          </div>
          <div class="text-center mt-3"></div>
          <div class="row tile-card-group d-none d-md-block ml-0 mr-0">
@@ -496,19 +765,20 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../contact-us/" target="_self" cla
 </div><!--ls:end[component-1776839816589]-->
      </div>
      <div class="iw_component" id="iw_comp_vg_notices">
-       <div class="container-fluid pl-0 pr-0">
+       <div class="container-fluid pl-0 pr-0 ir-notice-section">
    <div class="tile-card-group ml-0 mr-0">
+      <div class="row justify-content-center">
+         <div class="col-12 text-center"><span class="section-kicker d-inline-flex">Cập Nhật Mới Nhất</span></div>
+      </div>
       <div class="row justify-content-center content-title">
          <h2 class="col-9 uob-h2 text-center">Thông Báo Đến Cổ Đông</h2>
       </div>
-      <div class="row pl-3 pr-3">
-         <div class="col-12">
-            <ul>
-               <li class="paragraph mb-3">Kết quả kinh doanh quý 1/2026 (cập nhật ngày 10/04/2026)</li>
-               <li class="paragraph mb-3">Lịch họp Đại hội đồng cổ đông thường niên năm 2026</li>
-               <li class="paragraph mb-3">Thông báo phân phối lợi nhuận và chi trả cổ tức</li>
-               <li class="paragraph mb-3">Cập nhật tiến độ các dự án đầu tư Pre-IPO</li>
-            </ul>
+      <div class="row justify-content-center">
+         <div class="col-12 col-lg-9">
+            <div class="ir-notice-item"><span class="ir-notice-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 19V11M4 11L2 11M4 11L6 11M11 19V5M11 5L9 5M11 5L13 5M18 19V13M18 13L16 13M18 13L20 13" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span><span class="ir-notice-text">Kết quả kinh doanh quý 1/2026 <em>(cập nhật ngày 10/04/2026)</em></span></div>
+            <div class="ir-notice-item"><span class="ir-notice-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="16" rx="2" stroke="#ffffff" stroke-width="2"/><path d="M3 10H21M8 3V7M16 3V7" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span><span class="ir-notice-text">Lịch họp Đại hội đồng cổ đông thường niên năm 2026</span></div>
+            <div class="ir-notice-item"><span class="ir-notice-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2V22M17 6.5C17 4.6 14.8 3 12 3C9.2 3 7 4.6 7 6.5C7 8.4 9.2 9.5 12 9.5C14.8 9.5 17 10.6 17 12.5C17 14.4 14.8 16 12 16C9.2 16 7 14.4 7 12.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span><span class="ir-notice-text">Thông báo phân phối lợi nhuận và chi trả cổ tức</span></div>
+            <div class="ir-notice-item"><span class="ir-notice-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 17L9 11L13 15L21 7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 7H21V13" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ir-notice-text">Cập nhật tiến độ các dự án đầu tư Pre-IPO</span></div>
          </div>
       </div>
    </div>
@@ -516,37 +786,94 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../contact-us/" target="_self" cla
      </div>
      <div class="iw_component" id="iw_comp_vg_goals">
        <div class="container-fluid pl-0 pr-0">
+   <div class="row ml-0 mr-0 justify-content-center">
+      <div class="col-12 text-center"><span class="section-kicker d-inline-flex">Định Hướng</span></div>
+   </div>
    <div class="row ml-0 mr-0 justify-content-center content-title">
       <h2 class="col-12 uob-h2 text-center">Mục Tiêu Cổ Đông</h2>
    </div>
    <div class="row ml-0 mr-0 align-items-center">
-      <div class="col-12 col-md-6"><img loading="lazy" class="img-fluid rounded-10" src="../assets/web-resources/images/vina/shareholder-goals.webp" alt="Mục tiêu cổ đông"></div>
+      <div class="col-12 col-md-6 mb-5 mb-md-0"><img loading="lazy" class="img-fluid rounded-10" src="../assets/web-resources/images/vina/shareholder-goals.webp" alt="Mục tiêu cổ đông"></div>
       <div class="col-12 col-md-6">
-         <ul>
-            <li class="paragraph mb-3">Xây dựng giá trị dài hạn và tăng trưởng bền vững cho danh mục đầu tư Pre-IPO</li>
-            <li class="paragraph mb-3">Đảm bảo tính minh bạch cao nhất trong mọi hoạt động và báo cáo</li>
-            <li class="paragraph mb-3">Mang lại lợi nhuận tối ưu và giảm thiểu rủi ro cho cổ đông nhỏ lẻ</li>
-            <li class="paragraph mb-3">Trở thành đối tác tin cậy lâu dài, đồng hành cùng sự thịnh vượng của quý cổ đông</li>
+         <ul class="ir-check-list">
+            <li>Xây dựng giá trị dài hạn và tăng trưởng bền vững cho danh mục đầu tư Pre-IPO</li>
+            <li>Đảm bảo tính minh bạch cao nhất trong mọi hoạt động và báo cáo</li>
+            <li>Mang lại lợi nhuận tối ưu và giảm thiểu rủi ro cho cổ đông nhỏ lẻ</li>
+            <li>Trở thành đối tác tin cậy lâu dài, đồng hành cùng sự thịnh vượng của quý cổ đông</li>
          </ul>
       </div>
    </div>
 </div>
      </div>
      <div class="iw_component" id="iw_comp_vg_rights">
-       <div class="container-fluid pl-0 pr-0">
-   <div class="row ml-0 mr-0 justify-content-center content-title">
-      <h2 class="col-12 uob-h2 text-center mb-4">Quyền Lợi Cổ Đông</h2>
+       <div class="container-fluid pl-0 pr-0 ir-benefit-section">
+   <div class="row ml-0 mr-0 justify-content-center">
+      <div class="col-12 text-center"><span class="section-kicker d-inline-flex">Dành Cho Cổ Đông</span></div>
    </div>
-   <div class="row pl-3 pr-3">
-      <div class="col-12">
-         <ul>
-            <li class="paragraph mb-3">Được cập nhật thông tin định kỳ về tình hình hoạt động và kết quả kinh doanh</li>
-            <li class="paragraph mb-3">Tiếp cận báo cáo tài chính, báo cáo thường niên và tài liệu nội bộ</li>
-            <li class="paragraph mb-3">Tham gia Đại hội đồng cổ đông và biểu quyết các vấn đề quan trọng</li>
-            <li class="paragraph mb-3">Hỗ trợ tư vấn đầu tư cá nhân hóa</li>
-            <li class="paragraph mb-3">Nhận cổ tức theo tỷ lệ góp vốn</li>
-            <li class="paragraph mb-3">Tham gia cộng đồng cổ đông và quyền lợi khác</li>
-         </ul>
+   <div class="row ml-0 mr-0 justify-content-center content-title">
+      <h2 class="col-12 uob-h2 text-center">Quyền Lợi Cổ Đông</h2>
+   </div>
+   <div class="row">
+      <div class="col-12 col-md-6 col-lg-4 mb-4"><div class="ir-benefit-card"><span class="ir-benefit-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22C17 22 20 18 20 12V5L12 2L4 5V12C4 18 7 22 12 22Z" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/></svg></span><span class="ir-benefit-text">Được cập nhật thông tin định kỳ về tình hình hoạt động và kết quả kinh doanh</span></div></div>
+      <div class="col-12 col-md-6 col-lg-4 mb-4"><div class="ir-benefit-card"><span class="ir-benefit-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 2H15L20 7V22H6V2Z" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/><path d="M15 2V7H20" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/></svg></span><span class="ir-benefit-text">Tiếp cận báo cáo tài chính, báo cáo thường niên và tài liệu nội bộ</span></div></div>
+      <div class="col-12 col-md-6 col-lg-4 mb-4"><div class="ir-benefit-card"><span class="ir-benefit-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="#ffffff" stroke-width="2"/><path d="M3 20C3 16.5 5.5 14 9 14C12.5 14 15 16.5 15 20" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><path d="M16 9.5C17.5 9.5 18.5 8.3 18.5 7C18.5 5.7 17.5 4.5 16 4.5M18 14C20 14.3 21.5 16 21.5 20" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span><span class="ir-benefit-text">Tham gia Đại hội đồng cổ đông và biểu quyết các vấn đề quan trọng</span></div></div>
+      <div class="col-12 col-md-6 col-lg-4 mb-4"><div class="ir-benefit-card"><span class="ir-benefit-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22S19 17.9 19 11.5S16.2 2 12 2 5 5.9 5 11.5 12 22 12 22Z" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="11.5" r="2.7" stroke="#ffffff" stroke-width="2"/></svg></span><span class="ir-benefit-text">Hỗ trợ tư vấn đầu tư cá nhân hóa</span></div></div>
+      <div class="col-12 col-md-6 col-lg-4 mb-4"><div class="ir-benefit-card"><span class="ir-benefit-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#ffffff" stroke-width="2"/><path d="M12 7V12L15 14" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ir-benefit-text">Nhận cổ tức theo tỷ lệ góp vốn</span></div></div>
+      <div class="col-12 col-md-6 col-lg-4 mb-4"><div class="ir-benefit-card"><span class="ir-benefit-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="9" r="2.6" stroke="#ffffff" stroke-width="2"/><circle cx="16" cy="9" r="2.6" stroke="#ffffff" stroke-width="2"/><path d="M2.5 19C2.5 16 5 13.8 8 13.8C9.4 13.8 10.7 14.3 11.6 15.1M21.5 19C21.5 16 19 13.8 16 13.8C14.6 13.8 13.3 14.3 12.4 15.1" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span><span class="ir-benefit-text">Tham gia cộng đồng cổ đông và các quyền lợi khác</span></div></div>
+   </div>
+</div>
+     </div>
+     <div class="iw_component" id="iw_comp_vg_process">
+       <div class="container-fluid pl-0 pr-0 ir-process-section">
+   <div class="row justify-content-center">
+      <div class="col-12 text-center"><span class="section-kicker d-inline-flex">Quy Trình Minh Bạch</span></div>
+   </div>
+   <div class="row justify-content-center content-title">
+      <h2 class="col-12 uob-h2 text-center">Quy Trình Công Bố Thông Tin</h2>
+      <div class="col-12 col-md-8 text-center"><p class="paragraph">Mọi thông tin gửi tới cổ đông đều được thực hiện theo quy trình chặt chẽ, đảm bảo tính chính xác, kịp thời và minh bạch.</p></div>
+   </div>
+   <div class="row">
+      <div class="col-6 col-md-3 mb-5 mb-md-0">
+         <div class="ir-process-step"><div class="ir-process-connector"></div>
+            <div class="ir-process-number">1</div>
+            <div class="ir-process-step-title">Thu Thập &amp; Tổng Hợp</div>
+            <div class="ir-process-step-text">Tổng hợp dữ liệu hoạt động, tài chính và các sự kiện quan trọng từ các bộ phận liên quan.</div>
+         </div>
+      </div>
+      <div class="col-6 col-md-3 mb-5 mb-md-0">
+         <div class="ir-process-step"><div class="ir-process-connector"></div>
+            <div class="ir-process-number">2</div>
+            <div class="ir-process-step-title">Rà Soát &amp; Phê Duyệt</div>
+            <div class="ir-process-step-text">Kiểm tra tính chính xác, tuân thủ quy định pháp luật trước khi trình cấp có thẩm quyền phê duyệt.</div>
+         </div>
+      </div>
+      <div class="col-6 col-md-3">
+         <div class="ir-process-step"><div class="ir-process-connector"></div>
+            <div class="ir-process-number">3</div>
+            <div class="ir-process-step-title">Công Bố Chính Thức</div>
+            <div class="ir-process-step-text">Đăng tải thông tin tới cổ đông qua website và các kênh liên hệ chính thức của công ty.</div>
+         </div>
+      </div>
+      <div class="col-6 col-md-3">
+         <div class="ir-process-step">
+            <div class="ir-process-number">4</div>
+            <div class="ir-process-step-title">Lưu Trữ &amp; Cập Nhật</div>
+            <div class="ir-process-step-text">Lưu trữ đầy đủ hồ sơ, cập nhật định kỳ để cổ đông tra cứu khi cần thiết.</div>
+         </div>
+      </div>
+   </div>
+</div>
+     </div>
+     <div class="iw_component" id="iw_comp_vg_ircontact">
+       <div class="container-fluid">
+   <div class="ir-contact-banner">
+      <span class="section-kicker" style="color:#8ff0c0">Kênh Liên Hệ</span>
+      <h2 class="uob-h2 mb-3">Bộ Phận Quan Hệ Cổ Đông</h2>
+      <p class="paragraph">Quý cổ đông và nhà đầu tư có thắc mắc về thông tin công bố, báo cáo tài chính hoặc quyền lợi cổ đông, vui lòng liên hệ trực tiếp để được hỗ trợ nhanh chóng.</p>
+      <div class="ir-contact-links">
+         <a href="tel:0772916169"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3.5 5.5C3.5 4.4 4.4 3.5 5.5 3.5H8.3L10 8L7.6 9.8C8.6 12 10 13.4 12.2 14.4L14 12L18.5 13.7V16.5C18.5 17.6 17.6 18.5 16.5 18.5C9.3 18.5 3.5 12.7 3.5 5.5Z" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/></svg>077.291.6169</a>
+         <a href="mailto:tapdoanvinagroup@gmail.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#ffffff" stroke-width="2"/><path d="M4 7L12 13L20 7" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/></svg>tapdoanvinagroup@gmail.com</a>
+         <a href="../contact-us/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Gửi Yêu Cầu Hỗ Trợ</a>
       </div>
    </div>
 </div>

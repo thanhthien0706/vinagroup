@@ -26,7 +26,238 @@
           {
             min-width: 100% !important;
           }
-        </style>
+        
+          /* Tiêu đề các mục: in đậm, dùng font có điểm nhấn thay vì font mảnh mặc định */
+          .uob-h2,
+          .uob-h4,
+          h3.uob-h4 {
+            font-family: "Noto Sans Bold", sans-serif !important;
+            font-weight: 700 !important;
+            letter-spacing: .3px;
+          }
+
+          /* Nghiên Cứu & Phân Tích Thị Trường: thiết kế lại, bổ sung section mới */
+          .section-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--primary-light);
+            margin-bottom: 14px;
+          }
+          .section-kicker::before {
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 3px;
+            border-radius: 3px;
+            background: linear-gradient(90deg, #5fae84, #0f6b3f);
+            flex: 0 0 auto;
+          }
+          /* Giới thiệu: bố cục ảnh + chữ song song */
+          .svc-intro-section {
+            padding: 24px 0 56px;
+          }
+          .svc-intro-img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 1rem;
+            box-shadow: 0 24px 50px rgba(11, 85, 48, .18);
+          }
+
+          /* Phạm Vi Nghiên Cứu */
+          .svc-scope-section {
+            padding: 8px 0 56px;
+            background: linear-gradient(180deg, #ffffff 0%, #f2faf6 60%, #ffffff 100%);
+          }
+          .svc-scope-card {
+            text-align: center;
+            background: #ffffff;
+            border: 1.5px solid #e5efe9;
+            border-radius: 1rem;
+            padding: 32px 22px;
+            height: 100%;
+            transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+          }
+          .svc-scope-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 44px rgba(11, 85, 48, .16);
+            border-color: #5fae84;
+          }
+          .svc-scope-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+            margin-bottom: 18px;
+          }
+          .svc-scope-title {
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 15.5px;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+          }
+          .svc-scope-text {
+            font-size: 13.5px;
+            color: var(--gray-600);
+            line-height: 1.55;
+          }
+
+          /* Quy Trình Phân Tích: 4 bước ngang */
+          .svc-process-section {
+            padding: 8px 0 64px;
+          }
+          .svc-process-step {
+            position: relative;
+            text-align: center;
+            padding: 0 16px;
+          }
+          .svc-process-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+            color: #ffffff;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            box-shadow: 0 10px 24px rgba(11, 85, 48, .25);
+            position: relative;
+            z-index: 2;
+          }
+          .svc-process-step-title {
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+          }
+          .svc-process-step-text {
+            font-size: 13.5px;
+            color: var(--gray-600);
+            line-height: 1.55;
+          }
+          @media (min-width: 768px) {
+            .svc-process-connector {
+              position: absolute;
+              top: 32px;
+              left: calc(50% + 40px);
+              right: calc(-50% + 40px);
+              height: 2px;
+              background: repeating-linear-gradient(90deg, #5fae84 0 8px, transparent 8px 16px);
+              z-index: 1;
+            }
+          }
+
+          /* Lợi Ích Khi Sử Dụng Dịch Vụ */
+          .svc-benefit-section {
+            padding: 8px 0 60px;
+            background: linear-gradient(180deg, #ffffff 0%, #f2faf6 60%, #ffffff 100%);
+          }
+          .svc-benefit-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            background: #ffffff;
+            border: 1.5px solid #e5efe9;
+            border-radius: .9rem;
+            padding: 24px;
+            height: 100%;
+            transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+          }
+          .svc-benefit-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px rgba(11, 85, 48, .14);
+            border-color: #5fae84;
+          }
+          .svc-benefit-icon {
+            flex: 0 0 auto;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #5fae84, #0f6b3f);
+          }
+          .svc-benefit-title {
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 15.5px;
+            color: var(--primary-dark);
+            margin-bottom: 6px;
+          }
+          .svc-benefit-text {
+            font-size: 13.5px;
+            color: var(--gray-600);
+            line-height: 1.55;
+          }
+
+          /* CTA cuối trang */
+          .svc-cta-banner {
+            margin: 8px 0 64px;
+            padding: 52px 36px;
+            border-radius: 1.2rem;
+            background: linear-gradient(115deg, #052d19 0%, #0b5530 45%, #22a06b 100%);
+            text-align: center;
+            color: #ffffff;
+          }
+          .svc-cta-banner h2 {
+            color: #ffffff !important;
+          }
+          .svc-cta-banner p {
+            color: rgba(255,255,255,.85);
+            max-width: 620px;
+            margin: 0 auto 26px;
+          }
+          .svc-cta-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+          }
+          .svc-cta-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 30px;
+            border-radius: 30px;
+            font-family: "Noto Sans Bold", sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            transition: background .3s ease, transform .3s ease, color .3s ease;
+          }
+          .svc-cta-links a.svc-cta-primary {
+            background: #ffffff;
+            color: #0b5530;
+          }
+          .svc-cta-links a.svc-cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px rgba(0,0,0,.2);
+          }
+          .svc-cta-links a.svc-cta-ghost {
+            background: rgba(255,255,255,.12);
+            border: 1.5px solid rgba(255,255,255,.4);
+            color: #ffffff;
+          }
+          .svc-cta-links a.svc-cta-ghost:hover {
+            background: rgba(255,255,255,.22);
+            transform: translateY(-3px);
+          }
+</style>
 <link href="../../../assets/iwov-resources/grid/bootstrap/4.0/bootstrap-grid.min.css" type="text/css" rel="stylesheet">
 <!--ls:end[stylesheet]-->
 <!--ls:begin[script]-->
@@ -157,12 +388,12 @@
                               <div class="col-lg">
                                  <h6 class="text-uppercase mega-menu-title">GIỚI THIỆU</h6>
                                  <div class="dropdown-item"><a href="../../../about-us/corporate-profile/" class="dtm-link text-link" target="_self" anchor_name="header:giới thiệu công ty">Giới Thiệu Công Ty</a></div>
-                                 <div class="dropdown-item"><a href="../../../about-us/board-of-directors/" class="dtm-link text-link" target="_self" anchor_name="header:hội Đồng quản trị">Hội Đồng Quản Trị</a></div>
-                                 <div class="dropdown-item"><a href="../../../about-us/management-team/" class="dtm-link text-link" target="_self" anchor_name="header:ban Điều hành">Ban Điều Hành</a></div>
+                                 
+                                 
                                  <div class="dropdown-item"><a href="../../../about-us/our-investment-philosophy-and-capabilities/" class="dtm-link text-link" target="_self" anchor_name="header:phong cách, triết lý &amp; năng lực Đầu tư">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
-                                 <div class="dropdown-item"><a href="../../../about-us/careers/" class="dtm-link text-link" target="_self" anchor_name="header:cơ hội nghề nghiệp">Cơ Hội Nghề Nghiệp</a></div>
+                                 
                                  <div class="dropdown-item"><a href="../../../about-us/partnership/" class="dtm-link text-link" target="_self" anchor_name="header:Đối tác">Đối Tác</a></div>
-                                 <div class="dropdown-item"><a href="../../../about-us/policy/" class="dtm-link text-link" target="_self" anchor_name="header:quy Định">Quy Định</a></div>
+                                 
                               </div>
                               <div class="col-lg"></div>
                               <div class="col-lg"></div>
@@ -260,12 +491,12 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../../../contact-us/" target="_sel
                                     <div class="split-line--row"></div>
                                     <div class="col-12 pb-4 pt-3">
                                        <div class="dropdown-item"><a href="../../../about-us/corporate-profile/" class="dtm-link text-link" target="_self">Giới Thiệu Công Ty</a></div>
-                                       <div class="dropdown-item"><a href="../../../about-us/board-of-directors/" class="dtm-link text-link" target="_self">Hội Đồng Quản Trị</a></div>
-                                       <div class="dropdown-item"><a href="../../../about-us/management-team/" class="dtm-link text-link" target="_self">Ban Điều Hành</a></div>
+                                       
+                                       
                                        <div class="dropdown-item"><a href="../../../about-us/our-investment-philosophy-and-capabilities/" class="dtm-link text-link" target="_self">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
-                                       <div class="dropdown-item"><a href="../../../about-us/careers/" class="dtm-link text-link" target="_self">Cơ Hội Nghề Nghiệp</a></div>
+                                       
                                        <div class="dropdown-item"><a href="../../../about-us/partnership/" class="dtm-link text-link" target="_self">Đối Tác</a></div>
-                                       <div class="dropdown-item"><a href="../../../about-us/policy/" class="dtm-link text-link" target="_self">Quy Định</a></div>
+                                       
                                     </div>
                                  </div>
                               </div>
@@ -419,18 +650,106 @@ Email: tapdoanvinagroup@gmail.com</p><a href="../../../contact-us/" target="_sel
 </div><!--ls:end[component-1773900973931]--> 
      </div> 
      <div class="iw_component" id="iw_comp1773900973932">
-       <!--ls:begin[component-1773900973932]--><style>#iw_comp1773900973932{}</style><div class="" id="">
-<div><div class="" id="introduction">
-<div class="uob-table-carousel pb-0">
-<h2 class="uob-h2 pb-5" style="text-align: center;">Nghiên Cứu &amp; Phân Tích Thị Trường</h2>
-<p style="text-align: left;"><span>Vina Group cung cấp dịch vụ </span><strong>phân tích xu hướng thị trường, cung cấp insight và dự báo chiến lược</strong><span>, kết hợp nghiên cứu chuyên sâu để hỗ trợ khách hàng đưa ra quyết định đầu tư chính xác và kịp thời.</span></p>
-<p style="text-align: left;"><span>Đội ngũ chuyên gia phân tích của chúng tôi theo dõi liên tục diễn biến vĩ mô, ngành và doanh nghiệp niêm yết, tổng hợp thành các báo cáo và khuyến nghị thực tiễn, giúp nhà đầu tư nắm bắt cơ hội và quản trị rủi ro hiệu quả trên thị trường tài chính Việt Nam.</span></p>
-</div>
-</div></div>
+       <!--ls:begin[component-1773900973932]--><style>#iw_comp1773900973932{}</style><div class="container-fluid svc-intro-section" id="introduction">
+   <div class="row align-items-center">
+      <div class="col-12 col-lg-6">
+         <span class="section-kicker">Dịch Vụ Đầu Tư</span>
+         <h2 class="uob-h2 mb-4" style="text-align: left;">Nghiên Cứu &amp; Phân Tích Thị Trường</h2>
+         <p class="paragraph" style="text-align: left;"><span>Vina Group cung cấp dịch vụ </span><strong>phân tích xu hướng thị trường, cung cấp insight và dự báo chiến lược</strong><span>, kết hợp nghiên cứu chuyên sâu để hỗ trợ khách hàng đưa ra quyết định đầu tư chính xác và kịp thời.</span></p>
+         <p class="paragraph" style="text-align: left;"><span>Đội ngũ chuyên gia phân tích của chúng tôi theo dõi liên tục diễn biến vĩ mô, ngành và doanh nghiệp niêm yết, tổng hợp thành các báo cáo và khuyến nghị thực tiễn, giúp nhà đầu tư nắm bắt cơ hội và quản trị rủi ro hiệu quả trên thị trường tài chính Việt Nam.</span></p>
+      </div>
+      <div class="col-12 col-lg-6 mt-5 mt-lg-0"><img loading="lazy" class="img-fluid svc-intro-img" src="../../../assets/web-resources/images/funds-and-services/uvef/research-illustration-green.svg" alt="Nghiên cứu và phân tích thị trường"></div>
+   </div>
 </div>
 <!--ls:end[component-1773900973932]-->
      </div>
-    </div> 
+     <div class="iw_component" id="iw_comp_uvef_scope">
+       <div class="container-fluid svc-scope-section">
+   <div class="row justify-content-center">
+      <div class="col-12 text-center"><span class="section-kicker d-inline-flex">Phạm Vi Bao Phủ</span></div>
+   </div>
+   <div class="row justify-content-center content-title">
+      <h2 class="col-12 uob-h2 text-center">Phạm Vi Nghiên Cứu</h2>
+      <div class="col-12 col-md-8 text-center"><p class="paragraph">Đội ngũ phân tích theo dõi liên tục bốn khía cạnh cốt lõi của thị trường để đưa ra khuyến nghị đầu tư toàn diện.</p></div>
+   </div>
+   <div class="row">
+      <div class="col-6 col-md-3 mb-5 mb-md-0"><div class="svc-scope-card"><span class="svc-scope-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#ffffff" stroke-width="2"/><path d="M12 3C14.5 6 15.5 9 15.5 12C15.5 15 14.5 18 12 21C9.5 18 8.5 15 8.5 12C8.5 9 9.5 6 12 3Z" stroke="#ffffff" stroke-width="2"/><path d="M3.5 9H20.5M3.5 15H20.5" stroke="#ffffff" stroke-width="2"/></svg></span><div class="svc-scope-title">Vĩ Mô</div><div class="svc-scope-text">Theo dõi tăng trưởng GDP, lạm phát, tỷ giá và chính sách tiền tệ ảnh hưởng tới thị trường.</div></div></div>
+      <div class="col-6 col-md-3 mb-5 mb-md-0"><div class="svc-scope-card"><span class="svc-scope-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 19V11M4 11L2 11M4 11L6 11M11 19V5M11 5L9 5M11 5L13 5M18 19V13M18 13L16 13M18 13L20 13" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span><div class="svc-scope-title">Ngành</div><div class="svc-scope-text">Phân tích triển vọng và chu kỳ của từng nhóm ngành trên thị trường chứng khoán Việt Nam.</div></div></div>
+      <div class="col-6 col-md-3"><div class="svc-scope-card"><span class="svc-scope-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" stroke="#ffffff" stroke-width="2"/><path d="M8 8H16M8 12H16M8 16H12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span><div class="svc-scope-title">Doanh Nghiệp Niêm Yết</div><div class="svc-scope-text">Định giá, đánh giá sức khỏe tài chính và triển vọng tăng trưởng của từng doanh nghiệp.</div></div></div>
+      <div class="col-6 col-md-3"><div class="svc-scope-card"><span class="svc-scope-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 17L9 11L13 15L21 7" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 7H21V13" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="svc-scope-title">Dòng Vốn</div><div class="svc-scope-text">Bám sát diễn biến dòng tiền nội và khối ngoại để nhận diện xu hướng thị trường kịp thời.</div></div></div>
+   </div>
+</div>
+     </div>
+     <div class="iw_component" id="iw_comp_uvef_process">
+       <div class="container-fluid svc-process-section">
+   <div class="row justify-content-center">
+      <div class="col-12 text-center"><span class="section-kicker d-inline-flex">Cách Chúng Tôi Làm Việc</span></div>
+   </div>
+   <div class="row justify-content-center content-title">
+      <h2 class="col-12 uob-h2 text-center">Quy Trình Phân Tích</h2>
+   </div>
+   <div class="row">
+      <div class="col-6 col-md-3 mb-5 mb-md-0">
+         <div class="svc-process-step"><div class="svc-process-connector"></div>
+            <div class="svc-process-number">1</div>
+            <div class="svc-process-step-title">Thu Thập Dữ Liệu</div>
+            <div class="svc-process-step-text">Tổng hợp dữ liệu vĩ mô, ngành và doanh nghiệp từ các nguồn tin cậy.</div>
+         </div>
+      </div>
+      <div class="col-6 col-md-3 mb-5 mb-md-0">
+         <div class="svc-process-step"><div class="svc-process-connector"></div>
+            <div class="svc-process-number">2</div>
+            <div class="svc-process-step-title">Phân Tích Chuyên Sâu</div>
+            <div class="svc-process-step-text">Áp dụng mô hình phân tích cơ bản và kỹ thuật để đánh giá xu hướng.</div>
+         </div>
+      </div>
+      <div class="col-6 col-md-3">
+         <div class="svc-process-step"><div class="svc-process-connector"></div>
+            <div class="svc-process-number">3</div>
+            <div class="svc-process-step-title">Xây Dựng Khuyến Nghị</div>
+            <div class="svc-process-step-text">Chuyển hóa kết quả nghiên cứu thành khuyến nghị đầu tư thực tiễn.</div>
+         </div>
+      </div>
+      <div class="col-6 col-md-3">
+         <div class="svc-process-step">
+            <div class="svc-process-number">4</div>
+            <div class="svc-process-step-title">Cập Nhật Liên Tục</div>
+            <div class="svc-process-step-text">Theo dõi và cập nhật báo cáo khi thị trường có biến động mới.</div>
+         </div>
+      </div>
+   </div>
+</div>
+     </div>
+     <div class="iw_component" id="iw_comp_uvef_benefit">
+       <div class="container-fluid svc-benefit-section">
+   <div class="row justify-content-center">
+      <div class="col-12 text-center"><span class="section-kicker d-inline-flex">Giá Trị Mang Lại</span></div>
+   </div>
+   <div class="row justify-content-center content-title">
+      <h2 class="col-12 uob-h2 text-center">Lợi Ích Khi Sử Dụng Dịch Vụ</h2>
+   </div>
+   <div class="row">
+      <div class="col-12 col-md-6 mb-4"><div class="svc-benefit-card"><span class="svc-benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 22S19 17.9 19 11.5S16.2 2 12 2 5 5.9 5 11.5 12 22 12 22Z" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/><path d="M9 11.5L11 13.5L15.5 9" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><div class="svc-benefit-title">Ra Quyết Định Chính Xác Hơn</div><div class="svc-benefit-text">Dữ liệu và phân tích đáng tin cậy giúp nhà đầu tư đưa ra quyết định kịp thời, có cơ sở.</div></div></div></div>
+      <div class="col-12 col-md-6 mb-4"><div class="svc-benefit-card"><span class="svc-benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 19V11M4 11L2 11M4 11L6 11M11 19V5M11 5L9 5M11 5L13 5M18 19V13M18 13L16 13M18 13L20 13" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span><div><div class="svc-benefit-title">Nắm Bắt Cơ Hội Sớm</div><div class="svc-benefit-text">Cập nhật liên tục giúp nhà đầu tư nhận diện cơ hội và rủi ro trước thị trường.</div></div></div></div>
+      <div class="col-12 col-md-6"><div class="svc-benefit-card"><span class="svc-benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2" stroke="#ffffff" stroke-width="2"/><path d="M8 7V5C8 3.9 8.9 3 10 3H14C15.1 3 16 3.9 16 5V7" stroke="#ffffff" stroke-width="2"/></svg></span><div><div class="svc-benefit-title">Tiết Kiệm Thời Gian Nghiên Cứu</div><div class="svc-benefit-text">Nhận báo cáo tổng hợp sẵn sàng thay vì tự tổng hợp từ nhiều nguồn rời rạc.</div></div></div></div>
+      <div class="col-12 col-md-6"><div class="svc-benefit-card"><span class="svc-benefit-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="9" r="2.6" stroke="#ffffff" stroke-width="2"/><circle cx="16" cy="9" r="2.6" stroke="#ffffff" stroke-width="2"/><path d="M2.5 19C2.5 16 5 13.8 8 13.8C9.4 13.8 10.7 14.3 11.6 15.1M21.5 19C21.5 16 19 13.8 16 13.8C14.6 13.8 13.3 14.3 12.4 15.1" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg></span><div><div class="svc-benefit-title">Đồng Hành Cùng Chuyên Gia</div><div class="svc-benefit-text">Tiếp cận trực tiếp đội ngũ phân tích giàu kinh nghiệm khi cần tư vấn thêm.</div></div></div></div>
+   </div>
+</div>
+     </div>
+     <div class="iw_component" id="iw_comp_uvef_cta">
+       <div class="container-fluid">
+   <div class="svc-cta-banner">
+      <span class="section-kicker" style="color:#8ff0c0">Bắt Đầu Ngay</span>
+      <h2 class="uob-h2 mb-3">Sẵn Sàng Đầu Tư Với Dữ Liệu Trong Tay?</h2>
+      <p class="paragraph">Liên hệ đội ngũ chuyên gia của Vina Group để được tư vấn báo cáo nghiên cứu và chiến lược đầu tư phù hợp với mục tiêu của bạn.</p>
+      <div class="svc-cta-links">
+         <a class="svc-cta-primary" href="../../../contact-us/">Liên Hệ Tư Vấn</a>
+         <a class="svc-cta-ghost" href="../">Xem Các Dịch Vụ Khác</a>
+      </div>
+   </div>
+</div>
+     </div>
+    </div>
     <div class="iw_component" id="iw_comp1660130786243">
       <!--ls:begin[component-1660130786243]--><style>#iw_comp1660130786243{}</style><div role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" class="rounded-10 uob-cookie cookie-popup" id="cookie-alert">
    <div class="d-sm-flex">
