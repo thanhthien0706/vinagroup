@@ -13,6 +13,11 @@
 }
 </script><!--ls:headTopEnd[script]--><!--ls:begin[analytics-head]--><!--ls:end[analytics-head]--><title>Trang Chủ | Vina Group</title>
 <!--grid-layout-->
+<link rel="icon" type="image/svg+xml" href="assets/iwov-resources/assets/logos/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/iwov-resources/assets/logos/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/iwov-resources/assets/logos/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/iwov-resources/assets/logos/apple-touch-icon.png">
+
 <!--ls:begin[stylesheet]-->
 <style type="text/css">
           
@@ -132,55 +137,40 @@
             to { opacity: 1; transform: translateY(0); }
           }
 
-          /* Mũi tên điều hướng: nút tròn theo màu thương hiệu */
+          /* Chấm điều hướng carousel: dải pill gọn gàng, ẩn 2 nút mũi tên (vẫn giữ trong DOM để script gốc của theme không bị lỗi khi đổi slide, chỉ ẩn bằng CSS) */
+          #carouselExampleIndicators .carousel-controls {
+            margin: 0;
+            padding: 22px 0 28px;
+            background: linear-gradient(180deg, #f6faf8 0%, #ffffff 100%);
+          }
           #carouselExampleIndicators .carousel-control-prev,
           #carouselExampleIndicators .carousel-control-next {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: #ffffff;
-            border: 2px solid var(--primary-light);
-            flex: 0 0 auto;
-            margin: 0 14px !important;
-            opacity: 1;
-            transition: background .3s ease, border-color .3s ease, transform .3s ease;
+            display: none !important;
           }
-          #carouselExampleIndicators .carousel-control-prev:hover,
-          #carouselExampleIndicators .carousel-control-next:hover {
-            background: var(--primary-dark);
-            border-color: var(--primary-dark);
-            transform: scale(1.08);
-          }
-          #carouselExampleIndicators .carousel-control-prev-icon,
-          #carouselExampleIndicators .carousel-control-next-icon {
-            width: 16px;
-            height: 16px;
-            transition: filter .3s ease;
-          }
-          #carouselExampleIndicators .carousel-control-prev:hover .carousel-control-prev-icon,
-          #carouselExampleIndicators .carousel-control-next:hover .carousel-control-next-icon {
-            filter: brightness(0) invert(1);
-          }
-
-          /* Chấm điều hướng: dạng pill theo thương hiệu */
-          #carouselExampleIndicators .carousel-controls {
-            margin-top: 18px;
+          #carouselExampleIndicators .carousel-indicators {
+            position: static;
+            margin: 0;
           }
           #carouselExampleIndicators .carousel-indicators li {
             width: 10px;
             height: 10px;
-            margin: 0 6px;
-            border: 2px solid var(--primary-light);
-            background-color: #ffffff;
-            transition: width .35s ease, background .35s ease, border-color .35s ease;
+            margin: 0 5px;
+            border: none;
+            background-color: #d7e8de;
+            box-shadow: none;
+            opacity: 1;
+            transition: width .4s ease, background .4s ease, box-shadow .4s ease;
+          }
+          #carouselExampleIndicators .carousel-indicators li:hover {
+            background-color: #a8d9bf;
           }
           #carouselExampleIndicators .carousel-indicators li.active {
-            width: 32px;
+            width: 36px;
             border-radius: 6px;
-            border-color: transparent;
             background: linear-gradient(90deg, #5fae84, #0f6b3f);
+            box-shadow: 0 4px 14px rgba(11, 85, 48, .35);
           }
-        
+
           /* Tiêu đề các mục: in đậm, dùng font có điểm nhấn thay vì font mảnh mặc định */
           .uob-h2,
           .uob-h4,
@@ -276,7 +266,7 @@
                            <h6 class="dropdown-header"></h6><a target="_self" anchor_name="header:vina group" class="dtm-link dropdown-item text-uppercase language-dropdown language-vietnamese">TIẾNG VIỆT</a></div>
                      </div>
                   </li>
-                  <li class="nav-item"><a href="contact-us/" class="dtm-link nav-link font-weight-bold text-uppercase text-ff-rbold" target="_self" anchor_name="header:liên hệ">Liên Hệ</a></li>
+                  <li class="nav-item"><a href="lien-he/" class="dtm-link nav-link font-weight-bold text-uppercase text-ff-rbold" target="_self" anchor_name="header:liên hệ">Liên Hệ</a></li>
                </ul>
             </nav>
          </div>
@@ -313,82 +303,82 @@
                <div class="navbar-expand-lg">
                   <ul class="navbar-nav mr-auto sticky-navbar login-button-sticky-none">
                      <li class="nav-item dropdown megamenu-li one">
-                        <div><a href="about-us/" class="dtm-link nav-link dropdown-toggle text-link--header pl-lg-4 pr-lg-4" target="_self" anchor_name="header:giới thiệu">Giới Thiệu</a></div>
+                        <div><a href="gioi-thieu/" class="dtm-link nav-link dropdown-toggle text-link--header pl-lg-4 pr-lg-4" target="_self" anchor_name="header:giới thiệu">Giới Thiệu</a></div>
                         <div class="dropdown-menu megamenu" aria-labelledby="dropdown01">
                            <div class="row">
                               <div class="col-lg">
                                  <h6 class="text-uppercase mega-menu-title">GIỚI THIỆU</h6>
-                                 <div class="dropdown-item"><a href="about-us/corporate-profile/" class="dtm-link text-link" target="_self" anchor_name="header:giới thiệu công ty">Giới Thiệu Công Ty</a></div>
+                                 <div class="dropdown-item"><a href="gioi-thieu/gioi-thieu-cong-ty/" class="dtm-link text-link" target="_self" anchor_name="header:giới thiệu công ty">Giới Thiệu Công Ty</a></div>
                                  
                                  
-                                 <div class="dropdown-item"><a href="about-us/our-investment-philosophy-and-capabilities/" class="dtm-link text-link" target="_self" anchor_name="header:phong cách, triết lý &amp; năng lực Đầu tư">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
+                                 <div class="dropdown-item"><a href="gioi-thieu/phong-cach-dau-tu/" class="dtm-link text-link" target="_self" anchor_name="header:phong cách, triết lý &amp; năng lực Đầu tư">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
                                  
-                                 <div class="dropdown-item"><a href="about-us/partnership/" class="dtm-link text-link" target="_self" anchor_name="header:Đối tác">Đối Tác</a></div>
+                                 <div class="dropdown-item"><a href="gioi-thieu/doi-tac/" class="dtm-link text-link" target="_self" anchor_name="header:Đối tác">Đối Tác</a></div>
                                  
                               </div>
                               <div class="col-lg"></div>
                               <div class="col-lg"></div>
                               <div class="col-lg"><img loading="lazy" src="assets/web-resources/images/about-us/index/help-and-support-220x165px.jpg" alt="" class="border-radius-10 card-of-cloum"><h4 class="uob-h4 mt-4 mega-menu-img-title">Trợ giúp &amp; Hỗ trợ</h4>
                                  <p class="mega-menu-content">Hotline: 077.291.6169<br>
-Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class="dtm-link text-link mt-6 text-link--bright-blue" anchor_name="Trợ giúp &amp; Hỗ trợ:liên hệ với chúng tôi">Liên hệ với chúng tôi</a></div>
+Email: tapdoanvinagroup@gmail.com</p><a href="lien-he/" target="_self" class="dtm-link text-link mt-6 text-link--bright-blue" anchor_name="Trợ giúp &amp; Hỗ trợ:liên hệ với chúng tôi">Liên hệ với chúng tôi</a></div>
                            </div>
                         </div>
                      </li>
                      <li class="nav-item dropdown megamenu-li two">
-                        <div><a href="funds-and-services/" class="dtm-link nav-link dropdown-toggle text-link--header pl-lg-4 pr-lg-4" target="_self" anchor_name="header:lĩnh vực Đầu tư">Lĩnh Vực Đầu Tư</a></div>
+                        <div><a href="linh-vuc-dau-tu/" class="dtm-link nav-link dropdown-toggle text-link--header pl-lg-4 pr-lg-4" target="_self" anchor_name="header:lĩnh vực Đầu tư">Lĩnh Vực Đầu Tư</a></div>
                         <div class="dropdown-menu megamenu" aria-labelledby="dropdown02">
                            <div class="row">
                               <div class="col-lg">
                                  <h6 class="text-uppercase mega-menu-title">DỊCH VỤ ĐẦU TƯ</h6>
-                                 <div class="dropdown-item"><a href="funds-and-services/funds/united-vietnam-equity-fund/" class="dtm-link text-link" target="_self" anchor_name="header:nghiên cứu &amp; phân tích thị trường">Nghiên Cứu &amp; Phân Tích Thị Trường</a></div>
-                                 <div class="dropdown-item"><a href="funds-and-services/funds/united-vietnam-esg-equity-fund/" class="dtm-link text-link" target="_self" anchor_name="header:hợp tác dự án tiềm năng">Hợp Tác Dự Án Tiềm Năng</a></div>
-                                 <div class="dropdown-item"><a href="funds-and-services/funds/united-vietnam-dynamic-income-fund/" class="dtm-link text-link" target="_self" anchor_name="header:tự doanh phái sinh">Tự Doanh Phái Sinh</a></div>
-                                 <div class="dropdown-item"><a href="funds-and-services/funds/usif/" class="dtm-link text-link" target="_self" anchor_name="header:tự doanh trái phiếu">Tự Doanh Trái Phiếu</a></div>
-                                 <div class="dropdown-item"><a href="funds-and-services/funds/ummf/" class="dtm-link text-link" target="_self" anchor_name="header:Đầu tư cổ phiếu tự doanh">Đầu Tư Cổ Phiếu Tự Doanh</a></div>
-                                 <div><a href="funds-and-services/funds/" target="_self" button_name="header:tất cả" class="dtm-button"><button class="btn-default-secondary mt-3">Tất cả</button></a></div>
+                                 <div class="dropdown-item"><a href="linh-vuc-dau-tu/quy-dau-tu/nghien-cuu-phan-tich-thi-truong/" class="dtm-link text-link" target="_self" anchor_name="header:nghiên cứu &amp; phân tích thị trường">Nghiên Cứu &amp; Phân Tích Thị Trường</a></div>
+                                 <div class="dropdown-item"><a href="linh-vuc-dau-tu/quy-dau-tu/hop-tac-du-an-tiem-nang/" class="dtm-link text-link" target="_self" anchor_name="header:hợp tác dự án tiềm năng">Hợp Tác Dự Án Tiềm Năng</a></div>
+                                 <div class="dropdown-item"><a href="linh-vuc-dau-tu/quy-dau-tu/tu-doanh-phai-sinh/" class="dtm-link text-link" target="_self" anchor_name="header:tự doanh phái sinh">Tự Doanh Phái Sinh</a></div>
+                                 <div class="dropdown-item"><a href="linh-vuc-dau-tu/quy-dau-tu/tu-doanh-trai-phieu/" class="dtm-link text-link" target="_self" anchor_name="header:tự doanh trái phiếu">Tự Doanh Trái Phiếu</a></div>
+                                 <div class="dropdown-item"><a href="linh-vuc-dau-tu/quy-dau-tu/dau-tu-co-phieu-tu-doanh/" class="dtm-link text-link" target="_self" anchor_name="header:Đầu tư cổ phiếu tự doanh">Đầu Tư Cổ Phiếu Tự Doanh</a></div>
+                                 <div><a href="linh-vuc-dau-tu/quy-dau-tu/" target="_self" button_name="header:tất cả" class="dtm-button"><button class="btn-default-secondary mt-3">Tất cả</button></a></div>
                               </div>
                               <div class="split-line"></div>
                               <div class="col-lg">
                                  <h6 class="text-uppercase mega-menu-title">DỊCH VỤ</h6>
-                                 <div class="dropdown-item"><a href="funds-and-services/segregated-management-account-service/" class="dtm-link text-link" target="_self" anchor_name="header:Đầu tư tự doanh">Đầu Tư Tự Doanh</a></div>
-                                 <div class="dropdown-item"><a href="funds-and-services/investment-advisory/" class="dtm-link text-link" target="_self" anchor_name="header:tư vấn quản lý doanh nghiệp">Tư Vấn Quản Lý Doanh Nghiệp</a></div>
+                                 <div class="dropdown-item"><a href="linh-vuc-dau-tu/dau-tu-tu-doanh/" class="dtm-link text-link" target="_self" anchor_name="header:Đầu tư tự doanh">Đầu Tư Tự Doanh</a></div>
+                                 <div class="dropdown-item"><a href="linh-vuc-dau-tu/tu-van-quan-ly-doanh-nghiep/" class="dtm-link text-link" target="_self" anchor_name="header:tư vấn quản lý doanh nghiệp">Tư Vấn Quản Lý Doanh Nghiệp</a></div>
                               </div>
                            </div>
                         </div>
                      </li>
                      <li class="nav-item dropdown megamenu-li three">
-                        <div><a href="sustainability/" class="dtm-link nav-link dropdown-toggle text-link--header pl-lg-4 pr-lg-4" target="_self" anchor_name="header:phát triển bền vững">Phát Triển Bền Vững</a></div>
+                        <div><a href="phat-trien-ben-vung/" class="dtm-link nav-link dropdown-toggle text-link--header pl-lg-4 pr-lg-4" target="_self" anchor_name="header:phát triển bền vững">Phát Triển Bền Vững</a></div>
                         <div class="dropdown-menu megamenu" aria-labelledby="dropdown03">
                            <div class="row">
                               <div class="col-lg">
                                  <h6 class="text-uppercase mega-menu-title">PHÁT TRIỂN BỀN VỮNG</h6>
-                                 <div class="dropdown-item"><a href="sustainability/sustainability/what-is-sustainability-investing/" class="dtm-link text-link" target="_self" anchor_name="header:Đầu tư bền vững là gì?">Đầu Tư Bền Vững Là Gì?</a></div>
-                                 <div class="dropdown-item"><a href="sustainability/sustainability/our-commitment/" class="dtm-link text-link" target="_self" anchor_name="header:cam kết bền vững của chúng tôi">Cam Kết Bền Vững Của Chúng Tôi</a></div>
-                                 <div class="dropdown-item"><a href="sustainability/sustainability/sustainable-investment-and-active-ownership-approach/" class="dtm-link text-link" target="_self" anchor_name="header:phương pháp tiếp cận Đầu tư bền vững">Phương Pháp Tiếp Cận Đầu Tư Bền Vững</a></div>
-                                 <div class="dropdown-item"><a href="sustainability/sustainability/sustainability-solution/" class="dtm-link text-link" target="_self" anchor_name="header:giải pháp cho Đầu tư bền vững">Giải Pháp Cho Đầu Tư Bền Vững</a></div>
-                                 <div class="dropdown-item"><a href="sustainability/sustainability/article-activity/" class="dtm-link text-link" target="_self" anchor_name="header:hoạt Động esg">Hoạt Động ESG</a></div>
-                                 <div><a href="sustainability/sustainability/" target="_self" button_name="header:tất cả" class="dtm-button"><button class="btn-default-secondary mt-3">Tất cả</button></a></div>
+                                 <div class="dropdown-item"><a href="phat-trien-ben-vung/dau-tu-ben-vung/dau-tu-ben-vung-la-gi/" class="dtm-link text-link" target="_self" anchor_name="header:Đầu tư bền vững là gì?">Đầu Tư Bền Vững Là Gì?</a></div>
+                                 <div class="dropdown-item"><a href="phat-trien-ben-vung/dau-tu-ben-vung/cam-ket-ben-vung/" class="dtm-link text-link" target="_self" anchor_name="header:cam kết bền vững của chúng tôi">Cam Kết Bền Vững Của Chúng Tôi</a></div>
+                                 <div class="dropdown-item"><a href="phat-trien-ben-vung/dau-tu-ben-vung/phuong-phap-tiep-can-dau-tu-ben-vung/" class="dtm-link text-link" target="_self" anchor_name="header:phương pháp tiếp cận Đầu tư bền vững">Phương Pháp Tiếp Cận Đầu Tư Bền Vững</a></div>
+                                 <div class="dropdown-item"><a href="phat-trien-ben-vung/dau-tu-ben-vung/giai-phap-dau-tu-ben-vung/" class="dtm-link text-link" target="_self" anchor_name="header:giải pháp cho Đầu tư bền vững">Giải Pháp Cho Đầu Tư Bền Vững</a></div>
+                                 <div class="dropdown-item"><a href="phat-trien-ben-vung/dau-tu-ben-vung/hoat-dong-esg/" class="dtm-link text-link" target="_self" anchor_name="header:hoạt Động esg">Hoạt Động ESG</a></div>
+                                 <div><a href="phat-trien-ben-vung/dau-tu-ben-vung/" target="_self" button_name="header:tất cả" class="dtm-button"><button class="btn-default-secondary mt-3">Tất cả</button></a></div>
                               </div>
                               <div class="split-line"></div>
                               <div class="col-lg">
                                  <h6 class="text-uppercase mega-menu-title">KHÁC</h6>
-                                 <div class="dropdown-item"><a href="sustainability/esg-insights/" class="dtm-link text-link" target="_self" anchor_name="header:hiểu thêm về esg">Hiểu thêm về ESG</a></div>
+                                 <div class="dropdown-item"><a href="phat-trien-ben-vung/tim-hieu-esg/" class="dtm-link text-link" target="_self" anchor_name="header:hiểu thêm về esg">Hiểu thêm về ESG</a></div>
                               </div>
                            </div>
                         </div>
                      </li>
                      <li class="nav-item dropdown megamenu-li four">
-                        <div><a href="media-center/" class="dtm-link nav-link dropdown-toggle text-link--header pl-lg-4 pr-lg-4" target="_self" anchor_name="header:tin tức">Tin Tức</a></div>
+                        <div><a href="tin-tuc/" class="dtm-link nav-link dropdown-toggle text-link--header pl-lg-4 pr-lg-4" target="_self" anchor_name="header:tin tức">Tin Tức</a></div>
                      </li>
                      <li class="nav-item dropdown megamenu-li five">
-                        <div><a href="investor-relations/" class="dtm-link nav-link dropdown-toggle text-link--header pl-lg-4 pr-lg-4" target="_self" anchor_name="header:quan hệ cổ Đông">Quan Hệ Cổ Đông</a></div>
+                        <div><a href="quan-he-co-dong/" class="dtm-link nav-link dropdown-toggle text-link--header pl-lg-4 pr-lg-4" target="_self" anchor_name="header:quan hệ cổ Đông">Quan Hệ Cổ Đông</a></div>
                         <div class="dropdown-menu megamenu" aria-labelledby="dropdown05">
                            <div class="row">
                               <div class="col-lg">
                                  <h6 class="text-uppercase mega-menu-title">QUAN HỆ CỔ ĐÔNG</h6>
-                                 <div class="dropdown-item"><a href="investor-relations/press-releases/" class="dtm-link text-link" target="_self" anchor_name="header:công bố thông tin">Công Bố Thông Tin</a></div>
-                                 <div class="dropdown-item"><a href="investor-relations/charter-of-the-company/" class="dtm-link text-link" target="_self" anchor_name="header:Điều lệ công ty">Điều Lệ Công Ty</a></div>
-                                 <div class="dropdown-item"><a href="investor-relations/financial-reports-of-the-company/" class="dtm-link text-link" target="_self" anchor_name="header:báo cáo tài chính công ty">Báo Cáo Tài Chính Công Ty</a></div>
+                                 <div class="dropdown-item"><a href="quan-he-co-dong/cong-bo-thong-tin/" class="dtm-link text-link" target="_self" anchor_name="header:công bố thông tin">Công Bố Thông Tin</a></div>
+                                 <div class="dropdown-item"><a href="quan-he-co-dong/dieu-le-cong-ty/" class="dtm-link text-link" target="_self" anchor_name="header:Điều lệ công ty">Điều Lệ Công Ty</a></div>
+                                 <div class="dropdown-item"><a href="quan-he-co-dong/bao-cao-tai-chinh-cong-ty/" class="dtm-link text-link" target="_self" anchor_name="header:báo cáo tài chính công ty">Báo Cáo Tài Chính Công Ty</a></div>
                               </div>
                               <div class="col-lg"></div>
                               <div class="col-lg"></div>
@@ -396,7 +386,7 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
                         </div>
                      </li>
                      <li class="nav-item dropdown megamenu-li six">
-                        <div><a href="contact-us/" class="dtm-link nav-link dropdown-toggle text-link--header pl-lg-4 pr-lg-4" target="_self" anchor_name="header:liên hệ">Liên Hệ</a></div>
+                        <div><a href="lien-he/" class="dtm-link nav-link dropdown-toggle text-link--header pl-lg-4 pr-lg-4" target="_self" anchor_name="header:liên hệ">Liên Hệ</a></div>
                      </li>
                      <li class="nav-item megamenu-li header-search-icon">
                         <div><button class="dtm-button btn" data-toggle="modal" data-target="#LgSearchModal" button_name="header:search"></button></div>
@@ -421,12 +411,12 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
                                  <div class="row">
                                     <div class="split-line--row"></div>
                                     <div class="col-12 pb-4 pt-3">
-                                       <div class="dropdown-item"><a href="about-us/corporate-profile/" class="dtm-link text-link" target="_self">Giới Thiệu Công Ty</a></div>
+                                       <div class="dropdown-item"><a href="gioi-thieu/gioi-thieu-cong-ty/" class="dtm-link text-link" target="_self">Giới Thiệu Công Ty</a></div>
                                        
                                        
-                                       <div class="dropdown-item"><a href="about-us/our-investment-philosophy-and-capabilities/" class="dtm-link text-link" target="_self">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
+                                       <div class="dropdown-item"><a href="gioi-thieu/phong-cach-dau-tu/" class="dtm-link text-link" target="_self">Phong Cách, Triết Lý &amp; Năng Lực Đầu Tư</a></div>
                                        
-                                       <div class="dropdown-item"><a href="about-us/partnership/" class="dtm-link text-link" target="_self">Đối Tác</a></div>
+                                       <div class="dropdown-item"><a href="gioi-thieu/doi-tac/" class="dtm-link text-link" target="_self">Đối Tác</a></div>
                                        
                                     </div>
                                  </div>
@@ -445,13 +435,13 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
                                  <div class="row">
                                     <div class="split-line--row"></div>
                                     <div class="col-12 pb-4 pt-3">
-                                       <div class="dropdown-item"><a href="funds-and-services/funds/united-vietnam-equity-fund/" class="dtm-link text-link" target="_self">Nghiên Cứu &amp; Phân Tích Thị Trường</a></div>
-                                       <div class="dropdown-item"><a href="funds-and-services/funds/united-vietnam-esg-equity-fund/" class="dtm-link text-link" target="_self">Hợp Tác Dự Án Tiềm Năng</a></div>
-                                       <div class="dropdown-item"><a href="funds-and-services/funds/united-vietnam-dynamic-income-fund/" class="dtm-link text-link" target="_self">Tự Doanh Phái Sinh</a></div>
-                                       <div class="dropdown-item"><a href="funds-and-services/funds/usif/" class="dtm-link text-link" target="_self">Tự Doanh Trái Phiếu</a></div>
-                                       <div class="dropdown-item"><a href="funds-and-services/funds/ummf/" class="dtm-link text-link" target="_self">Đầu Tư Cổ Phiếu Tự Doanh</a></div>
-                                       <div class="dropdown-item"><a href="funds-and-services/segregated-management-account-service/" class="dtm-link text-link" target="_self">Đầu Tư Tự Doanh</a></div>
-                                       <div class="dropdown-item"><a href="funds-and-services/investment-advisory/" class="dtm-link text-link" target="_self">Tư Vấn Quản Lý Doanh Nghiệp</a></div>
+                                       <div class="dropdown-item"><a href="linh-vuc-dau-tu/quy-dau-tu/nghien-cuu-phan-tich-thi-truong/" class="dtm-link text-link" target="_self">Nghiên Cứu &amp; Phân Tích Thị Trường</a></div>
+                                       <div class="dropdown-item"><a href="linh-vuc-dau-tu/quy-dau-tu/hop-tac-du-an-tiem-nang/" class="dtm-link text-link" target="_self">Hợp Tác Dự Án Tiềm Năng</a></div>
+                                       <div class="dropdown-item"><a href="linh-vuc-dau-tu/quy-dau-tu/tu-doanh-phai-sinh/" class="dtm-link text-link" target="_self">Tự Doanh Phái Sinh</a></div>
+                                       <div class="dropdown-item"><a href="linh-vuc-dau-tu/quy-dau-tu/tu-doanh-trai-phieu/" class="dtm-link text-link" target="_self">Tự Doanh Trái Phiếu</a></div>
+                                       <div class="dropdown-item"><a href="linh-vuc-dau-tu/quy-dau-tu/dau-tu-co-phieu-tu-doanh/" class="dtm-link text-link" target="_self">Đầu Tư Cổ Phiếu Tự Doanh</a></div>
+                                       <div class="dropdown-item"><a href="linh-vuc-dau-tu/dau-tu-tu-doanh/" class="dtm-link text-link" target="_self">Đầu Tư Tự Doanh</a></div>
+                                       <div class="dropdown-item"><a href="linh-vuc-dau-tu/tu-van-quan-ly-doanh-nghiep/" class="dtm-link text-link" target="_self">Tư Vấn Quản Lý Doanh Nghiệp</a></div>
                                     </div>
                                  </div>
                               </div>
@@ -469,12 +459,12 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
                                  <div class="row">
                                     <div class="split-line--row"></div>
                                     <div class="col-12 pb-4 pt-3">
-                                       <div class="dropdown-item"><a href="sustainability/sustainability/what-is-sustainability-investing/" class="dtm-link text-link" target="_self">Đầu Tư Bền Vững Là Gì?</a></div>
-                                       <div class="dropdown-item"><a href="sustainability/sustainability/our-commitment/" class="dtm-link text-link" target="_self">Cam Kết Bền Vững Của Chúng Tôi</a></div>
-                                       <div class="dropdown-item"><a href="sustainability/sustainability/sustainable-investment-and-active-ownership-approach/" class="dtm-link text-link" target="_self">Phương Pháp Tiếp Cận Đầu Tư Bền Vững</a></div>
-                                       <div class="dropdown-item"><a href="sustainability/sustainability/sustainability-solution/" class="dtm-link text-link" target="_self">Giải Pháp Cho Đầu Tư Bền Vững</a></div>
-                                       <div class="dropdown-item"><a href="sustainability/sustainability/article-activity/" class="dtm-link text-link" target="_self">Hoạt Động ESG</a></div>
-                                       <div class="dropdown-item"><a href="sustainability/esg-insights/" class="dtm-link text-link" target="_self">Hiểu thêm về ESG</a></div>
+                                       <div class="dropdown-item"><a href="phat-trien-ben-vung/dau-tu-ben-vung/dau-tu-ben-vung-la-gi/" class="dtm-link text-link" target="_self">Đầu Tư Bền Vững Là Gì?</a></div>
+                                       <div class="dropdown-item"><a href="phat-trien-ben-vung/dau-tu-ben-vung/cam-ket-ben-vung/" class="dtm-link text-link" target="_self">Cam Kết Bền Vững Của Chúng Tôi</a></div>
+                                       <div class="dropdown-item"><a href="phat-trien-ben-vung/dau-tu-ben-vung/phuong-phap-tiep-can-dau-tu-ben-vung/" class="dtm-link text-link" target="_self">Phương Pháp Tiếp Cận Đầu Tư Bền Vững</a></div>
+                                       <div class="dropdown-item"><a href="phat-trien-ben-vung/dau-tu-ben-vung/giai-phap-dau-tu-ben-vung/" class="dtm-link text-link" target="_self">Giải Pháp Cho Đầu Tư Bền Vững</a></div>
+                                       <div class="dropdown-item"><a href="phat-trien-ben-vung/dau-tu-ben-vung/hoat-dong-esg/" class="dtm-link text-link" target="_self">Hoạt Động ESG</a></div>
+                                       <div class="dropdown-item"><a href="phat-trien-ben-vung/tim-hieu-esg/" class="dtm-link text-link" target="_self">Hiểu thêm về ESG</a></div>
                                     </div>
                                  </div>
                               </div>
@@ -485,7 +475,7 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
                   <div class="mx-auto mega-menu-list-item">
                      <div class="accordion md-accordion" role="tablist" aria-multiselectable="true" id="accordion-headerEX4">
                         <div class="card">
-                           <div class="card-header parent-accordion-header" role="tab" id="heading-headerEX4"><h5 class="d-flex justify-content-between page-header__title"><span><img loading="lazy" class="d-none icon-chevron-left" src="assets/iwov-resources/assets/Icons/icons-chevron-left.svg" alt="chevron left"><span class="title"><a href="media-center/" class="dtm-link text-link" target="_self">Tin Tức</a></span></span></h5></div>
+                           <div class="card-header parent-accordion-header" role="tab" id="heading-headerEX4"><h5 class="d-flex justify-content-between page-header__title"><span><img loading="lazy" class="d-none icon-chevron-left" src="assets/iwov-resources/assets/Icons/icons-chevron-left.svg" alt="chevron left"><span class="title"><a href="tin-tuc/" class="dtm-link text-link" target="_self">Tin Tức</a></span></span></h5></div>
                         </div>
                      </div>
                   </div>
@@ -499,9 +489,9 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
                                  <div class="row">
                                     <div class="split-line--row"></div>
                                     <div class="col-12 pb-4 pt-3">
-                                       <div class="dropdown-item"><a href="investor-relations/press-releases/" class="dtm-link text-link" target="_self">Công Bố Thông Tin</a></div>
-                                       <div class="dropdown-item"><a href="investor-relations/charter-of-the-company/" class="dtm-link text-link" target="_self">Điều Lệ Công Ty</a></div>
-                                       <div class="dropdown-item"><a href="investor-relations/financial-reports-of-the-company/" class="dtm-link text-link" target="_self">Báo Cáo Tài Chính Công Ty</a></div>
+                                       <div class="dropdown-item"><a href="quan-he-co-dong/cong-bo-thong-tin/" class="dtm-link text-link" target="_self">Công Bố Thông Tin</a></div>
+                                       <div class="dropdown-item"><a href="quan-he-co-dong/dieu-le-cong-ty/" class="dtm-link text-link" target="_self">Điều Lệ Công Ty</a></div>
+                                       <div class="dropdown-item"><a href="quan-he-co-dong/bao-cao-tai-chinh-cong-ty/" class="dtm-link text-link" target="_self">Báo Cáo Tài Chính Công Ty</a></div>
                                     </div>
                                  </div>
                               </div>
@@ -512,7 +502,7 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
                   <div class="mx-auto mega-menu-list-item">
                      <div class="accordion md-accordion" role="tablist" aria-multiselectable="true" id="accordion-headerEX6">
                         <div class="card">
-                           <div class="card-header parent-accordion-header" role="tab" id="heading-headerEX6"><h5 class="d-flex justify-content-between page-header__title"><span><img loading="lazy" class="d-none icon-chevron-left" src="assets/iwov-resources/assets/Icons/icons-chevron-left.svg" alt="chevron left"><span class="title"><a href="contact-us/" class="dtm-link text-link" target="_self">Liên Hệ</a></span></span></h5></div>
+                           <div class="card-header parent-accordion-header" role="tab" id="heading-headerEX6"><h5 class="d-flex justify-content-between page-header__title"><span><img loading="lazy" class="d-none icon-chevron-left" src="assets/iwov-resources/assets/Icons/icons-chevron-left.svg" alt="chevron left"><span class="title"><a href="lien-he/" class="dtm-link text-link" target="_self">Liên Hệ</a></span></span></h5></div>
                         </div>
                      </div>
                   </div>
@@ -527,7 +517,7 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
                         </div>
                      </div>
                   </li>
-                  <li class="nav-item"><a href="contact-us/" class="dtm-link nav-link text-uppercase" target="_self" anchor_name="header:liên hệ">Liên Hệ</a></li>
+                  <li class="nav-item"><a href="lien-he/" class="dtm-link nav-link text-uppercase" target="_self" anchor_name="header:liên hệ">Liên Hệ</a></li>
                </ul>
             </div>
          </div>
@@ -653,15 +643,15 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
          </div>
       </div>
    </div>
-   <div class="carousel-controls d-inline-flex align-items-center justify-content-center"><a class="carousel-control-prev" role="button" data-slide="prev" href="#carouselExampleIndicators"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only"></span></a><ol class="carousel-indicators">
+   <div class="carousel-controls d-flex align-items-center justify-content-center"><a class="carousel-control-prev" role="button" data-slide="prev" href="#carouselExampleIndicators" aria-hidden="true" tabindex="-1"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only"></span></a><ol class="carousel-indicators">
          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
          <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
          <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
          <li data-target="#carouselExampleIndicators" data-slide-to="3" class=""></li>
          <li data-target="#carouselExampleIndicators" data-slide-to="4" class=""></li>
          <li data-target="#carouselExampleIndicators" data-slide-to="5" class=""></li>
-      </ol><a class="carousel-control-next" role="button" data-slide="next" href="#carouselExampleIndicators"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only"></span></a></div>
-</div><!--ls:end[component-1773900973409]--> 
+      </ol><a class="carousel-control-next" role="button" data-slide="next" href="#carouselExampleIndicators" aria-hidden="true" tabindex="-1"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only"></span></a></div>
+</div><!--ls:end[component-1773900973409]-->
      </div> 
      <div class="iw_component" id="iw_comp1773900973411">
        <!--ls:begin[component-1773900973411]--><style>#iw_comp1773900973411{}</style><div class="container-fluid pl-0 pr-0 need-more-help bb-two-col-tile-stack">
@@ -673,45 +663,45 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
       <div class="row pl-0 pr-0 ">
          <div class="dtm-tile card-col col-12 col-md-6 mb-sm-5 mb-6" tile_name="đầu tư cổ phiếu tự doanh">
             <div class="card rounded-10 h-100" tabindex="0">
-               <div class="card-header text-center p-0 "><a href="funds-and-services/funds/ummf/" class="dtm-link" anchor_name="đầu tư cổ phiếu tự doanh" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/funds-and-services/index/funds-and-services-stock.jpg" alt="Đầu Tư Cổ Phiếu Tự Doanh"></a></div>
+               <div class="card-header text-center p-0 "><a href="linh-vuc-dau-tu/quy-dau-tu/dau-tu-co-phieu-tu-doanh/" class="dtm-link" anchor_name="đầu tư cổ phiếu tự doanh" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/funds-and-services/index/funds-and-services-stock.jpg" alt="Đầu Tư Cổ Phiếu Tự Doanh"></a></div>
                <div class="card-body p-6">
-                  <h4 class="card-title uob-h4 mb-3 text-bright-blue"><a href="funds-and-services/funds/ummf/" class="dtm-link link-hover-effect" anchor_name="đầu tư cổ phiếu tự doanh" target="_self">Đầu Tư Cổ Phiếu Tự Doanh</a></h4>
+                  <h4 class="card-title uob-h4 mb-3 text-bright-blue"><a href="linh-vuc-dau-tu/quy-dau-tu/dau-tu-co-phieu-tu-doanh/" class="dtm-link link-hover-effect" anchor_name="đầu tư cổ phiếu tự doanh" target="_self">Đầu Tư Cổ Phiếu Tự Doanh</a></h4>
                   <p class="card-text paragraph"></p>
                </div>
             </div>
          </div>
          <div class="dtm-tile card-col col-12 col-md-6 mb-sm-5 mb-6" tile_name="tự doanh trái phiếu">
             <div class="card rounded-10 h-100" tabindex="0">
-               <div class="card-header text-center p-0 "><a href="funds-and-services/funds/usif/" class="dtm-link" anchor_name="tự doanh trái phiếu" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/investor-relations/index/investor-relation-financial-report.jpg" alt="Tự Doanh Trái Phiếu"></a></div>
+               <div class="card-header text-center p-0 "><a href="linh-vuc-dau-tu/quy-dau-tu/tu-doanh-trai-phieu/" class="dtm-link" anchor_name="tự doanh trái phiếu" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/investor-relations/index/investor-relation-financial-report.jpg" alt="Tự Doanh Trái Phiếu"></a></div>
                <div class="card-body p-6">
-                  <h4 class="card-title uob-h4 mb-3 text-bright-blue"><a href="funds-and-services/funds/usif/" class="dtm-link link-hover-effect" anchor_name="tự doanh trái phiếu" target="_self">Tự Doanh Trái Phiếu</a></h4>
+                  <h4 class="card-title uob-h4 mb-3 text-bright-blue"><a href="linh-vuc-dau-tu/quy-dau-tu/tu-doanh-trai-phieu/" class="dtm-link link-hover-effect" anchor_name="tự doanh trái phiếu" target="_self">Tự Doanh Trái Phiếu</a></h4>
                   <p class="card-text paragraph"></p>
                </div>
             </div>
          </div>
          <div class="dtm-tile card-col col-12 col-md-6 mb-sm-5 mb-6" tile_name="tự doanh phái sinh">
             <div class="card rounded-10 h-100" tabindex="0">
-               <div class="card-header text-center p-0 "><a href="funds-and-services/funds/united-vietnam-dynamic-income-fund/" class="dtm-link" anchor_name="tự doanh phái sinh" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/funds-and-services/uvef/uvef-fund-information-banner.jpg" alt="Tự Doanh Phái Sinh"></a></div>
+               <div class="card-header text-center p-0 "><a href="linh-vuc-dau-tu/quy-dau-tu/tu-doanh-phai-sinh/" class="dtm-link" anchor_name="tự doanh phái sinh" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/funds-and-services/uvef/uvef-fund-information-banner.jpg" alt="Tự Doanh Phái Sinh"></a></div>
                <div class="card-body p-6">
-                  <h4 class="card-title uob-h4 mb-3 text-bright-blue"><a href="funds-and-services/funds/united-vietnam-dynamic-income-fund/" class="dtm-link link-hover-effect" anchor_name="tự doanh phái sinh" target="_self">Tự Doanh Phái Sinh</a></h4>
+                  <h4 class="card-title uob-h4 mb-3 text-bright-blue"><a href="linh-vuc-dau-tu/quy-dau-tu/tu-doanh-phai-sinh/" class="dtm-link link-hover-effect" anchor_name="tự doanh phái sinh" target="_self">Tự Doanh Phái Sinh</a></h4>
                   <p class="card-text paragraph"></p>
                </div>
             </div>
          </div>
          <div class="dtm-tile card-col col-12 col-md-6 mb-sm-5 mb-6" tile_name="hợp tác dự án tiềm năng">
             <div class="card rounded-10 h-100" tabindex="0">
-               <div class="card-header text-center p-0 "><a href="funds-and-services/funds/united-vietnam-esg-equity-fund/" class="dtm-link" anchor_name="hợp tác dự án tiềm năng" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/homepage/highlight-product/san-pham-noi-bat-uveef-2026.jpg" alt="Hợp Tác Dự Án Tiềm Năng"></a></div>
+               <div class="card-header text-center p-0 "><a href="linh-vuc-dau-tu/quy-dau-tu/hop-tac-du-an-tiem-nang/" class="dtm-link" anchor_name="hợp tác dự án tiềm năng" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/homepage/highlight-product/san-pham-noi-bat-uveef-2026.jpg" alt="Hợp Tác Dự Án Tiềm Năng"></a></div>
                <div class="card-body p-6">
-                  <h4 class="card-title uob-h4 mb-3 text-bright-blue"><a href="funds-and-services/funds/united-vietnam-esg-equity-fund/" class="dtm-link link-hover-effect" anchor_name="hợp tác dự án tiềm năng" target="_self">Hợp Tác Dự Án Tiềm Năng</a></h4>
+                  <h4 class="card-title uob-h4 mb-3 text-bright-blue"><a href="linh-vuc-dau-tu/quy-dau-tu/hop-tac-du-an-tiem-nang/" class="dtm-link link-hover-effect" anchor_name="hợp tác dự án tiềm năng" target="_self">Hợp Tác Dự Án Tiềm Năng</a></h4>
                   <p class="card-text paragraph"></p>
                </div>
             </div>
          </div>
          <div class="dtm-tile card-col col-12 col-md-6 mb-sm-5 mb-6" tile_name="đầu tư tự doanh">
             <div class="card rounded-10 h-100" tabindex="0">
-               <div class="card-header text-center p-0 "><a href="funds-and-services/segregated-management-account-service/" class="dtm-link" anchor_name="đầu tư tự doanh" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/funds-and-services/index/funds-and-services-sam.jpg" alt="Đầu Tư Tự Doanh"></a></div>
+               <div class="card-header text-center p-0 "><a href="linh-vuc-dau-tu/dau-tu-tu-doanh/" class="dtm-link" anchor_name="đầu tư tự doanh" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/funds-and-services/index/funds-and-services-sam.jpg" alt="Đầu Tư Tự Doanh"></a></div>
                <div class="card-body p-6">
-                  <h4 class="card-title uob-h4 mb-3 text-bright-blue"><a href="funds-and-services/segregated-management-account-service/" class="dtm-link link-hover-effect" anchor_name="đầu tư tự doanh" target="_self">Đầu Tư Tự Doanh</a></h4>
+                  <h4 class="card-title uob-h4 mb-3 text-bright-blue"><a href="linh-vuc-dau-tu/dau-tu-tu-doanh/" class="dtm-link link-hover-effect" anchor_name="đầu tư tự doanh" target="_self">Đầu Tư Tự Doanh</a></h4>
                   <p class="card-text paragraph"></p>
                </div>
             </div>
@@ -728,24 +718,24 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
       </div>
       <div class="row pl-0 pr-0">
          <div class="col-12 col-md-4">
-            <div class="card rounded-10 h-100 border-0 box-shadow-0"><a target="_self" anchor_name="icon:giới thiệu công ty" href="about-us/corporate-profile/" class="dtm-link"><img loading="lazy" class="rounded-10 img-fluid card-img card-img-top" src="assets/web-resources/images/homepage/abou-us/gioi-thieu-cong-ty-2026.jpg" alt=""></a><div class="card-body">
-                  <h4 class="card-title uob-h4 mb-3"><a target="_self" anchor_name="icon:giới thiệu công ty" href="about-us/corporate-profile/" class="dtm-link">Giới thiệu công ty</a></h4>
+            <div class="card rounded-10 h-100 border-0 box-shadow-0"><a target="_self" anchor_name="icon:giới thiệu công ty" href="gioi-thieu/gioi-thieu-cong-ty/" class="dtm-link"><img loading="lazy" class="rounded-10 img-fluid card-img card-img-top" src="assets/web-resources/images/homepage/abou-us/gioi-thieu-cong-ty-2026.jpg" alt=""></a><div class="card-body">
+                  <h4 class="card-title uob-h4 mb-3"><a target="_self" anchor_name="icon:giới thiệu công ty" href="gioi-thieu/gioi-thieu-cong-ty/" class="dtm-link">Giới thiệu công ty</a></h4>
                   <p class="card-text paragraph"></p>
                </div>
                <div class="card-footer"></div>
             </div>
          </div>
          <div class="col-12 col-md-4">
-            <div class="card rounded-10 h-100 border-0 box-shadow-0"><a target="_self" anchor_name="icon:phong cách, triết lý &amp; năng lực đầu tư" href="about-us/our-investment-philosophy-and-capabilities/" class="dtm-link"><img loading="lazy" class="rounded-10 img-fluid card-img card-img-top" src="assets/web-resources/images/homepage/abou-us/phong-cach-triet-ly-2026.jpg" alt=""></a><div class="card-body">
-                  <h4 class="card-title uob-h4 mb-3"><a target="_self" anchor_name="icon:phong cách, triết lý &amp; năng lực đầu tư" href="about-us/our-investment-philosophy-and-capabilities/" class="dtm-link">Phong cách, Triết lý & Năng lực đầu tư</a></h4>
+            <div class="card rounded-10 h-100 border-0 box-shadow-0"><a target="_self" anchor_name="icon:phong cách, triết lý &amp; năng lực đầu tư" href="gioi-thieu/phong-cach-dau-tu/" class="dtm-link"><img loading="lazy" class="rounded-10 img-fluid card-img card-img-top" src="assets/web-resources/images/homepage/abou-us/phong-cach-triet-ly-2026.jpg" alt=""></a><div class="card-body">
+                  <h4 class="card-title uob-h4 mb-3"><a target="_self" anchor_name="icon:phong cách, triết lý &amp; năng lực đầu tư" href="gioi-thieu/phong-cach-dau-tu/" class="dtm-link">Phong cách, Triết lý & Năng lực đầu tư</a></h4>
                   <p class="card-text paragraph"></p>
                </div>
                <div class="card-footer"></div>
             </div>
          </div>
          <div class="col-12 col-md-4">
-            <div class="card rounded-10 h-100 border-0 box-shadow-0"><a target="_self" anchor_name="icon:Đầu tư bền vững" href="sustainability/" class="dtm-link"><img loading="lazy" class="rounded-10 img-fluid card-img card-img-top" src="assets/web-resources/images/homepage/abou-us/dau-tu-ben-vung-2026.jpg" alt=""></a><div class="card-body">
-                  <h4 class="card-title uob-h4 mb-3"><a target="_self" anchor_name="icon:Đầu tư bền vững" href="sustainability/" class="dtm-link">Đầu tư bền vững</a></h4>
+            <div class="card rounded-10 h-100 border-0 box-shadow-0"><a target="_self" anchor_name="icon:Đầu tư bền vững" href="phat-trien-ben-vung/" class="dtm-link"><img loading="lazy" class="rounded-10 img-fluid card-img card-img-top" src="assets/web-resources/images/homepage/abou-us/dau-tu-ben-vung-2026.jpg" alt=""></a><div class="card-body">
+                  <h4 class="card-title uob-h4 mb-3"><a target="_self" anchor_name="icon:Đầu tư bền vững" href="phat-trien-ben-vung/" class="dtm-link">Đầu tư bền vững</a></h4>
                   <p class="card-text paragraph"></p>
                </div>
                <div class="card-footer"></div>
@@ -759,20 +749,20 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
       </div>
       <div id="carouselFigureOut" class="carousel slide text-center carousele-initialized pointer-event">
          <div class="carousel-inner d-flex">
-            <div class="carousel-item text-left active"><a target="_self" anchor_name="icon:giới thiệu công ty" href="about-us/corporate-profile/" class="dtm-link"><img loading="lazy" class="rounded-10 img-fluid card-img card-img-top" src="assets/web-resources/images/homepage/abou-us/gioi-thieu-cong-ty-2026.jpg" alt=""></a><div class="card-body pb-0">
-                  <h4 class="card-title uob-h4 mb-3"><a target="_self" anchor_name="icon:giới thiệu công ty" href="about-us/corporate-profile/" class="dtm-link">Giới thiệu công ty</a></h4>
+            <div class="carousel-item text-left active"><a target="_self" anchor_name="icon:giới thiệu công ty" href="gioi-thieu/gioi-thieu-cong-ty/" class="dtm-link"><img loading="lazy" class="rounded-10 img-fluid card-img card-img-top" src="assets/web-resources/images/homepage/abou-us/gioi-thieu-cong-ty-2026.jpg" alt=""></a><div class="card-body pb-0">
+                  <h4 class="card-title uob-h4 mb-3"><a target="_self" anchor_name="icon:giới thiệu công ty" href="gioi-thieu/gioi-thieu-cong-ty/" class="dtm-link">Giới thiệu công ty</a></h4>
                   <p class="card-text paragraph"></p>
                </div>
                <div class="card-footer"></div>
             </div>
-            <div class="carousel-item text-left"><a target="_self" anchor_name="icon:phong cách, triết lý &amp; năng lực đầu tư" href="about-us/our-investment-philosophy-and-capabilities/" class="dtm-link"><img loading="lazy" class="rounded-10 img-fluid card-img card-img-top" src="assets/web-resources/images/homepage/abou-us/phong-cach-triet-ly-2026.jpg" alt=""></a><div class="card-body pb-0">
-                  <h4 class="card-title uob-h4 mb-3"><a target="_self" anchor_name="icon:phong cách, triết lý &amp; năng lực đầu tư" href="about-us/our-investment-philosophy-and-capabilities/" class="dtm-link">Phong cách, Triết lý & Năng lực đầu tư</a></h4>
+            <div class="carousel-item text-left"><a target="_self" anchor_name="icon:phong cách, triết lý &amp; năng lực đầu tư" href="gioi-thieu/phong-cach-dau-tu/" class="dtm-link"><img loading="lazy" class="rounded-10 img-fluid card-img card-img-top" src="assets/web-resources/images/homepage/abou-us/phong-cach-triet-ly-2026.jpg" alt=""></a><div class="card-body pb-0">
+                  <h4 class="card-title uob-h4 mb-3"><a target="_self" anchor_name="icon:phong cách, triết lý &amp; năng lực đầu tư" href="gioi-thieu/phong-cach-dau-tu/" class="dtm-link">Phong cách, Triết lý & Năng lực đầu tư</a></h4>
                   <p class="card-text paragraph"></p>
                </div>
                <div class="card-footer"></div>
             </div>
-            <div class="carousel-item text-left"><a target="_self" anchor_name="icon:Đầu tư bền vững" href="sustainability/" class="dtm-link"><img loading="lazy" class="rounded-10 img-fluid card-img card-img-top" src="assets/web-resources/images/homepage/abou-us/dau-tu-ben-vung-2026.jpg" alt=""></a><div class="card-body pb-0">
-                  <h4 class="card-title uob-h4 mb-3"><a target="_self" anchor_name="icon:Đầu tư bền vững" href="sustainability/" class="dtm-link">Đầu tư bền vững</a></h4>
+            <div class="carousel-item text-left"><a target="_self" anchor_name="icon:Đầu tư bền vững" href="phat-trien-ben-vung/" class="dtm-link"><img loading="lazy" class="rounded-10 img-fluid card-img card-img-top" src="assets/web-resources/images/homepage/abou-us/dau-tu-ben-vung-2026.jpg" alt=""></a><div class="card-body pb-0">
+                  <h4 class="card-title uob-h4 mb-3"><a target="_self" anchor_name="icon:Đầu tư bền vững" href="phat-trien-ben-vung/" class="dtm-link">Đầu tư bền vững</a></h4>
                   <p class="card-text paragraph"></p>
                </div>
                <div class="card-footer"></div>
@@ -807,12 +797,12 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
                <div class="content-item-block active">
                   <div><img loading="lazy" class="rounded-10 shadow img-fluid" alt="" src="assets/web-resources/images/homepage/news/news-2026-2.jpg"></div>
                   <p class="paragraph mb-3 mt-5 mb-6">Những nguyên tắc cốt lõi giúp nhà đầu tư kiểm soát rủi ro và bảo toàn vốn trong danh mục đầu tư.</p>
-                  <div><a href="media-center/" class="dtm-link text-link text-link--bright-blue" anchor_name="quản trị rủi ro trong đầu tư chứng khoán:tìm hiểu thêm" target="_self">Tìm hiểu thêm</a></div>
+                  <div><a href="tin-tuc/" class="dtm-link text-link text-link--bright-blue" anchor_name="quản trị rủi ro trong đầu tư chứng khoán:tìm hiểu thêm" target="_self">Tìm hiểu thêm</a></div>
                </div>
                <div class="content-item-block">
                   <div><img loading="lazy" class="rounded-10 shadow img-fluid" alt="" src="assets/web-resources/images/homepage/news/news-2026-1.jpg"></div>
                   <p class="paragraph mb-3 mt-5 mb-6">Góc nhìn tổng quan về dòng vốn đầu tư và cơ hội tại thị trường tài chính Việt Nam.</p>
-                  <div><a href="media-center/" class="dtm-link text-link text-link--bright-blue" anchor_name="xu hướng dòng vốn trên thị trường tài chính:tìm hiểu thêm" target="_self">Tìm hiểu thêm</a></div>
+                  <div><a href="tin-tuc/" class="dtm-link text-link text-link--bright-blue" anchor_name="xu hướng dòng vốn trên thị trường tài chính:tìm hiểu thêm" target="_self">Tìm hiểu thêm</a></div>
                </div>
             </div>
          </div>
@@ -843,27 +833,27 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
                <div class="carousel-item active">
                   <div class="d-flex h-100">
                      <div class="col-12 col-md-4 mb-6 mb-sm-5">
-                        <div class="card shadow rounded-10 h-100 bg-white"><a href="sustainability/" class="dtm-link " anchor_name="icon:cam kết bền vững" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/vina/mission.webp" alt="Cam kết bền vững"></a><div class="card-body p-6">
-                              <h4 class="card-title uob-h4 mb-3"><a href="sustainability/" class="dtm-link " anchor_name="icon:cam kết bền vững" target="_self">Cam Kết Bền Vững</a></h4>
+                        <div class="card shadow rounded-10 h-100 bg-white"><a href="phat-trien-ben-vung/" class="dtm-link " anchor_name="icon:cam kết bền vững" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/vina/mission.webp" alt="Cam kết bền vững"></a><div class="card-body p-6">
+                              <h4 class="card-title uob-h4 mb-3"><a href="phat-trien-ben-vung/" class="dtm-link " anchor_name="icon:cam kết bền vững" target="_self">Cam Kết Bền Vững</a></h4>
                               <p class="card-text paragraph">Chúng tôi cam kết phát triển bền vững giá trị cho cổ đông và khách hàng.</p>
                            </div>
-                           <div class="card-footer text-left"><a href="sustainability/" class="dtm-link text-link--bright-blue arrow-icon&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; " anchor_name="icon:cam kết bền vững" target="_self"><img loading="lazy" src="assets/iwov-resources/assets/Icons/icons-link-blue.svg" alt=""></a></div>
+                           <div class="card-footer text-left"><a href="phat-trien-ben-vung/" class="dtm-link text-link--bright-blue arrow-icon&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; " anchor_name="icon:cam kết bền vững" target="_self"><img loading="lazy" src="assets/iwov-resources/assets/Icons/icons-link-blue.svg" alt=""></a></div>
                         </div>
                      </div>
                      <div class="col-12 col-md-4 mb-6 mb-sm-5">
-                        <div class="card shadow rounded-10 h-100 bg-white"><a href="about-us/" class="dtm-link " anchor_name="icon:giá trị cốt lõi" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/vina/about-chart.webp" alt="Giá trị cốt lõi"></a><div class="card-body p-6">
-                              <h4 class="card-title uob-h4 mb-3"><a href="about-us/" class="dtm-link " anchor_name="icon:giá trị cốt lõi" target="_self">Giá Trị Cốt Lõi</a></h4>
+                        <div class="card shadow rounded-10 h-100 bg-white"><a href="gioi-thieu/" class="dtm-link " anchor_name="icon:giá trị cốt lõi" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/vina/about-chart.webp" alt="Giá trị cốt lõi"></a><div class="card-body p-6">
+                              <h4 class="card-title uob-h4 mb-3"><a href="gioi-thieu/" class="dtm-link " anchor_name="icon:giá trị cốt lõi" target="_self">Giá Trị Cốt Lõi</a></h4>
                               <p class="card-text paragraph">Uy tín, minh bạch, chuyên nghiệp và tận tâm trong từng quyết định đầu tư.</p>
                            </div>
-                           <div class="card-footer text-left"><a href="about-us/" class="dtm-link text-link--bright-blue arrow-icon&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; " anchor_name="icon:giá trị cốt lõi" target="_self"><img loading="lazy" src="assets/iwov-resources/assets/Icons/icons-link-blue.svg" alt=""></a></div>
+                           <div class="card-footer text-left"><a href="gioi-thieu/" class="dtm-link text-link--bright-blue arrow-icon&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; " anchor_name="icon:giá trị cốt lõi" target="_self"><img loading="lazy" src="assets/iwov-resources/assets/Icons/icons-link-blue.svg" alt=""></a></div>
                         </div>
                      </div>
                      <div class="col-12 col-md-4 mb-6 mb-sm-5">
-                        <div class="card shadow rounded-10 h-100 bg-white"><a href="about-us/corporate-profile/" class="dtm-link " anchor_name="icon:tầm nhìn và sứ mệnh" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/vina/vision.webp" alt="Tầm nhìn và sứ mệnh"></a><div class="card-body p-6">
-                              <h4 class="card-title uob-h4 mb-3"><a href="about-us/corporate-profile/" class="dtm-link " anchor_name="icon:tầm nhìn và sứ mệnh" target="_self">Tầm Nhìn Và Sứ Mệnh</a></h4>
+                        <div class="card shadow rounded-10 h-100 bg-white"><a href="gioi-thieu/gioi-thieu-cong-ty/" class="dtm-link " anchor_name="icon:tầm nhìn và sứ mệnh" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/vina/vision.webp" alt="Tầm nhìn và sứ mệnh"></a><div class="card-body p-6">
+                              <h4 class="card-title uob-h4 mb-3"><a href="gioi-thieu/gioi-thieu-cong-ty/" class="dtm-link " anchor_name="icon:tầm nhìn và sứ mệnh" target="_self">Tầm Nhìn Và Sứ Mệnh</a></h4>
                               <p class="card-text paragraph">Xây dựng hệ sinh thái đầu tư minh bạch, bền vững cho mọi nhà đầu tư.</p>
                            </div>
-                           <div class="card-footer text-left"><a href="about-us/corporate-profile/" class="dtm-link text-link--bright-blue arrow-icon&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; " anchor_name="icon:tầm nhìn và sứ mệnh" target="_self"><img loading="lazy" src="assets/iwov-resources/assets/Icons/icons-link-blue.svg" alt=""></a></div>
+                           <div class="card-footer text-left"><a href="gioi-thieu/gioi-thieu-cong-ty/" class="dtm-link text-link--bright-blue arrow-icon&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; " anchor_name="icon:tầm nhìn và sứ mệnh" target="_self"><img loading="lazy" src="assets/iwov-resources/assets/Icons/icons-link-blue.svg" alt=""></a></div>
                         </div>
                      </div>
                   </div>
@@ -874,27 +864,27 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
             <div id="carousel-col-1" class="carousel slide text-center">
                <div class="carousel-inner d-flex">
                   <div class="carousel-item active">
-                     <div class="card shadow rounded-10 h-100 bg-white"><a href="sustainability/" class="dtm-link " anchor_name="icon:cam kết bền vững" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/vina/mission.webp" alt="Cam kết bền vững"></a><div class="card-body p-6">
-                           <h4 class="card-title uob-h4 mb-3"><a href="sustainability/" class="dtm-link " anchor_name="icon:cam kết bền vững" target="_self">Cam Kết Bền Vững</a></h4>
+                     <div class="card shadow rounded-10 h-100 bg-white"><a href="phat-trien-ben-vung/" class="dtm-link " anchor_name="icon:cam kết bền vững" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/vina/mission.webp" alt="Cam kết bền vững"></a><div class="card-body p-6">
+                           <h4 class="card-title uob-h4 mb-3"><a href="phat-trien-ben-vung/" class="dtm-link " anchor_name="icon:cam kết bền vững" target="_self">Cam Kết Bền Vững</a></h4>
                            <p class="card-text paragraph">Chúng tôi cam kết phát triển bền vững giá trị cho cổ đông và khách hàng.</p>
                         </div>
-                        <div class="card-footer text-left"><a href="sustainability/" class="dtm-link text-link--bright-blue arrow-icon&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; " anchor_name="icon:cam kết bền vững" target="_self"><img loading="lazy" src="assets/iwov-resources/assets/Icons/icons-link-blue.svg" alt=""></a></div>
+                        <div class="card-footer text-left"><a href="phat-trien-ben-vung/" class="dtm-link text-link--bright-blue arrow-icon&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; " anchor_name="icon:cam kết bền vững" target="_self"><img loading="lazy" src="assets/iwov-resources/assets/Icons/icons-link-blue.svg" alt=""></a></div>
                      </div>
                   </div>
                   <div class="carousel-item">
-                     <div class="card shadow rounded-10 h-100 bg-white"><a href="about-us/" class="dtm-link " anchor_name="icon:giá trị cốt lõi" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/vina/about-chart.webp" alt="Giá trị cốt lõi"></a><div class="card-body p-6">
-                           <h4 class="card-title uob-h4 mb-3"><a href="about-us/" class="dtm-link " anchor_name="icon:giá trị cốt lõi" target="_self">Giá Trị Cốt Lõi</a></h4>
+                     <div class="card shadow rounded-10 h-100 bg-white"><a href="gioi-thieu/" class="dtm-link " anchor_name="icon:giá trị cốt lõi" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/vina/about-chart.webp" alt="Giá trị cốt lõi"></a><div class="card-body p-6">
+                           <h4 class="card-title uob-h4 mb-3"><a href="gioi-thieu/" class="dtm-link " anchor_name="icon:giá trị cốt lõi" target="_self">Giá Trị Cốt Lõi</a></h4>
                            <p class="card-text paragraph">Uy tín, minh bạch, chuyên nghiệp và tận tâm trong từng quyết định đầu tư.</p>
                         </div>
-                        <div class="card-footer text-left"><a href="about-us/" class="dtm-link text-link--bright-blue arrow-icon&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; " anchor_name="icon:giá trị cốt lõi" target="_self"><img loading="lazy" src="assets/iwov-resources/assets/Icons/icons-link-blue.svg" alt=""></a></div>
+                        <div class="card-footer text-left"><a href="gioi-thieu/" class="dtm-link text-link--bright-blue arrow-icon&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; " anchor_name="icon:giá trị cốt lõi" target="_self"><img loading="lazy" src="assets/iwov-resources/assets/Icons/icons-link-blue.svg" alt=""></a></div>
                      </div>
                   </div>
                   <div class="carousel-item">
-                     <div class="card shadow rounded-10 h-100 bg-white"><a href="about-us/corporate-profile/" class="dtm-link " anchor_name="icon:tầm nhìn và sứ mệnh" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/vina/vision.webp" alt="Tầm nhìn và sứ mệnh"></a><div class="card-body p-6">
-                           <h4 class="card-title uob-h4 mb-3"><a href="about-us/corporate-profile/" class="dtm-link " anchor_name="icon:tầm nhìn và sứ mệnh" target="_self">Tầm Nhìn Và Sứ Mệnh</a></h4>
+                     <div class="card shadow rounded-10 h-100 bg-white"><a href="gioi-thieu/gioi-thieu-cong-ty/" class="dtm-link " anchor_name="icon:tầm nhìn và sứ mệnh" target="_self"><img loading="lazy" class="rounded-top-10 img-fluid card-img card-img-top large-image" src="assets/web-resources/images/vina/vision.webp" alt="Tầm nhìn và sứ mệnh"></a><div class="card-body p-6">
+                           <h4 class="card-title uob-h4 mb-3"><a href="gioi-thieu/gioi-thieu-cong-ty/" class="dtm-link " anchor_name="icon:tầm nhìn và sứ mệnh" target="_self">Tầm Nhìn Và Sứ Mệnh</a></h4>
                            <p class="card-text paragraph">Xây dựng hệ sinh thái đầu tư minh bạch, bền vững cho mọi nhà đầu tư.</p>
                         </div>
-                        <div class="card-footer text-left"><a href="about-us/corporate-profile/" class="dtm-link text-link--bright-blue arrow-icon&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; " anchor_name="icon:tầm nhìn và sứ mệnh" target="_self"><img loading="lazy" src="assets/iwov-resources/assets/Icons/icons-link-blue.svg" alt=""></a></div>
+                        <div class="card-footer text-left"><a href="gioi-thieu/gioi-thieu-cong-ty/" class="dtm-link text-link--bright-blue arrow-icon&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; " anchor_name="icon:tầm nhìn và sứ mệnh" target="_self"><img loading="lazy" src="assets/iwov-resources/assets/Icons/icons-link-blue.svg" alt=""></a></div>
                      </div>
                   </div>
                </div>
@@ -909,15 +899,7 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
    </div>
 </div><!--ls:end[component-1773900973434]--> 
      </div> 
-    </div> 
-    <div class="iw_component" id="iw_comp1660130786243">
-      <!--ls:begin[component-1660130786243]--><style>#iw_comp1660130786243{}</style><div role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" class="rounded-10 uob-cookie cookie-popup" id="cookie-alert">
-   <div class="d-sm-flex">
-      <div><img loading="lazy" class="rounded d-none d-sm-block" alt="" src="assets/iwov-resources/assets/SVGIllustrations/notice.svg"></div>
-      <div class="toast-body p-0 d-flex"><p class="paragraph mb-0">Ch&uacute;ng t&ocirc;i sử dụng cookies nhằm mang lại cho Qu&yacute; kh&aacute;ch những trải nghiệm tốt nhất tr&ecirc;n trang web. Bằng c&aacute;ch tiếp tục truy cập trang n&agrave;y, Qu&yacute; kh&aacute;ch đồng &yacute; với ch&iacute;nh s&aacute;ch cockies của ch&uacute;ng t&ocirc;i.</p><button type="button" class="close" aria-label="Close"></button></div>
-   </div>
-</div><!--ls:end[component-1660130786243]--> 
-    </div> 
+    </div>
     <div class="iw_component" id="iw_comp1660130786242">
       <!--ls:begin[component-1660130786242]--><style>#iw_comp1660130786242{}</style><div></div><!--ls:end[component-1660130786242]--> 
     </div> 
@@ -936,9 +918,9 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
          <div class="d-none d-sm-block col-sm mx-auto">
             <h6 class="text-uppercase page-footer-title">VỀ VINA GROUP</h6>
             <p><a href="./" class="dtm-link text-link-darkbg" target="_self">Trang Chủ</a></p>
-            <p><a href="about-us/corporate-profile/" class="dtm-link text-link-darkbg" target="_self">Giới Thiệu Công Ty</a></p>
-            <p><a href="funds-and-services/" class="dtm-link text-link-darkbg" target="_self">Lĩnh Vực Đầu Tư</a></p>
-            <p><a href="investor-relations/" class="dtm-link text-link-darkbg" target="_self">Quan Hệ Cổ Đông</a></p>
+            <p><a href="gioi-thieu/gioi-thieu-cong-ty/" class="dtm-link text-link-darkbg" target="_self">Giới Thiệu Công Ty</a></p>
+            <p><a href="linh-vuc-dau-tu/" class="dtm-link text-link-darkbg" target="_self">Lĩnh Vực Đầu Tư</a></p>
+            <p><a href="quan-he-co-dong/" class="dtm-link text-link-darkbg" target="_self">Quan Hệ Cổ Đông</a></p>
          </div>
          <div class="d-sm-none mx-auto col-sm pl-0 pr-0">
             <div class="accordion md-accordion" id="accordionEx1" role="tablist" aria-multiselectable="true">
@@ -948,9 +930,9 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
                   <div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1" data-parent="#accordionEx1">
                      <div class="card-body">
                         <p><a href="./" class="dtm-link text-link-darkbg" target="_self">Trang Chủ</a></p>
-                        <p><a href="about-us/corporate-profile/" class="dtm-link text-link-darkbg" target="_self">Giới Thiệu Công Ty</a></p>
-                        <p><a href="funds-and-services/" class="dtm-link text-link-darkbg" target="_self">Lĩnh Vực Đầu Tư</a></p>
-                        <p><a href="investor-relations/" class="dtm-link text-link-darkbg" target="_self">Quan Hệ Cổ Đông</a></p>
+                        <p><a href="gioi-thieu/gioi-thieu-cong-ty/" class="dtm-link text-link-darkbg" target="_self">Giới Thiệu Công Ty</a></p>
+                        <p><a href="linh-vuc-dau-tu/" class="dtm-link text-link-darkbg" target="_self">Lĩnh Vực Đầu Tư</a></p>
+                        <p><a href="quan-he-co-dong/" class="dtm-link text-link-darkbg" target="_self">Quan Hệ Cổ Đông</a></p>
                      </div>
                   </div>
                </div>
@@ -959,9 +941,9 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
          <hr class="d-sm-none d-md-none page-footer-line">
          <div class="d-none d-sm-block col-sm mx-auto">
             <h6 class="text-uppercase page-footer-title">HỖ TRỢ</h6>
-            <p><a href="contact-us/" class="dtm-link text-link-darkbg" target="_self">Liên Hệ</a></p>
-            <p><a href="site-map/" class="dtm-link text-link-darkbg" target="_self">Sơ Đồ Trang</a></p>
-            <p><a href="media-center/" class="dtm-link text-link-darkbg" target="_self">Tin Tức</a></p>
+            <p><a href="lien-he/" class="dtm-link text-link-darkbg" target="_self">Liên Hệ</a></p>
+            <p><a href="so-do-trang/" class="dtm-link text-link-darkbg" target="_self">Sơ Đồ Trang</a></p>
+            <p><a href="tin-tuc/" class="dtm-link text-link-darkbg" target="_self">Tin Tức</a></p>
          </div>
          <div class="d-sm-none mx-auto col-sm pl-0 pr-0">
             <div class="accordion md-accordion" id="accordionEx2" role="tablist" aria-multiselectable="true">
@@ -970,9 +952,9 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
                         <h6 class="d-flex justify-content-between text-uppercase page-footer-title"><span>HỖ TRỢ</span><img loading="lazy" class="icon-chevron-down" src="assets/iwov-resources/assets/Icons/icons-chevron-down.svg" alt="chevron-down"></h6></a></div>
                   <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx2">
                      <div class="card-body">
-                        <p><a href="contact-us/" class="dtm-link text-link-darkbg" target="_self">Liên Hệ</a></p>
-                        <p><a href="site-map/" class="dtm-link text-link-darkbg" target="_self">Sơ Đồ Trang</a></p>
-                        <p><a href="media-center/" class="dtm-link text-link-darkbg" target="_self">Tin Tức</a></p>
+                        <p><a href="lien-he/" class="dtm-link text-link-darkbg" target="_self">Liên Hệ</a></p>
+                        <p><a href="so-do-trang/" class="dtm-link text-link-darkbg" target="_self">Sơ Đồ Trang</a></p>
+                        <p><a href="tin-tuc/" class="dtm-link text-link-darkbg" target="_self">Tin Tức</a></p>
                      </div>
                   </div>
                </div>
@@ -981,8 +963,8 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
          <hr class="d-sm-none d-md-none page-footer-line">
          <div class="d-none d-sm-block col-sm mx-auto">
             <h6 class="text-uppercase page-footer-title">MINH BẠCH</h6>
-            <p><a href="legal-disclaimer/" class="dtm-link text-link-darkbg" target="_self">Quyền Miễn Trừ Trách Nhiệm</a></p>
-            <p><a href="privacy-security/" class="dtm-link text-link-darkbg" target="_self">Thông Báo Bảo Mật</a></p>
+            <p><a href="mien-tru-trach-nhiem/" class="dtm-link text-link-darkbg" target="_self">Quyền Miễn Trừ Trách Nhiệm</a></p>
+            <p><a href="bao-mat/" class="dtm-link text-link-darkbg" target="_self">Thông Báo Bảo Mật</a></p>
          </div>
          <div class="d-sm-none mx-auto col-sm pl-0 pr-0">
             <div class="accordion md-accordion" id="accordionEx3" role="tablist" aria-multiselectable="true">
@@ -991,8 +973,8 @@ Email: tapdoanvinagroup@gmail.com</p><a href="contact-us/" target="_self" class=
                         <h6 class="d-flex justify-content-between text-uppercase page-footer-title"><span>MINH BẠCH</span><img loading="lazy" class="icon-chevron-down" src="assets/iwov-resources/assets/Icons/icons-chevron-down.svg" alt="chevron-down"></h6></a></div>
                   <div id="collapseTwo3" class="collapse" role="tabpanel" aria-labelledby="headingTwo3" data-parent="#accordionEx3">
                      <div class="card-body">
-                        <p><a href="legal-disclaimer/" class="dtm-link text-link-darkbg" target="_self">Quyền Miễn Trừ Trách Nhiệm</a></p>
-                        <p><a href="privacy-security/" class="dtm-link text-link-darkbg" target="_self">Thông Báo Bảo Mật</a></p>
+                        <p><a href="mien-tru-trach-nhiem/" class="dtm-link text-link-darkbg" target="_self">Quyền Miễn Trừ Trách Nhiệm</a></p>
+                        <p><a href="bao-mat/" class="dtm-link text-link-darkbg" target="_self">Thông Báo Bảo Mật</a></p>
                      </div>
                   </div>
                </div>
